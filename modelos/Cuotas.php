@@ -10,17 +10,17 @@
         }
 
         //Implementamos un metodo para insertar registros
-        public function insertar($concepto, $monto)
+        public function insertar($tipo_persona, $pernocta, $sinpernocta)
         {
-            $sql="INSERT INTO cuotas (concepto, monto)
-                VALUES ('$concepto', '$monto')";
+            $sql="INSERT INTO cuotas (tipo_persona, pernocta, sinpernocta)
+                VALUES ('$tipo_persona', '$pernocta','$sinpernocta')";
             return ejecutarConsulta($sql);
         }
 
         //Implementamos un metodo para editar los registros
-        public function editar($idcuotas, $concepto, $monto)
+        public function editar($idcuotas, $tipo_persona, $pernocta, $sinpernocta)
         {
-            $sql="UPDATE cuotas SET concepto='$concepto', monto='$monto'
+            $sql="UPDATE cuotas SET tipo_persona='$tipo_persona', pernocta='$pernocta', sinpernocta='$sinpernocta'
                 WHERE idcuotas='$idcuotas'";
             return ejecutarConsulta($sql);
         }

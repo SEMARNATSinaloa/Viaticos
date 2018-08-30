@@ -22,10 +22,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" href="../public/css/skins/skin-blue.min.css">
 
-  <!-- DATATABLES -->
+  <!-- DATATABLES 
   <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="../public/bootstrap/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  -->
+  <link rel="stylesheet" href="../public/plugins/DataTables/datatables.min.css">
   <link rel="stylesheet" href="../public/bootstrap/buttons/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" href="../public/plugins/DataTables/responsive-2.2.2/css/responsive.dataTables.min.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>

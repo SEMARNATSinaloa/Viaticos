@@ -97,14 +97,15 @@
 <script src="../public/js/adminlte.min.js"></script>
 
 <!-- DATATABLES -->
-<script src="../public/bootstrap/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../public/plugins/DataTables/datatables.min.js"></script>
+<script src="../public/plugins/DataTables/Responsive-2.2.2/js/dataTables.responsive.min.js"></script>
 <script src="../public/bootstrap/buttons/js/dataTables.buttons.min.js"></script>
 <script src="../public/bootstrap/buttons/js/buttons.html5.min.js"></script>
 <script src="../public/bootstrap/buttons/js/buttons.colVis.min.js"></script>
 
 <script src="../public/bootstrap/jszip/jszip.min.js"></script>
-<script src='../public/bootstrap/pdfmake/src/browser-extensions/pdfmake.js'></script>
-<script src='../public/bootstrap/pdfmake/src/browser-extensions/virtual-fs.js'></script>
+<script src='../public/plugins/DataTables/pdfmake-0.1.36/pdfmake.min.js'></script>
+<script src='../public/plugins/DataTables/pdfmake-0.1.36/vfs_fonts.js'></script>
 
 
 

@@ -4,8 +4,9 @@
     $cuotas= new Cuotas();
 
     $idcuotas=isset($_POST["idcuotas"])?limpiarCadena($_POST["idcuotas"]):"";
-    $concepto=isset($_POST["concepto"])?limpiarCadena($_POST["concepto"]):"";
-    $monto=isset($_POST["monto"])?limpiarCadena($_POST["monto"]):"";
+    $tipo_persona=isset($_POST["tipo_persona"])?limpiarCadena($_POST["tipo_persona"]):"";
+    $pernocta=isset($_POST["pernocta"])?limpiarCadena($_POST["pernocta"]):"";
+    $sinpernocta=isset($_POST["sinpernocta"])?limpiarCadena($_POST["sinpernocta"]):"";
     $estado=isset($_POST["estado"])?limpiarCadena($_POST["estado"]):"";
     
     switch ($_GET["op"]) {
@@ -13,12 +14,12 @@
             # code...
             if(empty($idcuotas))
             {
-                $rspta=$cuotas->insertar($concepto, $monto);
+                $rspta=$cuotas->insertar($tipo_persona, $pernocta, $sinpernocta);
                 echo $rspta?"Cuota registrada.":"Cuota no registrada.";
             }
             else
             {
-                $rspta=$cuotas->editar($idcuotas, $concepto, $monto);
+                $rspta=$cuotas->editar($idcuotas, $tipo_persona, $pernocta, $sinpernocta);
                 echo $rspta?"Cuota actualizada.":"Cuota no actualizada.";
             }
             break;
@@ -51,9 +52,10 @@
             while ($reg = $rspta->fetch_object()) {
                 $data[]=array(
                     "0"=>$reg->idcuotas,
-                    "1"=>$reg->concepto,
-                    "2"=>$reg->montos,
-                    "3"=>$reg->estado
+                    "1"=>$reg->tipo_persona,
+                    "2"=>$reg->pernocta,
+                    "3"=>$reg->sinpernocta,
+                    "4"=>$reg->estado
                 );
             }
             $results=array(

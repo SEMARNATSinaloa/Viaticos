@@ -46,6 +46,10 @@ function listar()
 {
 	tabla=$('#tbllistado').dataTable(
 	{
+		"language": {
+			"url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+		  },
+		"responsive": true,
 		"aProcessing": true,//Activamos el procesamiento del datatables
 	    "aServerSide": true,//Paginación y filtrado realizados por el servidor
 	    dom: 'Bfrtip',//Definimos los elementos del control de tabla
@@ -57,7 +61,7 @@ function listar()
 		        ],
 		"ajax":
 				{
-					url: '../ajax/categoria.php?op=listar',
+					url: '../ajax/cuotas.php?op=listar',
 					type : "get",
 					dataType : "json",						
 					error: function(e){
