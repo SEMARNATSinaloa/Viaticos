@@ -40,7 +40,7 @@
     function limpiarCadena($str)
     {
         global $conexion;
-        $str=mysql_real_escape_string($conexion, trim($str));
+        $str=mysqli_real_escape_string($conexion, trim($str));
         return htmlspecialchars($str);
     }
 ?>

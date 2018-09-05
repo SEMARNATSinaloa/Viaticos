@@ -21,7 +21,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" href="../public/css/skins/skin-blue.min.css">
+  <link rel="stylesheet" href="../public/css/viaticos.css">
 
+  <!-- DATATABLES 
+  <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  -->
+  <link rel="stylesheet" href="../public/plugins/DataTables/datatables.min.css">
+  <link rel="stylesheet" href="../public/bootstrap/buttons/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" href="../public/plugins/DataTables/responsive-2.2.2/css/responsive.dataTables.min.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -277,17 +284,3 @@ desired effect
     </section>
     <!-- /.sidebar -->
   </aside>
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Page Header
-        <small>Optional description</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol>
-    </section>
