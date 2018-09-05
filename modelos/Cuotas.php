@@ -39,6 +39,13 @@
             return ejecutarConsulta($sql);
         }
 
+         //Impementamos un metodo para desactivar registros
+         public function eliminar($idcuotas)
+         {
+             $sql="DELETE FROM cuotas WHERE idcuotas='$idcuotas'";
+             return ejecutarConsulta($sql);
+         }
+
         //Implementar un metodo para mostrar los datos de un registro a modificar
         public function mostrar($idcuotas)
         {

@@ -36,6 +36,12 @@
             echo $rspta?"Cuota activada.":"Cuota no activada.";
         break;
 
+        case 'eliminar':
+            # code...
+            $rspta=$cuotas->eliminar($idcuotas);
+            echo $rspta?"Cuota eliminada.":"Cuota no eliminada.";
+        break;
+
         case 'mostrar':
             # code...
             $rspta=$cuotas->mostrar($idcuotas);
@@ -51,11 +57,17 @@
 
             while ($reg = $rspta->fetch_object()) {
                 $data[]=array(
-                    "0"=>$reg->idcuotas,
+                    
+                    "0"=>($reg->estado)?'<button class="btn btn-warning" onclick="mostrar('.$reg->idcuotas.')"><i class="fa fa-pencil"></i></button>'." ".
+                                        '<button class="btn btn-danger" onclick="desactivar('.$reg->idcuotas.')"><i class="fa fa-eye-slash"></i></button>'." ".
+                                        '<button class="btn btn-danger" onclick="eliminar('.$reg->idcuotas.')"><i class="fa fa-trash"></i></button>':
+                                        '<button class="btn btn-warning" onclick="mostrar('.$reg->idcuotas.')"><i class="fa fa-pencil"></i></button>'." ".
+                                        '<button class="btn btn-success" onclick="activar('.$reg->idcuotas.')"><i class="fa fa-eye"></i></button>'." ".
+                                        '<button class="btn btn-danger" onclick="eliminar('.$reg->idcuotas.')"><i class="fa fa-trash"></i></button>',
                     "1"=>$reg->tipo_persona,
                     "2"=>$reg->pernocta,
                     "3"=>$reg->sinpernocta,
-                    "4"=>$reg->estado
+                    "4"=>($reg->estado)?'<span class="label bg-green">Activo</span>':'<span class="label bg-red">Inactivo</span>'
                 );
             }
             $results=array(
