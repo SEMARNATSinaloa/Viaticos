@@ -38,13 +38,12 @@
                         <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover" style="width:100%">
                           <thead>
                             
-                            <th>Opciones</th>
+                            <th style="width:70px">Opciones</th>
                             <th>Usuario</th>
                             <th>Contraseña</th>
                             <th>Nombre</th>
                             <th>Apellido Paterno</th>
                             <th>Apellido Materno</th>
-                            <th>Correo</th>
                             <th>Estado</th>
                           </thead>
                           <tbody>                            
@@ -60,28 +59,42 @@
                           -->
                         </table>
                     </div>
-                    <div class="panel-body" style="height: 400px;" id="formularioregistros">
+                    <div class="panel-body" id="formularioregistros">
                         <form name="formulario" id="formulario" method="POST">
                           <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <label>Usuarios:</label>
+                            <label>Nombre de Usuario:</label>
                             <input type="hidden" name="idusuario" id="idusuario">
                             <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-shirtsinbulk"></i></span>
-                              <input type="text" class="form-control" name="tipo_persona" id="tipo_persona" maxlength="45" placeholder="Categoria" required>
+                              <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                              <input type="text" class="form-control" name="correo" id="correo" maxlength="45" placeholder="alguien@semarnat.gob.mx" required>
                             </div>
                           </div>
                           <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <label>Monto Con Pernocta:</label>
+                            <label>Contraseña:</label>
                             <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-moon-o"></i></span>
-                              <input type="text" class="form-control" name="pernocta" id="pernocta" maxlength="9" placeholder="$00.00" required>
+                              <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                              <input type="password" class="form-control" name="pwd" id="pwd" maxlength="20" placeholder="Contraseña" required>
                             </div>    
                           </div>
                           <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <label>Monto Sin Pernocta:</label>
+                            <label>Nombre:</label>
                             <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-sun-o"></i></span>
-                              <input type="text" class="form-control" name="sinpernocta" id="sinpernocta" maxlength="9" placeholder="$00.00"required>
+                              <span class="input-group-addon"><i class="fa fa-slideshare"></i></span>
+                              <input type="text" class="form-control" name="nombre" id="nombre" maxlength="30" placeholder="Nombre" required>
+                            </div> 
+                          </div>
+                          <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label>Apellido Paterno:</label>
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-slack"></i></span>
+                              <input type="text" class="form-control" name="apellidop" id="apellidop" maxlength="20" placeholder="Apellido Paterno">
+                            </div> 
+                          </div>
+                          <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label>Apellido Materno:</label>
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-pied-piper"></i></span>
+                              <input type="text" class="form-control" name="apellidom" id="apellidom" maxlength="20" placeholder="Apellido Materno">
                             </div> 
                           </div>
                           <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">

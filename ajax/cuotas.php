@@ -14,6 +14,7 @@
             # code...
             if(empty($idcuotas))
             {
+                echo empty($idcuotas);
                 $rspta=$cuotas->insertar($tipo_persona, $pernocta, $sinpernocta);
                 echo $rspta?"Cuota registrada.":"Cuota no registrada.";
             }
@@ -22,7 +23,7 @@
                 $rspta=$cuotas->editar($idcuotas, $tipo_persona, $pernocta, $sinpernocta);
                 echo $rspta?"Cuota actualizada.":"Cuota no actualizada.";
             }
-            break;
+        break;
         
         case 'desactivar':
             # code...

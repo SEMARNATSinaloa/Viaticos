@@ -38,7 +38,7 @@
                         <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover" style="width:100%">
                           <thead>
                             
-                            <th>Opciones</th>
+                            <th style="width:110px">Opciones</th>
                             <th>Categoria</th>
                             <th>Monto Con Pernocta</th>
                             <th>Monto Sin Pernocta</th>
@@ -57,7 +57,7 @@
                           -->
                         </table>
                     </div>
-                    <div class="panel-body" style="height: 400px;" id="formularioregistros">
+                    <div class="panel-body" id="formularioregistros">
                         <form name="formulario" id="formulario" method="POST">
                           <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <label>Categoria:</label>

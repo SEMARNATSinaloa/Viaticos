@@ -13,16 +13,20 @@
     
     
     switch ($_GET["op"]) {
-        case 'editar':
-            # code...
-            $rspta=$usuarios->editar($idusuario, $pwd, $apellidop, $apellidom, $nombre, $correo);
-            echo $rspta?"Usuario actualizado.":"Usuario no actualizado.";
-        break;
 
-        case 'guardar':
+        case 'guardaryeditar':
             # code...
-            $rspta=$usuarios->insertar($idusuario, $pwd, $apellidop, $apellidom, $nombre, $correo);
-            echo $rspta?"Usuario registrado.":"Usuario no registrado.";
+            if(empty($idusuario))
+            {
+                echo empty($idusuario);
+                $rspta=$usuarios->insertar($pwd, $apellidop, $apellidom, $nombre, $correo);
+                echo $rspta?"Cuota registrada.":"Cuota no registrada.";
+            }
+            else
+            {
+                $rspta=$cuotas->editar($idusuario, $pwd, $apellidop, $apellidom, $nombre, $correo);
+                echo $rspta?"Cuota actualizada.":"Cuota no actualizada.";
+            }
         break;
 
         case 'desactivar':
@@ -33,7 +37,7 @@
 
         case 'activar':
             # code...
-            $rspta=$usuarios->activar($idusuarios);
+            $rspta=$usuarios->activar($idusuario);
             echo $rspta?"Usuario activado.":"Usuario no activado.";
         break;
 
@@ -47,7 +51,7 @@
 
         case 'mostrar':
             # code...
-            $rspta=$usuarios->mostrar($idusuarios);
+            $rspta=$usuarios->mostrar($idusuario);
             //Codificar el resultado utilizando json
             echo json_encode($rspta);
             break;
@@ -62,18 +66,15 @@
                 $data[]=array(
                     
                     "0"=>($reg->estado)?'<button class="btn btn-warning" onclick="mostrar('.$reg->idusuario.')"><i class="fa fa-pencil"></i></button>'." ".
-                                        '<button class="btn btn-danger" onclick="desactivar('.$reg->idusuario.')"><i class="fa fa-eye-slash"></i></button>'." ".
-                                        '<button class="btn btn-danger" onclick="eliminar('.$reg->idusuario.')"><i class="fa fa-trash"></i></button>':
+                                        '<button class="btn btn-danger" onclick="desactivar('.$reg->idusuario.')"><i class="fa fa-eye-slash"></i></button>':
                                         '<button class="btn btn-warning" onclick="mostrar('.$reg->idusuario.')"><i class="fa fa-pencil"></i></button>'." ".
-                                        '<button class="btn btn-success" onclick="activar('.$reg->idusuario.')"><i class="fa fa-eye"></i></button>'." ".
-                                        '<button class="btn btn-danger" onclick="eliminar('.$reg->idusuario.')"><i class="fa fa-trash"></i></button>',
-                    "1"=>$reg->idusuario,
+                                        '<button class="btn btn-success" onclick="activar('.$reg->idusuario.')"><i class="fa fa-eye"></i></button>',
+                    "1"=>$reg->correo,
                     "2"=>$reg->pwd,
                     "3"=>$reg->nombre,
                     "4"=>$reg->apellidop,
                     "5"=>$reg->apellidom,
-                    "6"=>$reg->correo,
-                    "7"=>($reg->estado)?'<span class="label bg-green">Activo</span>':'<span class="label bg-red">Inactivo</span>'
+                    "6"=>($reg->estado)?'<span class="label bg-green">Activo</span>':'<span class="label bg-red">Inactivo</span>'
                 );
             }
             $results=array(

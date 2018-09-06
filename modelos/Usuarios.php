@@ -10,17 +10,18 @@
         }
 
         //Implementamos un metodo para insertar registros
-        public function insertar($idusuario, $pwd, $apellidop, $apellidom, $nombre, $correo)
+        public function insertar($pwd, $apellidop, $apellidom, $nombre, $correo)
         {
-            $sql="INSERT INTO usuario (idusuario, pwd, apellidop, apellidom, nombre, correo)
-                VALUES ('$idusuario', '$pwd','$apellidop, $apellidom, $nombre, $correo')";
+            $sql="INSERT INTO usuario (pwd, apellidop, apellidom, nombre, correo)
+                VALUES ('$pwd','$apellidop', '$apellidom', '$nombre', '$correo')";
+            //return $sql;
             return ejecutarConsulta($sql);
         }
 
         //Implementamos un metodo para editar los registros
         public function editar($idusuario, $pwd, $apellidop, $apellidom, $nombre, $correo)
         {
-            $sql="UPDATE usuario SET pwd='$pwd', apellidop='$apellidop', apellidom='$apellidom', nombre='$nombre', correo='$correo'
+            $sql="UPDATE usuario SET pwd='$pwd', apellidop='$apellidop', apellidom='$apellidom', nombre='$nombre'
                 WHERE idusuario='$idusuario'";
             return ejecutarConsulta($sql);
         }

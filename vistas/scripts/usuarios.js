@@ -7,7 +7,7 @@ function init()
     listar();
 
     $("#formulario").on("submit", function(e){
-        guardar(e);
+        guardaryeditar(e);
     })
 }
 
@@ -55,7 +55,7 @@ function listar()
 	{
 		"language": {
 			"url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
-		  },
+          },
 		"responsive": true,
 		"aProcessing": true,//Activamos el procesamiento del datatables
 	    "aServerSide": true,//Paginación y filtrado realizados por el servidor
@@ -81,42 +81,14 @@ function listar()
 	}).DataTable();
 }
 
-//Funcion para dar formato al monto con pernocta
-$("#_pernocta").on({
-    "focus": function (event) {
-        $(event.target).select();
-    },
-    "keyup": function (event) {
-        $(event.target).val(function (index, value ) {
-            return value.replace(/\D/g, "")
-                        .replace(/([0-9])([0-9]{2})$/, '$1.$2')
-                        .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
-        });
-    }
-});
-
-//Funcion para dar formato al monto sin pernocta
-$("#_sinpernocta").on({
-    "focus": function (event) {
-        $(event.target).select();
-    },
-    "keyup": function (event) {
-        $(event.target).val(function (index, value ) {
-            return value.replace(/\D/g, "")
-                        .replace(/([0-9])([0-9]{2})$/, '$1.$2')
-                        .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
-        });
-    }
-});
-
 //Funcion para guardar o editar
-function guardar(e){
+function guardaryeditar(e){
     e.preventDefault(); //No se activara la accion predeterminada del evento
     $("#btnGuardar").prop("disabled",true);
     var formData = new FormData($("#formulario")[0]);
 
     $.ajax({
-        url: "../ajax/usuarios.php?op=guardar",
+        url: "../ajax/usuarios.php?op=guardaryeditar",
         type: "POST",
         data: formData,
         contentType: false,
@@ -133,7 +105,7 @@ function guardar(e){
     limpiar();
 }
 
-function mostrar(idcuotas)
+function mostrar(idusuario)
 {
     $.post("../ajax/usuarios.php?op=mostrar",{idusuario:idusuario}, function(data, status)
         {
@@ -155,8 +127,7 @@ function desactivar(idusuario)
 {
     if(confirm("¿Esta seguro de desactivar al usuario?"))
     {
-
-        $.post("../ajax/usuario.php?op=desactivar",{idusuario : idusuario}, function(e){
+        $.post("../ajax/usuarios.php?op=desactivar",{idusuario : idusuario}, function(e){
             alert(e);
             tabla.ajax.reload();
         });
