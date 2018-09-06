@@ -28,7 +28,7 @@
               <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                   <div class="box">
                     <div class="box-header with-border">
-                          <h1 class="box-title">Montos de Gastos Operativos <button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button></h1>
+                          <h1 class="box-title">Usuarios del Sistema <button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button></h1>
                         <div class="box-tools pull-right">
                         </div>
                     </div>
@@ -38,10 +38,12 @@
                         <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover" style="width:100%">
                           <thead>
                             
-                            <th style="width:110px">Opciones</th>
-                            <th>Categoria</th>
-                            <th>Monto Con Pernocta</th>
-                            <th>Monto Sin Pernocta</th>
+                            <th style="width:70px">Opciones</th>
+                            <th>Usuario</th>
+                            <th>Contraseña</th>
+                            <th>Nombre</th>
+                            <th>Apellido Paterno</th>
+                            <th>Apellido Materno</th>
                             <th>Estado</th>
                           </thead>
                           <tbody>                            
@@ -60,25 +62,39 @@
                     <div class="panel-body" id="formularioregistros">
                         <form name="formulario" id="formulario" method="POST">
                           <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <label>Categoria:</label>
-                            <input type="hidden" name="idcuotas" id="idcuotas">
+                            <label>Nombre de Usuario:</label>
+                            <input type="hidden" name="idusuario" id="idusuario">
                             <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-shirtsinbulk"></i></span>
-                              <input type="text" class="form-control" name="tipo_persona" id="tipo_persona" maxlength="45" placeholder="Categoria" required>
+                              <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                              <input type="text" class="form-control" name="correo" id="correo" maxlength="45" placeholder="alguien@semarnat.gob.mx" required>
                             </div>
                           </div>
                           <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <label>Monto Con Pernocta:</label>
+                            <label>Contraseña:</label>
                             <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-moon-o"></i></span>
-                              <input type="text" class="form-control" name="pernocta" id="pernocta" maxlength="9" placeholder="$00.00" required>
+                              <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                              <input type="password" class="form-control" name="pwd" id="pwd" maxlength="20" placeholder="Contraseña" required>
                             </div>    
                           </div>
                           <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <label>Monto Sin Pernocta:</label>
+                            <label>Nombre:</label>
                             <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-sun-o"></i></span>
-                              <input type="text" class="form-control" name="sinpernocta" id="sinpernocta" maxlength="9" placeholder="$00.00"required>
+                              <span class="input-group-addon"><i class="fa fa-slideshare"></i></span>
+                              <input type="text" class="form-control" name="nombre" id="nombre" maxlength="30" placeholder="Nombre" required>
+                            </div> 
+                          </div>
+                          <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label>Apellido Paterno:</label>
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-slack"></i></span>
+                              <input type="text" class="form-control" name="apellidop" id="apellidop" maxlength="20" placeholder="Apellido Paterno">
+                            </div> 
+                          </div>
+                          <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label>Apellido Materno:</label>
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-pied-piper"></i></span>
+                              <input type="text" class="form-control" name="apellidom" id="apellidom" maxlength="20" placeholder="Apellido Materno">
                             </div> 
                           </div>
                           <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -100,4 +116,4 @@
 <?php
   require 'footer.php';
 ?>
-<script type="text/javascript" src="scripts/cuotas.js"></script>
+<script type="text/javascript" src="scripts/usuarios.js"></script>
