@@ -63,7 +63,6 @@
                         <form name="formulario" id="formulario" method="POST">
                           <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <label>Nombre de Usuario:</label>
-                            <input type="hidden" name="idusuario" id="idusuario">
                             <div class="input-group">
                               <span class="input-group-addon"><i class="fa fa-user"></i></span>
                               <input type="text" class="form-control" name="correo" id="correo" maxlength="45" placeholder="alguien@semarnat.gob.mx" required>

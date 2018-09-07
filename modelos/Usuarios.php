@@ -19,31 +19,31 @@
         }
 
         //Implementamos un metodo para editar los registros
-        public function editar($idusuario, $pwd, $apellidop, $apellidom, $nombre, $correo)
+        public function editar($pwd, $apellidop, $apellidom, $nombre, $correo)
         {
             $sql="UPDATE usuario SET pwd='$pwd', apellidop='$apellidop', apellidom='$apellidom', nombre='$nombre'
-                WHERE idusuario='$idusuario'";
+                WHERE correo='$correo'";
             return ejecutarConsulta($sql);
         }
 
         //Impementamos un metodo para desactivar registros
-        public function desactivar($idusuario)
+        public function desactivar($correo)
         {
-            $sql="UPDATE usuario SET estado='0' WHERE idusuario='$idusuario'";
+            $sql="UPDATE usuario SET estado='0' WHERE correo='$correo'";
             return ejecutarConsulta($sql);
         }
 
         //Impementamos un metodo para activar registros
-        public function activar($idusuario)
+        public function activar($correo)
         {
-            $sql="UPDATE usuario SET estado='1' WHERE idusuario='$idusuario'";
+            $sql="UPDATE usuario SET estado='1' WHERE correo='$correo'";
             return ejecutarConsulta($sql);
         }
 
         //Implementar un metodo para mostrar los datos de un registro a modificar
-        public function mostrar($idusuario)
+        public function mostrar($correo)
         {
-            $sql="SELECT * FROM usuario WHERE idusuario='$idusuario'";
+            $sql="SELECT * FROM usuario WHERE correo='$correo'";
             return ejecutarConsultaSimpleFila($sql);
         }
 
@@ -52,6 +52,17 @@
         {
             $sql="SELECT * FROM usuario";
             return ejecutarConsulta($sql);
+        }
+
+        //Metodo para corroborar que existe algun usuario
+        public function existe($correo)
+        {
+            $sql="SELECT EXISTS(
+                SELECT correo
+                FROM usuario
+                WHERE correo = '$correo')";
+            return ejecutarConsulta($sql);
+            //return $sql;
         }
     }
 ?>

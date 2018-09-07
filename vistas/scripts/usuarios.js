@@ -14,7 +14,6 @@ function init()
 //Funcion limpiar
 function limpiar()
 {
-    $("#idusuario").val("");
     $("#pwd").val("");
     $("#apellidop").val("");
     $("#apellidom").val("");
@@ -105,14 +104,13 @@ function guardaryeditar(e){
     limpiar();
 }
 
-function mostrar(idusuario)
+function mostrar(correo)
 {
-    $.post("../ajax/usuarios.php?op=mostrar",{idusuario:idusuario}, function(data, status)
+    $.post("../ajax/usuarios.php?op=mostrar",{correo:correo}, function(data, status)
         {
             data = JSON.parse(data);
             mostrarform(true);
 
-            $("#idusuario").val(data.idusuario);
             $("#pwd").val(data.pwd);
             $("#apellidop").val(data.apellidop);
             $("#apellidom").val(data.apellidom);
@@ -123,11 +121,11 @@ function mostrar(idusuario)
 }
 
 //Funcion para desactivar registros
-function desactivar(idusuario)
+function desactivar(correo)
 {
     if(confirm("¿Esta seguro de desactivar al usuario?"))
     {
-        $.post("../ajax/usuarios.php?op=desactivar",{idusuario : idusuario}, function(e){
+        $.post("../ajax/usuarios.php?op=desactivar",{correo : correo}, function(e){
             alert(e);
             tabla.ajax.reload();
         });
@@ -149,12 +147,12 @@ function desactivar(idusuario)
 }
 
 //Funcion para activar registros
-function activar(idusuario)
+function activar(correo)
 {
     if(confirm("¿Esta seguro de activar al usuario?"))
     {
 
-        $.post("../ajax/usuarios.php?op=activar",{idusuario : idusuario}, function(e){
+        $.post("../ajax/usuarios.php?op=activar",{correo : correo}, function(e){
             alert(e);
             tabla.ajax.reload();
         });

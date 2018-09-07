@@ -3,7 +3,6 @@
 
     $usuarios= new Usuarios();
 
-    $idusuario=isset($_POST["idusuario"])?limpiarCadena($_POST["idusuario"]):"";
     $pwd=isset($_POST["pwd"])?limpiarCadena($_POST["pwd"]):"";
     $apellidop=isset($_POST["apellidop"])?limpiarCadena($_POST["apellidop"]):"";
     $apellidom=isset($_POST["apellidom"])?limpiarCadena($_POST["apellidom"]):"";
@@ -16,28 +15,32 @@
 
         case 'guardaryeditar':
             # code...
-            if(empty($idusuario))
+            $existe=$usuarios->existe($correo);
+            echo empty($existe);
+            /*
+            if(empty($existe))
             {
-                echo empty($idusuario);
                 $rspta=$usuarios->insertar($pwd, $apellidop, $apellidom, $nombre, $correo);
-                echo $rspta?"Cuota registrada.":"Cuota no registrada.";
+                echo $rspta?"Cuenta registrada.":"Cuenta no registrada.";
             }
             else
             {
-                $rspta=$cuotas->editar($idusuario, $pwd, $apellidop, $apellidom, $nombre, $correo);
-                echo $rspta?"Cuota actualizada.":"Cuota no actualizada.";
+                $rspta=$usuarios->editar($pwd, $apellidop, $apellidom, $nombre, $correo);
+                echo $rspta?"Cuenta actualizada.":"Cuenta no actualizada.";
             }
+            */
+
         break;
 
         case 'desactivar':
             # code...
-            $rspta=$usuarios->desactivar($idusuario);
+            $rspta=$usuarios->desactivar($correo);
             echo $rspta?"Usuario Desactivado.":"Usuario no desactivado.";
             break;
 
         case 'activar':
             # code...
-            $rspta=$usuarios->activar($idusuario);
+            $rspta=$usuarios->activar($correo);
             echo $rspta?"Usuario activado.":"Usuario no activado.";
         break;
 
@@ -51,7 +54,7 @@
 
         case 'mostrar':
             # code...
-            $rspta=$usuarios->mostrar($idusuario);
+            $rspta=$usuarios->mostrar($correo);
             //Codificar el resultado utilizando json
             echo json_encode($rspta);
             break;
@@ -65,10 +68,10 @@
             while ($reg = $rspta->fetch_object()) {
                 $data[]=array(
                     
-                    "0"=>($reg->estado)?'<button class="btn btn-warning" onclick="mostrar('.$reg->idusuario.')"><i class="fa fa-pencil"></i></button>'." ".
-                                        '<button class="btn btn-danger" onclick="desactivar('.$reg->idusuario.')"><i class="fa fa-eye-slash"></i></button>':
-                                        '<button class="btn btn-warning" onclick="mostrar('.$reg->idusuario.')"><i class="fa fa-pencil"></i></button>'." ".
-                                        '<button class="btn btn-success" onclick="activar('.$reg->idusuario.')"><i class="fa fa-eye"></i></button>',
+                    "0"=>($reg->estado)?'<button class="btn btn-warning" onclick="mostrar(\''.$reg->correo.'\')"><i class="fa fa-pencil"></i></button>'.' '.
+                                        '<button class="btn btn-danger" onclick="desactivar(\''.$reg->correo.'\')"><i class="fa fa-eye-slash"></i></button>':
+                                        '<button class="btn btn-warning" onclick="mostrar(\''.$reg->correo.'\')"><i class="fa fa-pencil"></i></button>'.' '.
+                                        '<button class="btn btn-success" onclick="activar(\''.$reg->correo.'\')"><i class="fa fa-eye"></i></button>',
                     "1"=>$reg->correo,
                     "2"=>$reg->pwd,
                     "3"=>$reg->nombre,
