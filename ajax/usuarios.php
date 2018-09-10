@@ -19,7 +19,6 @@
             
             if(empty($oculto))
             {
-                ;
                 if($usuarios->existe($correo)<1)
                 {
                     $rspta=$usuarios->insertar($pwd, $apellidop, $apellidom, $nombre, $correo);
@@ -32,6 +31,7 @@
             }
             else
             {
+                //echo ($pwd.",". $apellidop.",".  $apellidom.",".  $nombre.",".  $correo);
                 $rspta=$usuarios->editar($pwd, $apellidop, $apellidom, $nombre, $correo);
                 echo $rspta?"Cuenta actualizada.":"Cuenta no actualizada.";
             }

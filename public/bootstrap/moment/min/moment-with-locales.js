@@ -14373,7 +14373,7 @@
         }
     });
 
-    hooks.locale('en');
+    hooks.locale('es');
 
     return hooks;
 

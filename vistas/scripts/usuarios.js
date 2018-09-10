@@ -20,7 +20,7 @@ function limpiar()
     $("#apellidom").val("");
     $("#nombre").val("");
     $("#correo").val("");
-    $("#correo").prop("disabled", false);
+    $("#correo").prop("readonly", false);
     $("#estado").val("1");
 }
 
@@ -32,13 +32,13 @@ function mostrarform(flag)
     {
         $("#listadoregistros").hide();
         $("#formularioregistros").show();
-        $("#btnGuardar").prop("disabled", false);
+        $("#btnGuardar").prop("readonly", false);
     }
     else
     {
         $("#listadoregistros").show();
         $("#formularioregistros").hide();
-        $("#btnGuardar").prop("disabled", false);
+        $("#btnGuardar").prop("readonly", false);
     }
 }
 
@@ -85,7 +85,7 @@ function listar()
 //Funcion para guardar o editar
 function guardaryeditar(e){
     e.preventDefault(); //No se activara la accion predeterminada del evento
-    $("#btnGuardar").prop("disabled",true);
+    $("#btnGuardar").prop("readonly",true);
     var formData = new FormData($("#formulario")[0]);
 
     $.ajax({
@@ -120,7 +120,7 @@ function mostrar(correo)
             $("#nombre").val(data.nombre);
             $("#correo").val(data.correo);
             $("#estado").val(data.estado);
-            $("#correo").prop("disabled", true);
+            $("#correo").prop("readonly", true);
         });
 }
 
