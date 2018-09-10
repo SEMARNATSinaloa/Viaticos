@@ -28,7 +28,7 @@
               <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                   <div class="box">
                     <div class="box-header with-border">
-                          <h1 class="box-title">Usuarios del Sistema <button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button></h1>
+                          <h1 class="box-title">Usuarios del Sistema <button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar Nuevo</button></h1>
                         <div class="box-tools pull-right">
                         </div>
                     </div>
@@ -63,6 +63,7 @@
                         <form name="formulario" id="formulario" method="POST">
                           <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <label>Nombre de Usuario:</label>
+                            <input type="hidden" name="oculto" id="oculto">
                             <div class="input-group">
                               <span class="input-group-addon"><i class="fa fa-user"></i></span>
                               <input type="text" class="form-control" name="correo" id="correo" maxlength="45" placeholder="alguien@semarnat.gob.mx" required>
@@ -72,7 +73,7 @@
                             <label>Contraseña:</label>
                             <div class="input-group">
                               <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                              <input type="password" class="form-control" name="pwd" id="pwd" maxlength="20" placeholder="Contraseña" required>
+                              <input type="password" class="form-control" name="pwd" id="pwd" maxlength="20" placeholder="Contraseña" required autocomplete="pwd">
                             </div>    
                           </div>
                           <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">

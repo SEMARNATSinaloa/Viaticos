@@ -57,12 +57,10 @@
         //Metodo para corroborar que existe algun usuario
         public function existe($correo)
         {
-            $sql="SELECT EXISTS(
-                SELECT correo
-                FROM usuario
-                WHERE correo = '$correo')";
-            return ejecutarConsulta($sql);
-            //return $sql;
+            $sql="SELECT correo FROM usuario WHERE correo = '$correo'";
+            
+            return mysqli_num_rows(ejecutarConsulta($sql));
+            //return $sql; 
         }
     }
 ?>

@@ -14,11 +14,13 @@ function init()
 //Funcion limpiar
 function limpiar()
 {
+    $("#oculto").val("");
     $("#pwd").val("");
     $("#apellidop").val("");
     $("#apellidom").val("");
     $("#nombre").val("");
     $("#correo").val("");
+    $("#correo").prop("disabled", false);
     $("#estado").val("1");
 }
 
@@ -36,7 +38,7 @@ function mostrarform(flag)
     {
         $("#listadoregistros").show();
         $("#formularioregistros").hide();
-        $("#btnGuardar").prop("disabled", true);
+        $("#btnGuardar").prop("disabled", false);
     }
 }
 
@@ -110,13 +112,15 @@ function mostrar(correo)
         {
             data = JSON.parse(data);
             mostrarform(true);
-
+            
+            $("#oculto").val(data.correo);
             $("#pwd").val(data.pwd);
             $("#apellidop").val(data.apellidop);
             $("#apellidom").val(data.apellidom);
             $("#nombre").val(data.nombre);
             $("#correo").val(data.correo);
             $("#estado").val(data.estado);
+            $("#correo").prop("disabled", true);
         });
 }
 

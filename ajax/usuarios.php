@@ -3,6 +3,7 @@
 
     $usuarios= new Usuarios();
 
+    $oculto=isset($_POST["oculto"])?limpiarCadena($_POST["oculto"]):"";
     $pwd=isset($_POST["pwd"])?limpiarCadena($_POST["pwd"]):"";
     $apellidop=isset($_POST["apellidop"])?limpiarCadena($_POST["apellidop"]):"";
     $apellidom=isset($_POST["apellidom"])?limpiarCadena($_POST["apellidom"]):"";
@@ -15,21 +16,25 @@
 
         case 'guardaryeditar':
             # code...
-            $existe=$usuarios->existe($correo);
-            echo empty($existe);
-            /*
-            if(empty($existe))
+            
+            if(empty($oculto))
             {
-                $rspta=$usuarios->insertar($pwd, $apellidop, $apellidom, $nombre, $correo);
-                echo $rspta?"Cuenta registrada.":"Cuenta no registrada.";
+                ;
+                if($usuarios->existe($correo)<1)
+                {
+                    $rspta=$usuarios->insertar($pwd, $apellidop, $apellidom, $nombre, $correo);
+                    echo $rspta?"Cuenta registrada.":"Cuenta no registrada.";
+                }
+                else
+                {
+                    echo "El usuario ya existe.";
+                }
             }
             else
             {
                 $rspta=$usuarios->editar($pwd, $apellidop, $apellidom, $nombre, $correo);
                 echo $rspta?"Cuenta actualizada.":"Cuenta no actualizada.";
             }
-            */
-
         break;
 
         case 'desactivar':
