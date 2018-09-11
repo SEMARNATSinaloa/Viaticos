@@ -35,7 +35,7 @@
                     <!-- /.box-header -->
                     <!-- centro -->
                     <div class="panel-body" id="formularioregistros">
-                        <form name="formulario" id="formulario" method="POST">
+                        <form name="formulario" id="formulario" method="POST" action="reportes/ofcomision.php"  target="_blank">
                         <div class="row">
                             <div class="col-lg-12 col-smd-12 col-sm-12 col-xs-12">
                                 <label for="departamento">Departamento: </label>
@@ -86,7 +86,7 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <label for="pais">Fechas de inicio: </label>
+                                <label for="fechainicio">Fechas de inicio: </label>
                                 <div class="input-group date">
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
@@ -95,7 +95,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <label for="pais">Fechas de fin: </label>
+                                <label for="fechafin">Fechas de fin: </label>
                                 <div class="input-group date">
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
@@ -104,7 +104,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <label for="municipio">Objetivo de la comisión: </label>
+                                <label for="objetivo">Objetivo de la comisión: </label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
                                     <textarea class="form-control" rows="3" name="objetivo" id="objetivo" placeholder="Objetivo de la comisión" required></textarea>
@@ -128,9 +128,9 @@
                         <div class="row">
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <br>
-                                <button class="btn btn-primary" type="submit" id="btnGuardar"><i class="fa fa-save"></i> Guardar</button>
+                                <button class="btn btn-primary" type="submit" id="btnImprimir"><i class="fa fa-print"></i> Imprimir</button>
 
-                                <button class="btn btn-danger" onclick="cancelarform()" type="button"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+                                <button class="btn btn-danger" onclick="cancelarform()" type="button"><i class="fa fa-eraser"></i> Borrar</button>
                             </div>
                         </div>
                         </form>
