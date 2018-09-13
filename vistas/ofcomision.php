@@ -35,104 +35,104 @@
                     <!-- /.box-header -->
                     <!-- centro -->
                     <div class="panel-body" id="formularioregistros">
-                        <form name="formulario" id="formulario" method="POST" action="reportes/ofcomision.php"  target="_blank">
-                        <div class="row">
-                            <div class="col-lg-12 col-smd-12 col-sm-12 col-xs-12">
-                                <label for="departamento">Departamento: </label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-institution"></i></span>
-                                    <input type="text" name="departamento" class="form-control" id="departamento" maxlength="45" placeholder="Departamento" required>
+                        <form name="formulario" id="formulario" action="reportes/ofcomision.php" method="POST">
+                            <div class="row">
+                                <div class="col-lg-12 col-smd-12 col-sm-12 col-xs-12">
+                                    <label for="departamento">Departamento: </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-institution"></i></span>
+                                        <input type="text" name="departamento" class="form-control" id="departamento" maxlength="60" placeholder="Departamento" required>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <label for="noficio">Número de oficio: </label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-book"></i></span>
-                                    <input type="text" name="noficio" class="form-control" id="noficio" maxlength="10" placeholder="Número de oficio" required>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="noficio">Número de oficio: </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-book"></i></span>
+                                        <input type="text" name="noficio" class="form-control" id="noficio" maxlength="20" placeholder="Número de oficio" required>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="nombre">Nombre del comisionado: </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-child"></i></span>
+                                        <input type="text" name="nombre" class="form-control" id="nombre" maxlength="60" placeholder="Nombre del comisionado" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="puesto">Puesto: </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-sitemap"></i></span>
+                                        <input type="text" name="puesto" class="form-control" id="puesto" maxlength="60" placeholder="Puesto" required>
+                                    </div>
                                 </div> 
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <label for="nombre">Nombre del comisionado: </label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-child"></i></span>
-                                    <input type="text" name="nombre" class="form-control" id="nombre" maxlength="45" placeholder="Nombre del comisionado" required>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <label for="puesto">Puesto: </label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-sitemap"></i></span>
-                                    <input type="text" name="puesto" class="form-control" id="puesto" maxlength="45" placeholder="Puesto" required>
-                                </div>
-                            </div> 
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <label for="destino">Destino de la comisión:</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-globe"></i></span>
-                                    <input type="text" name="destino" class="form-control" id="destino" maxlength="6" placeholder="Destino de la comisión" required>
-                                </div>
-                            </div> 
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <label for="duracion">Dias de duración: </label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
-                                    <input type="number" name="duracion" class="form-control" id="duracion" maxlength="6" min="1" placeholder="Dias que dura la comisión" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <label for="fechainicio">Fechas de inicio: </label>
-                                <div class="input-group date">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-calendar"></i>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="destino">Destino de la comisión:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-globe"></i></span>
+                                        <input type="text" name="destino" class="form-control" id="destino" maxlength="60" placeholder="Destino de la comisión" required>
                                     </div>
-                                    <input type="text" class="form-control pull-right" id="fechainicio" value='<?php echo date('d/m/Y')?>' required>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <label for="fechafin">Fechas de fin: </label>
-                                <div class="input-group date">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-calendar"></i>
+                                </div> 
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="duracion">Dias de duración: </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+                                        <input type="text" name="duracion" class="form-control" id="duracion" maxlength="6" placeholder="Dias que dura la comisión" required>
                                     </div>
-                                    <input type="text" class="form-control pull-right" id="fechafin" value='<?php echo date('d/m/Y')?>' required>
                                 </div>
                             </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <label for="objetivo">Objetivo de la comisión: </label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
-                                    <textarea class="form-control" rows="3" name="objetivo" id="objetivo" placeholder="Objetivo de la comisión" required></textarea>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="fechainicio">Fechas de inicio: </label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" class="form-control pull-right" name="fechainicio" id="fechainicio" value='<?php echo date('d/m/Y')?>' required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="fechafin">Fechas de fin: </label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" class="form-control pull-right" name="fechafin" id="fechafin" value='<?php echo date('d/m/Y')?>' required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label for="objetivo">Objetivo de la comisión: </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
+                                        <textarea class="form-control" rows="3" name="objetivo" id="objetivo" maxlength="500" placeholder="Objetivo de la comisión" required></textarea>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-smd-6 col-sm-12 col-xs-12">
-                                <label for="jefeinmediato">Jefe inmediato: </label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input type="text" name="jefeinmediato" class="form-control" id="jefeinmediato" maxlength="45" placeholder="Jefe inmediato" required>
-                                </div>
-                                <label for="puestojefe">Puesto del jefe: </label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-deviantart"></i></span>
-                                    <input type="text" name="puestojefe" class="form-control" id="puestojefe" maxlength="10" placeholder="Puesto del jefe inmediato" required>
+                            <div class="row">
+                                <div class="col-lg-6 col-smd-6 col-sm-12 col-xs-12">
+                                    <label for="jefeinmediato">Jefe inmediato: </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                        <input type="text" name="jefeinmediato" class="form-control" id="jefeinmediato" maxlength="60" placeholder="Jefe inmediato" required>
+                                    </div>
+                                    <label for="puestojefe">Puesto del jefe: </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-deviantart"></i></span>
+                                        <input type="text" name="puestojefe" class="form-control" id="puestojefe" maxlength="60" placeholder="Puesto del jefe inmediato" required>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <br>
-                                <button class="btn btn-primary" type="submit" id="btnImprimir"><i class="fa fa-print"></i> Imprimir</button>
+                            <div class="row">
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <br>
+                                    <button class="btn btn-primary" type="submit" id="btnImprimir" value="imprimir"><i class="fa fa-print"></i> Imprimir</button>
 
-                                <button class="btn btn-danger" onclick="cancelarform()" type="button"><i class="fa fa-eraser"></i> Borrar</button>
+                                    <button class="btn btn-danger" onclick="cancelarform()" type="button"><i class="fa fa-eraser"></i> Borrar</button>
+                                </div>
                             </div>
-                        </div>
                         </form>
                     </div>
                     <!--Fin centro -->
