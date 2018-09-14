@@ -14,12 +14,13 @@ function init()
 //Funcion limpiar
 function limpiar()
 {
-    $("#idusuario").val("");
+    $("#oculto").val("");
     $("#pwd").val("");
     $("#apellidop").val("");
     $("#apellidom").val("");
     $("#nombre").val("");
     $("#correo").val("");
+    $("#correo").prop("readonly", false);
     $("#estado").val("1");
 }
 
@@ -31,13 +32,13 @@ function mostrarform(flag)
     {
         $("#listadoregistros").hide();
         $("#formularioregistros").show();
-        $("#btnGuardar").prop("disabled", false);
+        $("#btnGuardar").prop("readonly", false);
     }
     else
     {
         $("#listadoregistros").show();
         $("#formularioregistros").hide();
-        $("#btnGuardar").prop("disabled", true);
+        $("#btnGuardar").prop("readonly", false);
     }
 }
 
@@ -84,7 +85,7 @@ function listar()
 //Funcion para guardar o editar
 function guardaryeditar(e){
     e.preventDefault(); //No se activara la accion predeterminada del evento
-    $("#btnGuardar").prop("disabled",true);
+    $("#btnGuardar").prop("readonly",true);
     var formData = new FormData($("#formulario")[0]);
 
     $.ajax({
@@ -105,29 +106,30 @@ function guardaryeditar(e){
     limpiar();
 }
 
-function mostrar(idusuario)
+function mostrar(correo)
 {
-    $.post("../ajax/usuarios.php?op=mostrar",{idusuario:idusuario}, function(data, status)
+    $.post("../ajax/usuarios.php?op=mostrar",{correo:correo}, function(data, status)
         {
             data = JSON.parse(data);
             mostrarform(true);
-
-            $("#idusuario").val(data.idusuario);
+            
+            $("#oculto").val(data.correo);
             $("#pwd").val(data.pwd);
             $("#apellidop").val(data.apellidop);
             $("#apellidom").val(data.apellidom);
             $("#nombre").val(data.nombre);
             $("#correo").val(data.correo);
             $("#estado").val(data.estado);
+            $("#correo").prop("readonly", true);
         });
 }
 
 //Funcion para desactivar registros
-function desactivar(idusuario)
+function desactivar(correo)
 {
     if(confirm("¿Esta seguro de desactivar al usuario?"))
     {
-        $.post("../ajax/usuarios.php?op=desactivar",{idusuario : idusuario}, function(e){
+        $.post("../ajax/usuarios.php?op=desactivar",{correo : correo}, function(e){
             alert(e);
             tabla.ajax.reload();
         });
@@ -149,12 +151,12 @@ function desactivar(idusuario)
 }
 
 //Funcion para activar registros
-function activar(idusuario)
+function activar(correo)
 {
     if(confirm("¿Esta seguro de activar al usuario?"))
     {
 
-        $.post("../ajax/usuarios.php?op=activar",{idusuario : idusuario}, function(e){
+        $.post("../ajax/usuarios.php?op=activar",{correo : correo}, function(e){
             alert(e);
             tabla.ajax.reload();
         });

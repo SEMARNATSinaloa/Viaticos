@@ -9882,7 +9882,7 @@
         }
     });
 
-    moment.locale('en');
+    moment.locale('es');
 
     return moment;
 
