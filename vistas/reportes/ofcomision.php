@@ -4,17 +4,17 @@
 
     setlocale(LC_ALL,"es_ES");
     //190px de ancho de la hoja con los margenes
-    $departamento=isset($_POST["departamento"])?$_POST["departamento"]:"oculto vacio";
-    $noficio=isset($_POST["noficio"])?$_POST["noficio"]:"pwd vacio";
-    $nombre=isset($_POST["nombre"])?$_POST["nombre"]:"apellidop vacio";
-    $puesto=isset($_POST["puesto"])?$_POST["puesto"]:"apellidom vacio";
-    $destino=isset($_POST["destino"])?$_POST["destino"]:"nombre vacio";
-    $duracion=isset($_POST["duracion"])?$_POST["duracion"]:"correo vacio";
-    $fechainicio=isset($_POST["fechainicio"])?$_POST["fechainicio"]:"estado vacio";
-    $fechafin=isset($_POST["fechafin"])?$_POST["fechafin"]:"estado vacio";
-    $objetivo=isset($_POST["objetivo"])?$_POST["objetivo"]:"estado vacio";
-    $jefeinmediato=isset($_POST["jefeinmediato"])?$_POST["jefeinmediato"]:"estado vacio";
-    $puestojefe=isset($_POST["puestojefe"])?$_POST["puestojefe"]:"estado vacio";
+    $departamento=isset($_POST["departamento"])?$_POST["departamento"]:"";
+    $noficio=isset($_POST["noficio"])?$_POST["noficio"]:"";
+    $nombre=isset($_POST["nombre"])?$_POST["nombre"]:"";
+    $puesto=isset($_POST["puesto"])?$_POST["puesto"]:"";
+    $destino=isset($_POST["destino"])?$_POST["destino"]:"";
+    $duracion=isset($_POST["duracion"])?$_POST["duracion"]:"";
+    $fechainicio=isset($_POST["fechainicio"])?$_POST["fechainicio"]:"";
+    $fechafin=isset($_POST["fechafin"])?$_POST["fechafin"]:"";
+    $objetivo=isset($_POST["objetivo"])?$_POST["objetivo"]:"";
+    $jefeinmediato=isset($_POST["jefeinmediato"])?$_POST["jefeinmediato"]:"";
+    $puestojefe=isset($_POST["puestojefe"])?$_POST["puestojefe"]:"";
     $cierreoficio="Asimismo, solicito presente su informe de comisión y entregue el ".
                     "residual del boleto de avión, los pases de abordar, la comprobación documental ".
                     "de su comisión, segun sea el caso, en un lapso no mayor a 6 días hábiles posteriores ".

@@ -144,7 +144,7 @@
                 <div class="tab-pane" id="glyphicons">
                     <!-- centro -->
                     <div class="panel-body" id="formularioMinistracion">
-                        <form name="formofministracion" id="formofministracion" action="reportes/ofcomision.php" method="POST" target="_blank">
+                        <form name="formofministracion" id="formofministracion" action="reportes/ministracion.php" method="POST" target="_blank">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <label for="noficio">Número del oficio de comisión: </label>
@@ -241,17 +241,17 @@
                                     <table id="mediotransporte">
                                         <td>
                                             <label>
-                                            <input type="radio" name="transporte" value="Base" class="minimal" checked>Avión</label>
+                                            <input type="radio" name="transporte" value="Avión" class="minimal" checked>Avión</label>
                                         </td>
                                         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
                                         <td>
                                             <label>
-                                            <input type="radio" name="transporte" value="Confianza" class="minimal">Autobús</label>
+                                            <input type="radio" name="transporte" value="Autobús" class="minimal">Autobús</label>
                                         </td>
                                         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
                                         <td>
                                             <label>
-                                            <input type="radio" name="transporte" value="Confianza" class="minimal">Automóvil</label>
+                                            <input type="radio" name="transporte" value="Automóvil" class="minimal">Automóvil</label>
                                         </td>
                                     </table>
                                 </div>
