@@ -17,12 +17,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="../public/bootstrap/Ionicons/css/ionicons.min.css">
   <!-- daterange picker -->
   <link rel="stylesheet" href="../public/bootstrap/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="../public/plugins/iCheck/all.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../public/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" href="../public/css/skins/skin-blue.min.css">
+
   <link rel="stylesheet" href="../public/css/viaticos.css">
 
   <!-- DATATABLES 

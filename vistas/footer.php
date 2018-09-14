@@ -102,6 +102,8 @@
 <script src="../public/bootstrap/buttons/js/dataTables.buttons.min.js"></script>
 <script src="../public/bootstrap/buttons/js/buttons.html5.min.js"></script>
 <script src="../public/bootstrap/buttons/js/buttons.colVis.min.js"></script>
+<!-- iCheck 1.0.1 -->
+<script src="../public/plugins/iCheck/icheck.min.js"></script>
 
 <script src="../public/bootstrap/jszip/jszip.min.js"></script>
 <script src='../public/plugins/DataTables/pdfmake-0.1.36/pdfmake.min.js'></script>

@@ -16,32 +16,36 @@ function init()
       })
 
     $('#fechafin').datepicker({
-    autoclose: true,
-    language: 'es'
+        autoclose: true,
+        language: 'es'
     })
 
-}
+    $('#fechaof').datepicker({
+        autoclose: true,
+        language: 'es',
+        orientation: "bottom"
+    })
 
-//Funcion cancelarform
-function cancelarform()
-{
-    limpiar();
-}
+    $('#fechacoinicio').datepicker({
+        autoclose: true,
+        language: 'es',
+        //orientation: "bottom"
+    })
 
-//Funcion limpiar
-function limpiar()
-{
-    $("#departamento").val("");
-    $("#noficio").val("");
-    $("#nombre").val("");
-    $("#puesto").val("");
-    $("#destino").val("");
-    $("#duracion").val("");
-    $("#fechainicio").val("");
-    $("#fechafin").val("");
-    $("#objetivo").val("");
-    $("#jefeinmediato").val("");
-    $("#puestojefe").val("");
+    $('#fechacofin').datepicker({
+        autoclose: true,
+        language: 'es',
+        //orientation: "bottom"
+    })
+
+    //iCheck for checkbox and radio inputs
+    //$('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+        checkboxClass: 'icheckbox_minimal-blue',
+        radioClass   : 'iradio_minimal-blue'
+    })
+
+
 }
 
 //Funcion para guardar o editar
@@ -65,5 +69,7 @@ function guardaryeditar(e){
 */
     limpiar();
 }
+
+
 
 init();
