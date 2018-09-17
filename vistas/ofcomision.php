@@ -207,8 +207,8 @@
                                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                         <input type="text" name="puesto" class="form-control" id="puesto" maxlength="60" placeholder="Puesto" required>
                                     </div>
-                            </div> 
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                </div> 
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <label for="">Categoria: </label>
                                     <table id="tipopersona">
                                         <td>
@@ -222,6 +222,13 @@
                                         </td>
                                     </table>
                                 </div>
+                                <div class="col-lg-6 col-smd-6 col-sm-12 col-xs-12">
+                                    <label for="adscripcion">Área de adscripción: </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                        <input type="text" name="adscripcion" class="form-control" id="adscripcion" maxlength="60" placeholder="Área de adscripción" required>
+                                    </div>
+                                </div> 
                             </div>
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -288,7 +295,7 @@
                                     <label for="cuota">Cuota Diaria: </label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-money"></i></span>
-                                        <input type="number" name="cuota" class="form-control" id="cuota" maxlength="10" placeholder="Cuota diaria" required>
+                                        <input type="number" name="cuota" class="form-control" step=".01" id="cuota" maxlength="10" placeholder="Cuota diaria" required>
                                     </div>
                                 </div>
                             </div>
@@ -297,7 +304,7 @@
                                     <label for="duracion">Dias de duración: </label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
-                                        <input type="number" name="duracion" class="form-control" id="duracion" maxlength="6" placeholder="Dias que dura la comisión" required>
+                                        <input type="number" name="duracion" class="form-control" step=".01" id="duracion" maxlength="6" placeholder="Dias que dura la comisión" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">

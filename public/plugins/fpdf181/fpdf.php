@@ -69,6 +69,7 @@ protected $PDFVersion;         // PDF version number
 
 var $widths;
 var $aligns;
+var $border;
 
 /*******************************************************************************
 *                               Public methods                                 *
@@ -1912,6 +1913,12 @@ function SetAligns($a)
     $this->aligns=$a;
 }
 
+function SetBorder($bb)
+{
+    //Set the array of column alignments
+    $this->border=$bb;
+}
+
 function Row($data)
 {
     //Calculate the height of the row
@@ -1928,9 +1935,13 @@ function Row($data)
         $a=isset($this->aligns[$i]) ? $this->aligns[$i] : 'L';
         //Save the current position
         $x=$this->GetX();
-        $y=$this->GetY();
-        //Draw the border
-        //$this->Rect($x,$y,$w,$h);
+		$y=$this->GetY();
+		$dd=$this->border[$i];
+		if($dd==1)
+		{
+        	//Draw the border
+        	$this->Rect($x,$y,$w,$h);
+		}
         //Print the text
         $this->MultiCell($w,5,$data[$i],0,$a);
         //Put the position to the right of the cell
