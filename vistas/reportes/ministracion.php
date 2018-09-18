@@ -2,13 +2,30 @@
 require('../../public/plugins/fpdf181/fpdf.php');
 setlocale(LC_ALL,"es_ES");
 
+//Implementamos un metodo para editar los registros
+function acompletar($dato)
+{
+    $tamaño = strlen($dato);
+    //echo($tamaño);
+    if($tamaño<60)
+    {
+        //$tamaño=60-$tamaño;
+        //echo($tamaño);
+        //for($tamaño;$tamaño<60;$tamaño++)
+        //{
+            $dato=$dato."\n";
+        //}
+    }
+    return $dato;
+}
+
 $noficio=isset($_POST["noficio"])?$_POST["noficio"]:"Error";
 $fechaof=isset($_POST["fechaof"])?$_POST["fechaof"]:"Error";
 $folio=isset($_POST["folio"])?$_POST["folio"]:"Error";
 $clavep=isset($_POST["clavep"])?$_POST["clavep"]:"Error";
-$nombre=isset($_POST["nombre"])?$_POST["nombre"]:"Error";
+$nombre=isset($_POST["nombre"])?acompletar($_POST["nombre"]):"Error";
 $nivel=isset($_POST["nivel"])?$_POST["nivel"]:"Error";
-$puesto=isset($_POST["puesto"])?$_POST["puesto"]:"Error";
+$puesto=isset($_POST["puesto"])?acompletar($_POST["puesto"]):"Error";
 $base=isset($_POST["base"])?$_POST["base"]:"Error";
 $lugar=isset($_POST["lugar"])?$_POST["lugar"]:"Error";
 $transporte=isset($_POST["transporte"])?$_POST["transporte"]:"Error";
@@ -19,9 +36,13 @@ $cuota=isset($_POST["cuota"])?$_POST["cuota"]:"Error";
 $duracion=isset($_POST["duracion"])?$_POST["duracion"]:"Error";
 $importe=isset($_POST["importe"])?$_POST["importe"]:"Error";
 $objetivo=isset($_POST["objetivo"])?$_POST["objetivo"]:"Error";
-$autorizador=isset($_POST["autorizador"])?$_POST["autorizador"]:"Error";
-$puestojefe=isset($_POST["puestojefe"])?$_POST["puestojefe"]:"Error";
+$jefei=isset($_POST["jefei"])?acompletar($_POST["jefei"]):"Error";
+$puestojefei=isset($_POST["puestojefei"])?acompletar($_POST["puestojefei"]):"Error";
+$autorizador=isset($_POST["autorizador"])?acompletar($_POST["autorizador"]):"Error";
+$puestojefe=isset($_POST["puestojefe"])?acompletar($_POST["puestojefe"]):"Error";
 $adscripcion=isset($_POST["adscripcion"])?$_POST["adscripcion"]:"Error";
+$delegado=acompletar($delegado="Jorge Abel Lopez Sanchez \r Delegado Federal de la SEMARNAT \n \n ");
+
 
 
 $pdf = new FPDF();
@@ -142,37 +163,57 @@ $importe=$cuota*$duracion;
 $pdf->SetFont('Arial','B',11);
 $pdf->Row(array('LUGAR Y PERIODO DE LA COMISIÓN','TARIFA Y NIVEL','CUOTA DIARIA','DIAS','IMPORTE $(pesos)'));
 $pdf->SetFont('Arial','',9);
-$pdf->Row(array($lugar.', del '.$fechacoinicio.' al '.$fechacofin,$nivel,$cuota,$duracion, $importe ));
+$pdf->Row(array($lugar.', del '.$fechacoinicio.' al '.$fechacofin,$nivel,number_format($cuota, 2, '.', ' '),$duracion, number_format($importe, 2, '.', ' ') ));
 //for($i=0;$i<4;$i++)
 $pdf->Row(array('','','','',''));
 
 $pdf->Cell(157,10,'REALMENTE GASTADO',1,0,'R');
-$pdf->Cell(29,10,'$ '.$importe,1,1,'C');
+$pdf->Cell(29,10,'$ '.number_format($importe, 2, '.', ' '),1,1,'C');
+
+$pdf->SetXY(10,195);
+$pdf->Cell(50,30,'',1,0,'C');
+$pdf->Cell(136,30,'',1,0,'C');
+$pdf->SetXY(10,195);
+
 $pdf->SetWidths(array(50,136));
-$pdf->SetBorder(array(1,1));
+$pdf->SetBorder(array(0,0));
 $pdf->SetAligns(array('C','L'));
 $pdf->Row(array('Motivo de la comisión:', $objetivo));
+
+
 $pdf->SetXY(10,230);
-$pdf->Cell(62,10,'COMISIONADO(A)','LTR',0,'C');
-$pdf->Cell(62,10,'Vo.Bo.','LTR',0,'C');
-$pdf->Cell(62,10,'AUTORIZA','LTR',1,'C');
-$pdf->Cell(10,20,'','L',0,'C');
-$pdf->Cell(42,20,'','B',0,'C');
-$pdf->Cell(10,20,'','R',0,'C');
-$pdf->Cell(10,20,'','L',0,'C');
-$pdf->Cell(42,20,'','B',0,'C');
-$pdf->Cell(10,20,'','R',0,'C');
-$pdf->Cell(10,20,'','L',0,'C');
-$pdf->Cell(42,20,'','B',0,'C');
-$pdf->Cell(10,20,'','R',1,'C');
+$pdf->Cell(46.5,10,'COMISIONADO(A)','LTR',0,'C');
+$pdf->Cell(46.5,10,'JEFE INMEDIATO','LTR',0,'C');
+$pdf->Cell(46.5,10,'Vo.Bo.','LTR',0,'C');
+$pdf->Cell(46.5,10,'AUTORIZA','LTR',1,'C');
+$pdf->Cell(4.75,20,'','L',0,'C');
+$pdf->Cell(37,20,'','B',0,'C');
+$pdf->Cell(4.75,20,'','R',0,'C');
+$pdf->Cell(4.75,20,'','L',0,'C');
+$pdf->Cell(37,20,'','B',0,'C');
+$pdf->Cell(4.75,20,'','R',0,'C');
+$pdf->Cell(4.75,20,'','L',0,'C');
+$pdf->Cell(37,20,'','B',0,'C');
+$pdf->Cell(4.75,20,'','R',0,'C');
+$pdf->Cell(4.75,20,'','L',0,'C');
+$pdf->Cell(37,20,'','B',0,'C');
+$pdf->Cell(4.75,20,'','R',1,'C');
+
 
 //$pdf->SetXY(32,250);
-$pdf->MultiCell(62,5,$nombre."\n".$puesto,'LBR','C');
-$pdf->SetXY(72,260);
-$pdf->MultiCell(62,5,$autorizador."\n".$puestojefe."\n ",'LBR','C');
-$pdf->SetXY(134,260);
-$pdf->MultiCell(62,5,"Jorge Abel Lopez Sanchez \n Delegado Federal de la SEMARNAT \n \n ",'LBR','C');
+$pdf->MultiCell(46.5,5,$nombre."\r".$puesto,0,'C');
+$pdf->SetXY(56.5,260);
+$pdf->MultiCell(46.5,5,$jefei."\r".$puestojefei,0,'C');
+$pdf->SetXY(103,260);
+$pdf->MultiCell(46.5,5,$autorizador."\r".$puestojefe,0,'C');
+$pdf->SetXY(149.5,260);
+$pdf->MultiCell(46.5,5,$delegado,0,'C');
 
+$pdf->SetXY(10,260);
+$pdf->Cell(46.5,30,"",'LBR',0,"C");
+$pdf->Cell(46.5,30,"",'LBR',0,"C");
+$pdf->Cell(46.5,30,"",'LBR',0,"C");
+$pdf->Cell(46.5,30,"",'LBR',0,"C");
 
 $pdf->Output();
 ?>

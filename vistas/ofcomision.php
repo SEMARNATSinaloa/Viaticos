@@ -328,17 +328,33 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="jefei">Jefe inmediato: </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-check-square-o"></i></span>
+                                        <input type="text" name="jefei" class="form-control" id="jefei" maxlength="60" placeholder="Jefe inmediato" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="puestojefei">Puesto del jefe inmediato: </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-shirtsinbulk"></i></span>
+                                        <input type="text" name="puestojefei" class="form-control" id="puestojefei" maxlength="60" placeholder="Puesto del jefe inmediato" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <label for="autorizador">Autoriosa y/o Visto bueno: </label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-check-square-o"></i></span>
-                                        <input type="text" name="autorizador" class="form-control" id="autorizador" maxlength="6" placeholder="Autoriza y/o Visto bueno" value="Lic. Eduardo Urizabel Luque" required>
+                                        <input type="text" name="autorizador" class="form-control" id="autorizador" maxlength="60" placeholder="Autoriza y/o Visto bueno" value="Lic. Eduardo Urizabel Luque" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <label for="puestojefe">Puesto: </label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-shirtsinbulk"></i></span>
-                                        <input type="text" name="puestojefe" class="form-control" id="puestojefe" maxlength="10" placeholder="Puesto" value="Jefe de Departamento de Recursos Humanos, Materiales y Servicios" required>
+                                        <input type="text" name="puestojefe" class="form-control" id="puestojefe" maxlength="60" placeholder="Puesto" value="Jefe de Departamento de Recursos Humanos, Materiales y Servicios" required>
                                     </div>
                                 </div>
                             </div>
