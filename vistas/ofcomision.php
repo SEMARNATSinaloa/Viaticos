@@ -222,6 +222,8 @@
                                         </td>
                                     </table>
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-lg-6 col-smd-6 col-sm-12 col-xs-12">
                                     <label for="adscripcion">Área de adscripción: </label>
                                     <div class="input-group">
