@@ -38,6 +38,18 @@ function init()
         //orientation: "bottom"
     })
 
+    $('#fechamininicio').datepicker({
+        autoclose: true,
+        language: 'es',
+        //orientation: "bottom"
+    })
+
+    $('#fechaminfin').datepicker({
+        autoclose: true,
+        language: 'es',
+        //orientation: "bottom"
+    })
+
     //iCheck for checkbox and radio inputs
     //$('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
     $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
@@ -45,6 +57,17 @@ function init()
         radioClass   : 'iradio_minimal-blue'
     })
 
+    //when the Add Field button is clicked
+    $("#add").click(function (e) {
+        e.preventDefault();
+        //Append a new row of code to the "#items" div
+        $("#items").append('asdf'); 
+       });
+
+    $("body").on("click", ".delete", function (e) {
+        e.preventDefault();
+        this.parent("div").remove();
+    });
 
 }
 
