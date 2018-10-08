@@ -8,4 +8,6 @@ input[type=number] {
     -moz-appearance:textfield;
 }
 
-
+.motivos{
+    /*display: inline-flex;*/
+}
