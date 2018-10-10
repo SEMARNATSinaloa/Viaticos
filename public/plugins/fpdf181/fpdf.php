@@ -2009,6 +2009,14 @@ function NbLines($w,$txt)
     return $nl;
 }
 
+function SetDash($black=false, $white=false)
+{
+	if($black and $white)
+		$s=sprintf('[%.3f %.3f] 0 d', $black*$this->k, $white*$this->k);
+	else
+		$s='[] 0 d';
+	$this->_out($s);
+}
 
 
 }

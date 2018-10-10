@@ -118,25 +118,25 @@
                                         <!-- select -->
                                         <div class="form-group">
                                             <select class="form-control" name="just1">
-                                                <option>Retardo 1</option>
-                                                <option>Retardo 2</option>
-                                                <option>Retardo 3</option>
-                                                <option>Comisión Sindical</option>
-                                                <option>Comisión Interna</option>
-                                                <option>Comisión Externa</option>
-                                                <option>Cuidados Maternos</option>
-                                                <option>Dia Económico</option>
-                                                <option>Licencia Medica</option>
-                                                <option>Onomastico</option>
-                                                <option>Falta Retardo</option>
-                                                <option>Salida Anticipada</option>
-                                                <option>Matrimonio</option>
-                                                <option>Defunción Familiar Directo</option>
-                                                <option>Vacaciones Extraordinarias Trimestrales</option>
-                                                <option>Vacaciones Extraordinarias Antigüedad</option>
-                                                <option>Vacaciones Extraordinarias Estimulos y Recompensas</option>
-                                                <option>Favilidades Administrativas</option>
-                                                <option>Nacimiento Hijo/a</option>
+                                                <option value="01-Retardo 1">Retardo 1</option>
+                                                <option value="02-Retardo 2">Retardo 2</option>
+                                                <option value="03-Retardo 3">Retardo 3</option>
+                                                <option value="04-Comisión Sindical">Comisión Sindical</option>
+                                                <option value="05-Comisión Interna">Comisión Interna</option>
+                                                <option value="06-Comisión Externa">Comisión Externa</option>
+                                                <option value="07-Cuidados Maternos">Cuidados Maternos</option>
+                                                <option value="08-Dia Económico">Dia Económico</option>
+                                                <option value="09-Licencia Medica">Licencia Medica</option>
+                                                <option value="10-Onomastico">Onomastico</option>
+                                                <option value="11-Falta Retardo">Falta Retardo</option>
+                                                <option value="12-Salida Anticipada">Salida Anticipada</option>
+                                                <option value="13-Matrimonio">Matrimonio</option>
+                                                <option value="14-Defunción Familiar Directo">Defunción Familiar Directo</option>
+                                                <option value="15-Vacaciones Extraordinarias Trimestrales">Vacaciones Extraordinarias Trimestrales</option>
+                                                <option value="16-Vacaciones Extraordinarias Antigüedad">Vacaciones Extraordinarias Antigüedad</option>
+                                                <option value="17-Vacaciones Extraordinarias Estimulos y Recompensas">Vacaciones Extraordinarias Estimulos y Recompensas</option>
+                                                <option value="18-Favilidades Administrativas">Favilidades Administrativas</option>
+                                                <option value="19-Nacimiento Hijo/a">Nacimiento Hijo/a</option>
                                             </select>
                                         </div>
                                     </div>
@@ -147,7 +147,7 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input type="text" class="form-control pull-right" name="just1fin" id="just1fin" value='<?php echo date('d/m/Y')?>' required>
+                                        <input type="text" class="form-control pull-right" name="just1fin" id="just1fin" required>
                                     </div>
                                 </div>
                                 <div>
@@ -156,7 +156,7 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input type="text" class="form-control pull-right" name="just1ffin" id="just1ffin" value='<?php echo date('d/m/Y')?>' required>
+                                        <input type="text" class="form-control pull-right" name="just1ffin" id="just1ffin" required>
                                     </div>
                                 </div>
                             </div>
@@ -168,25 +168,26 @@
                                         <!-- select -->
                                         <div class="form-group">
                                             <select class="form-control" name="just2">
-                                                <option>Retardo 1</option>
-                                                <option>Retardo 2</option>
-                                                <option>Retardo 3</option>
-                                                <option>Comisión Sindical</option>
-                                                <option>Comisión Interna</option>
-                                                <option>Comisión Externa</option>
-                                                <option>Cuidados Maternos</option>
-                                                <option>Dia Económico</option>
-                                                <option>Licencia Medica</option>
-                                                <option>Onomastico</option>
-                                                <option>Falta Retardo</option>
-                                                <option>Salida Anticipada</option>
-                                                <option>Matrimonio</option>
-                                                <option>Defunción Familiar Directo</option>
-                                                <option>Vacaciones Extraordinarias Trimestrales</option>
-                                                <option>Vacaciones Extraordinarias Antigüedad</option>
-                                                <option>Vacaciones Extraordinarias Estimulos y Recompensas</option>
-                                                <option>Favilidades Administrativas</option>
-                                                <option>Nacimiento Hijo/a</option>
+                                                <option value="-"></option>
+                                                <option value="01-Retardo 1">Retardo 1</option>
+                                                <option value="02-Retardo 2">Retardo 2</option>
+                                                <option value="03-Retardo 3">Retardo 3</option>
+                                                <option value="04-Comisión Sindical">Comisión Sindical</option>
+                                                <option value="05-Comisión Interna">Comisión Interna</option>
+                                                <option value="06-Comisión Externa">Comisión Externa</option>
+                                                <option value="07-Cuidados Maternos">Cuidados Maternos</option>
+                                                <option value="08-Dia Económico">Dia Económico</option>
+                                                <option value="09-Licencia Medica">Licencia Medica</option>
+                                                <option value="10-Onomastico">Onomastico</option>
+                                                <option value="11-Falta Retardo">Falta Retardo</option>
+                                                <option value="12-Salida Anticipada">Salida Anticipada</option>
+                                                <option value="13-Matrimonio">Matrimonio</option>
+                                                <option value="14-Defunción Familiar Directo">Defunción Familiar Directo</option>
+                                                <option value="15-Vacaciones Extraordinarias Trimestrales">Vacaciones Extraordinarias Trimestrales</option>
+                                                <option value="16-Vacaciones Extraordinarias Antigüedad">Vacaciones Extraordinarias Antigüedad</option>
+                                                <option value="17-Vacaciones Extraordinarias Estimulos y Recompensas">Vacaciones Extraordinarias Estimulos y Recompensas</option>
+                                                <option value="18-Favilidades Administrativas">Favilidades Administrativas</option>
+                                                <option value="19-Nacimiento Hijo/a">Nacimiento Hijo/a</option>
                                             </select>
                                         </div>
                                     </div>
@@ -197,7 +198,7 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input type="text" class="form-control pull-right" name="just2fin" id="just2fin" value='<?php echo date('d/m/Y')?>' required>
+                                        <input type="text" class="form-control pull-right" name="just2fin" id="just2fin">
                                     </div>
                                 </div>
                                 <div>
@@ -206,7 +207,7 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input type="text" class="form-control pull-right" name="just2ffin" id="just2ffin" value='<?php echo date('d/m/Y')?>' required>
+                                        <input type="text" class="form-control pull-right" name="just2ffin" id="just2ffin">
                                     </div>
                                 </div>
                             </div>
@@ -218,25 +219,26 @@
                                         <!-- select -->
                                         <div class="form-group">
                                             <select class="form-control" name="just3">
-                                                <option>Retardo 1</option>
-                                                <option>Retardo 2</option>
-                                                <option>Retardo 3</option>
-                                                <option>Comisión Sindical</option>
-                                                <option>Comisión Interna</option>
-                                                <option>Comisión Externa</option>
-                                                <option>Cuidados Maternos</option>
-                                                <option>Dia Económico</option>
-                                                <option>Licencia Medica</option>
-                                                <option>Onomastico</option>
-                                                <option>Falta Retardo</option>
-                                                <option>Salida Anticipada</option>
-                                                <option>Matrimonio</option>
-                                                <option>Defunción Familiar Directo</option>
-                                                <option>Vacaciones Extraordinarias Trimestrales</option>
-                                                <option>Vacaciones Extraordinarias Antigüedad</option>
-                                                <option>Vacaciones Extraordinarias Estimulos y Recompensas</option>
-                                                <option>Favilidades Administrativas</option>
-                                                <option>Nacimiento Hijo/a</option>
+                                                <option value="-"></option>
+                                                <option value="01-Retardo 1">Retardo 1</option>
+                                                <option value="02-Retardo 2">Retardo 2</option>
+                                                <option value="03-Retardo 3">Retardo 3</option>
+                                                <option value="04-Comisión Sindical">Comisión Sindical</option>
+                                                <option value="05-Comisión Interna">Comisión Interna</option>
+                                                <option value="06-Comisión Externa">Comisión Externa</option>
+                                                <option value="07-Cuidados Maternos">Cuidados Maternos</option>
+                                                <option value="08-Dia Económico">Dia Económico</option>
+                                                <option value="09-Licencia Medica">Licencia Medica</option>
+                                                <option value="10-Onomastico">Onomastico</option>
+                                                <option value="11-Falta Retardo">Falta Retardo</option>
+                                                <option value="12-Salida Anticipada">Salida Anticipada</option>
+                                                <option value="13-Matrimonio">Matrimonio</option>
+                                                <option value="14-Defunción Familiar Directo">Defunción Familiar Directo</option>
+                                                <option value="15-Vacaciones Extraordinarias Trimestrales">Vacaciones Extraordinarias Trimestrales</option>
+                                                <option value="16-Vacaciones Extraordinarias Antigüedad">Vacaciones Extraordinarias Antigüedad</option>
+                                                <option value="17-Vacaciones Extraordinarias Estimulos y Recompensas">Vacaciones Extraordinarias Estimulos y Recompensas</option>
+                                                <option value="18-Favilidades Administrativas">Favilidades Administrativas</option>
+                                                <option value="19-Nacimiento Hijo/a">Nacimiento Hijo/a</option>
                                             </select>
                                         </div>
                                     </div>
@@ -247,7 +249,7 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input type="text" class="form-control pull-right" name="just3fin" id="just3fin" value='<?php echo date('d/m/Y')?>' required>
+                                        <input type="text" class="form-control pull-right" name="just3fin" id="just3fin">
                                     </div>
                                 </div>
                                 <div>
@@ -256,7 +258,7 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input type="text" class="form-control pull-right" name="just3ffin" id="just3ffin" value='<?php echo date('d/m/Y')?>' required>
+                                        <input type="text" class="form-control pull-right" name="just3ffin" id="just3ffin">
                                     </div>
                                 </div>
                             </div>
@@ -268,25 +270,26 @@
                                         <!-- select -->
                                         <div class="form-group">
                                             <select class="form-control" name="just4">
-                                                <option>Retardo 1</option>
-                                                <option>Retardo 2</option>
-                                                <option>Retardo 3</option>
-                                                <option>Comisión Sindical</option>
-                                                <option>Comisión Interna</option>
-                                                <option>Comisión Externa</option>
-                                                <option>Cuidados Maternos</option>
-                                                <option>Dia Económico</option>
-                                                <option>Licencia Medica</option>
-                                                <option>Onomastico</option>
-                                                <option>Falta Retardo</option>
-                                                <option>Salida Anticipada</option>
-                                                <option>Matrimonio</option>
-                                                <option>Defunción Familiar Directo</option>
-                                                <option>Vacaciones Extraordinarias Trimestrales</option>
-                                                <option>Vacaciones Extraordinarias Antigüedad</option>
-                                                <option>Vacaciones Extraordinarias Estimulos y Recompensas</option>
-                                                <option>Favilidades Administrativas</option>
-                                                <option>Nacimiento Hijo/a</option>
+                                                <option value="-"></option>
+                                                <option value="01-Retardo 1">Retardo 1</option>
+                                                <option value="02-Retardo 2">Retardo 2</option>
+                                                <option value="03-Retardo 3">Retardo 3</option>
+                                                <option value="04-Comisión Sindical">Comisión Sindical</option>
+                                                <option value="05-Comisión Interna">Comisión Interna</option>
+                                                <option value="06-Comisión Externa">Comisión Externa</option>
+                                                <option value="07-Cuidados Maternos">Cuidados Maternos</option>
+                                                <option value="08-Dia Económico">Dia Económico</option>
+                                                <option value="09-Licencia Medica">Licencia Medica</option>
+                                                <option value="10-Onomastico">Onomastico</option>
+                                                <option value="11-Falta Retardo">Falta Retardo</option>
+                                                <option value="12-Salida Anticipada">Salida Anticipada</option>
+                                                <option value="13-Matrimonio">Matrimonio</option>
+                                                <option value="14-Defunción Familiar Directo">Defunción Familiar Directo</option>
+                                                <option value="15-Vacaciones Extraordinarias Trimestrales">Vacaciones Extraordinarias Trimestrales</option>
+                                                <option value="16-Vacaciones Extraordinarias Antigüedad">Vacaciones Extraordinarias Antigüedad</option>
+                                                <option value="17-Vacaciones Extraordinarias Estimulos y Recompensas">Vacaciones Extraordinarias Estimulos y Recompensas</option>
+                                                <option value="18-Favilidades Administrativas">Favilidades Administrativas</option>
+                                                <option value="19-Nacimiento Hijo/a">Nacimiento Hijo/a</option>
                                             </select>
                                         </div>
                                     </div>
@@ -297,7 +300,7 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input type="text" class="form-control pull-right" name="just4fin" id="just4fin" value='<?php echo date('d/m/Y')?>' required>
+                                        <input type="text" class="form-control pull-right" name="just4fin" id="just4fin">
                                     </div>
                                 </div>
                                 <div>
@@ -306,7 +309,7 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input type="text" class="form-control pull-right" name="just4ffin" id="just4ffin" value='<?php echo date('d/m/Y')?>' required>
+                                        <input type="text" class="form-control pull-right" name="just4ffin" id="just4ffin">
                                     </div>
                                 </div>
                             </div>
@@ -315,7 +318,7 @@
                                     <label for="motivo">Motivo de la justificación: </label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
-                                        <textarea class="form-control" rows="3" name="motivo" id="motivo" maxlength="500" placeholder="Motivo de la justificación" required></textarea>
+                                        <textarea class="form-control" rows="3" name="motivo" id="motivo" maxlength="240" placeholder="Motivo de la justificación" required></textarea>
                                     </div>
                                 </div>
                             </div>
