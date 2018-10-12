@@ -96,7 +96,7 @@ $pdf->Ln(8);
 
 $pdf->SetFont('Arial','B', 7);
 $pdf->Cell(35, 5, 'CLAVE:', 0, 0,  'C');
-$pdf->Cell(90, 5, 'CONFIANZA:', 0, 0,  'C');
+$pdf->Cell(90, 5, 'DESCRIPCIÓN:', 0, 0,  'C');
 $pdf->Cell(65, 5, 'FECHA:', 0, 0,  'C');
 
 $pdf->Ln(5);
@@ -249,7 +249,7 @@ $pdf->Ln(8);
 
 $pdf->SetFont('Arial','B', 7);
 $pdf->Cell(35, 5, 'CLAVE:', 0, 0,  'C');
-$pdf->Cell(90, 5, 'CONFIANZA:', 0, 0,  'C');
+$pdf->Cell(90, 5, 'DESCRIPCIÓN:', 0, 0,  'C');
 $pdf->Cell(65, 5, 'FECHA:', 0, 0,  'C');
 
 $pdf->Ln(5);

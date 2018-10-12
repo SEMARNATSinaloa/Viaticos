@@ -72,11 +72,11 @@ desired effect
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="fuji.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>SMA</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>SEMARNAT</b> Sinaloa</span>
     </a>
 
     <!-- Header Navbar -->
@@ -104,7 +104,7 @@ desired effect
                     <a href="#">
                       <div class="pull-left">
                         <!-- User Image -->
-                        <img src="../public/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="reportes/logov.jpg" class="img-circle" alt="User Image">
                       </div>
                       <!-- Message title and timestamp -->
                       <h4>
@@ -189,17 +189,17 @@ desired effect
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
-              <img src="../public/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="reportes/logov.jpg" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">José Martin Corrales Pérez</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src="../public/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="reportes/logov.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
+                  Martin Corrales - Depto. Sistemas
                   <small>Member since Nov. 2012</small>
                 </p>
               </li>
@@ -246,10 +246,10 @@ desired effect
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="../public/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="reportes/logov.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>José Martín Corrales Pérez</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
@@ -271,6 +271,7 @@ desired effect
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
+        <!--
         <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
         <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
         <li class="treeview">
@@ -284,6 +285,7 @@ desired effect
             <li><a href="#">Link in level 2</a></li>
           </ul>
         </li>
+        -->
       </ul>
       <!-- /.sidebar-menu -->
     </section>
