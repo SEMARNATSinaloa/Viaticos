@@ -10,45 +10,58 @@ function init()
     })
 */  
     //Date picker
-    $('#fechainicio').datepicker({
+    $('#fecha').datepicker({
         autoclose: true,
         language: 'es'
       })
 
-    $('#fechafin').datepicker({
-        autoclose: true,
-        language: 'es'
-    })
-
-    $('#fechaof').datepicker({
+    $('#just1fin').datepicker({
         autoclose: true,
         language: 'es',
         orientation: "bottom"
     })
 
-    $('#fechacoinicio').datepicker({
+    $('#just1ffin').datepicker({
         autoclose: true,
         language: 'es',
-        //orientation: "bottom"
+        orientation: "bottom"
     })
 
-    $('#fechacofin').datepicker({
+    $('#just2fin').datepicker({
         autoclose: true,
         language: 'es',
-        //orientation: "bottom"
+        orientation: "bottom"
     })
 
-    $('#fechamininicio').datepicker({
+    $('#just2ffin').datepicker({
         autoclose: true,
         language: 'es',
-        //orientation: "bottom"
+        orientation: "bottom"
     })
 
-    $('#fechaminfin').datepicker({
+    $('#just3fin').datepicker({
         autoclose: true,
         language: 'es',
-        //orientation: "bottom"
+        orientation: "bottom"
     })
+
+    $('#just3ffin').datepicker({
+        autoclose: true,
+        language: 'es',
+        orientation: "bottom"
+    })
+
+    $('#just4fin').datepicker({
+        autoclose: true,
+        language: 'es',
+    })
+
+    $('#just4ffin').datepicker({
+        autoclose: true,
+        language: 'es',
+    })
+
+
 
     //iCheck for checkbox and radio inputs
     //$('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
