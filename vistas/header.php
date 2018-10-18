@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Viaticos</title>
+  <title>Formatos</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="../public/bootstrap/bootstrap/dist/css/bootstrap.min.css">
@@ -72,7 +72,7 @@ desired effect
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="fuji.php" class="logo">
+    <a href="starter.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>SMA</b></span>
       <!-- logo for regular state and mobile devices -->
@@ -272,20 +272,22 @@ desired effect
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
         <!--
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
+        <li class="active"><a href="#"><i class="fa fa-link"></i> <span></span></a></li>
+        
         <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+        -->
         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+          <a href="#"><i class="fa fa-edit"></i> <span>Formatos</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
+            <li><a href="fuji.php"><i class="fa fa-file-pdf-o"><span></i>Justificación de Incidencias</span></a></li>
+            <li><a href="pasesalida.php"><i class="fa fa-file-pdf-o"><span></i>Pase de salida</span></a></li>
           </ul>
         </li>
-        -->
+        
       </ul>
       <!-- /.sidebar-menu -->
     </section>
