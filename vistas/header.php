@@ -276,7 +276,7 @@ desired effect
         
         <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
         -->
-        <li class="treeview">
+        <li class="active treeview menu-open">
           <a href="#"><i class="fa fa-edit"></i> <span>Formatos</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>

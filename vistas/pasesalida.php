@@ -54,7 +54,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <label>Tipo de asunto::</label>
                                     <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-file"></i></span>
+                                        <span class="input-group-addon"><i class="fa fa-inbox"></i></span>
                                         <!-- select -->
                                         <div class="form-group">
                                             <select class="form-control" name="caracter">
@@ -86,7 +86,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <label for="jefe">Jefe Inmediato:</label>
                                     <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-globe"></i></span>
+                                        <span class="input-group-addon"><i class="fa fa-black-tie"></i></span>
                                         <input type="text" name="jefe" class="form-control" id="jefe" maxlength="60" placeholder="Jefe Inmediato"  required>
                                     </div>
                                 </div> 

@@ -75,7 +75,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <label for="ext">Extensión:</label>
                                     <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-globe"></i></span>
+                                        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
                                         <input type="text" name="ext" class="form-control" id="ext" maxlength="6" placeholder="Extensión"  required>
                                     </div>
                                 </div> 
@@ -101,7 +101,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <label for="jefe">Jefe Inmediato:</label>
                                     <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-globe"></i></span>
+                                        <span class="input-group-addon"><i class="fa fa-black-tie"></i></span>
                                         <input type="text" name="jefe" class="form-control" id="jefe" maxlength="60" placeholder="Jefe Inmediato"  required>
                                     </div>
                                 </div> 
@@ -120,48 +120,26 @@
                                         <!-- select -->
                                         <div class="form-group">
                                             <select class="form-control" name="just1">
-                                                <option value="34-Cambio de adscripción">34-Cambio de adscripción</option>
-                                                <option value="04-Comisión externa">04-Comisión externa</option>
-                                                <option value="03-Comisión interna">03-Comisión interna</option>
-                                                <option value="02-Comisión sindical">02-Comisión sindical</option>
-                                                <option value="37-Constancia escolar">37-Constancia escolar</option>
-                                                <option value="99-Constancia medica/tiempo">99-Constancia medica/tiempo</option>
-                                                <option value="99-Cuidados maternos">99-Cuidados maternos</option>
-                                                <option value="16-Defunción familiar directo">16-Defunción familiar directo</option>
-                                                <option value="17-Descanso">17-Descanso</option>
-                                                <option value="31-Día de la secretaria">31-Día de la secretaria</option>
-                                                <option value="26-Día de las madres (10 de mayo)">26-Día de las madres (10 de mayo)</option>
-                                                <option value="32-Día del padre">32-Día del padre</option>
-                                                <option value="27-Día del trabajador SEMARNAT">27-Día del trabajador SEMARNAT</option>
-                                                <option value="99-Día económico">99-Día económico</option>
-                                                <option value="28-Día inhabil DOF">28-Día inhabil DOF</option>
-                                                <option value="24-Facilidades administrativas">24-Facilidades administrativas</option>
-                                                <option value="01-Falta injustificada">01-Falta injustificada</option>
-                                                <option value="01-Falta por eventos sin horario asignado">01-Falta por eventos sin horario asignado</option>
-                                                <option value="01-Falta por falta de registro (omision)">01-Falta por falta de registro (omision)</option>
-                                                <option value="35-Falta por falta retardo">35-Falta por falta retardo</option>
-                                                <option value="02-Falta por retardo">02-Falta por retardo</option>
-                                                <option value="03-Falta por salida anticipada">03-Falta por salida anticipada</option>
-                                                <option value="36-Falta retardo justificado">36-Falta retardo justificado</option>
-                                                <option value="99-Licencia médica">99-Licencia médica</option>
-                                                <option value="33-Licencia por titulación">33-Licencia por titulación</option>
-                                                <option value="23-Licencia pre-jubilatoria">23-Licencia pre-jubilatoria</option>
-                                                <option value="15-Matrimonio">15-Matrimonio</option>
-                                                <option value="25-Nacimiento de hijo/a (padre)">25-Nacimiento de hijo/a (padre)</option>
-                                                <option value="30-Olvido de credencial">30-Olvido de credencial</option>
-                                                <option value="99-Onomástico">99-Onomástico</option>
-                                                <option value="29-Permiso de salida anticipada">29-Permiso de salida anticipada</option>
-                                                <option value="02-Retardo 1">02-Retardo 1</option>
-                                                <option value="02-Retardo 2">02-Retardo 2</option>
-                                                <option value="02-Retardo 3">02-Retardo 3</option>
-                                                <option value="02-Salida anticipada 1">02-Salida anticipada 1</option>
-                                                <option value="02-Salida anticipada 2">02-Salida anticipada 2</option>
-                                                <option value="02-salida anticipada 3">02-salida anticipada 3</option>
-                                                <option value="99-Vacaciones extraordinarias">99-Vacaciones extraordinarias</option>
-                                                <option value="20-Vacaciones extraordinarias (trimestral)">20-Vacaciones extraordinarias (trimestral)</option>
-                                                <option value="21-Vacaciones extraordinarias (antifuedad)">21-Vacaciones extraordinarias (antifuedad)</option>
-                                                <option value="22-Vacaciones extraordinarias (estímulos y recompensas)">22-Vacaciones extraordinarias (estímulos y recompensas)</option>
-                                                <option value="99-Vacaciones ordinarias">99-Vacaciones ordinarias</option>
+                                                <option value="01-RETARDO 1/S1">01-RETARDO 1/S1</option>
+                                                <option value="02-RETARDO 2/S2">02-RETARDO 2/S2</option>
+                                                <option value="03-RETARDO 3/S3">03-RETARDO 3/S3</option>
+                                                <option value="04-COMISIÓN SINDICAL">04-COMISIÓN SINDICAL</option>
+                                                <option value="05-COMISIÓN INTERNA">05-COMISIÓN INTERNA</option>
+                                                <option value="06-COMISIÓN EXTERNA">06-COMISIÓN EXTERNA</option>
+                                                <option value="07-CUIDADOS MATERNOS">07-CUIDADOS MATERNOS</option>
+                                                <option value="08-DIA ECONOMICO">08-DIA ECONOMICO</option>
+                                                <option value="09-LICENCIA MEDICA">09-LICENCIA MEDICA</option>
+                                                <option value="10-ONOMASTICO">10-ONOMASTICO</option>
+                                                <option value="11-FALTA RETARDO">11-FALTA RETARDO</option>
+                                                <option value="12-SALIDA ANTICIPADA">12-SALIDA ANTICIPADA</option>
+                                                <option value="13-MATRIMONIO">13-MATRIMONIO</option>
+                                                <option value="14-DEFUNCION FAMILIAR DIRECTO">14-DEFUNCION FAMILIAR DIRECTO</option>
+                                                <option value="15-VACACIONES EXTRAORDINARIAS TRIMESTRAL">15-VACACIONES EXTRAORDINARIAS TRIMESTRAL</option>
+                                                <option value="16-VACACIONES EXTRAORDINARIAS ANTIGÜEDAD">16-VACACIONES EXTRAORDINARIAS ANTIGÜEDAD</option>
+                                                <option value="17-VACACIONES EXTRAORDINARIAS ESTIMULOS Y RECOMPENSAS">17-VACACIONES EXTRAORDINARIAS ESTIMULOS Y RECOMPENSAS</option>
+                                                <option value="18-FACILIDADES ADMVAS">18-FACILIDADES ADMVAS</option>
+                                                <option value="19-NACIMIENTO HIJO/A">19-NACIMIENTO HIJO/A</option>
+                                                <option value="20-OLVIDO DE CREDENCIAL">20-OLVIDO DE CREDENCIAL</option>
                                             </select>
                                         </div>
                                     </div>
@@ -194,48 +172,26 @@
                                         <div class="form-group">
                                             <select class="form-control" name="just2">
                                                 <option value="-"></option>
-                                                <option value="34-Cambio de adscripción">34-Cambio de adscripción</option>
-                                                <option value="04-Comisión externa">04-Comisión externa</option>
-                                                <option value="03-Comisión interna">03-Comisión interna</option>
-                                                <option value="02-Comisión sindical">02-Comisión sindical</option>
-                                                <option value="37-Constancia escolar">37-Constancia escolar</option>
-                                                <option value="99-Constancia medica/tiempo">99-Constancia medica/tiempo</option>
-                                                <option value="99-Cuidados maternos">99-Cuidados maternos</option>
-                                                <option value="16-Defunción familiar directo">16-Defunción familiar directo</option>
-                                                <option value="17-Descanso">17-Descanso</option>
-                                                <option value="31-Día de la secretaria">31-Día de la secretaria</option>
-                                                <option value="26-Día de las madres (10 de mayo)">26-Día de las madres (10 de mayo)</option>
-                                                <option value="32-Día del padre">32-Día del padre</option>
-                                                <option value="27-Día del trabajador SEMARNAT">27-Día del trabajador SEMARNAT</option>
-                                                <option value="99-Día económico">99-Día económico</option>
-                                                <option value="28-Día inhabil DOF">28-Día inhabil DOF</option>
-                                                <option value="24-Facilidades administrativas">24-Facilidades administrativas</option>
-                                                <option value="01-Falta injustificada">01-Falta injustificada</option>
-                                                <option value="01-Falta por eventos sin horario asignado">01-Falta por eventos sin horario asignado</option>
-                                                <option value="01-Falta por falta de registro (omision)">01-Falta por falta de registro (omision)</option>
-                                                <option value="35-Falta por falta retardo">35-Falta por falta retardo</option>
-                                                <option value="02-Falta por retardo">02-Falta por retardo</option>
-                                                <option value="03-Falta por salida anticipada">03-Falta por salida anticipada</option>
-                                                <option value="36-Falta retardo justificado">36-Falta retardo justificado</option>
-                                                <option value="99-Licencia médica">99-Licencia médica</option>
-                                                <option value="33-Licencia por titulación">33-Licencia por titulación</option>
-                                                <option value="23-Licencia pre-jubilatoria">23-Licencia pre-jubilatoria</option>
-                                                <option value="15-Matrimonio">15-Matrimonio</option>
-                                                <option value="25-Nacimiento de hijo/a (padre)">25-Nacimiento de hijo/a (padre)</option>
-                                                <option value="30-Olvido de credencial">30-Olvido de credencial</option>
-                                                <option value="99-Onomástico">99-Onomástico</option>
-                                                <option value="29-Permiso de salida anticipada">29-Permiso de salida anticipada</option>
-                                                <option value="02-Retardo 1">02-Retardo 1</option>
-                                                <option value="02-Retardo 2">02-Retardo 2</option>
-                                                <option value="02-Retardo 3">02-Retardo 3</option>
-                                                <option value="02-Salida anticipada 1">02-Salida anticipada 1</option>
-                                                <option value="02-Salida anticipada 2">02-Salida anticipada 2</option>
-                                                <option value="02-salida anticipada 3">02-salida anticipada 3</option>
-                                                <option value="99-Vacaciones extraordinarias">99-Vacaciones extraordinarias</option>
-                                                <option value="20-Vacaciones extraordinarias (trimestral)">20-Vacaciones extraordinarias (trimestral)</option>
-                                                <option value="21-Vacaciones extraordinarias (antifuedad)">21-Vacaciones extraordinarias (antifuedad)</option>
-                                                <option value="22-Vacaciones extraordinarias (estímulos y recompensas)">22-Vacaciones extraordinarias (estímulos y recompensas)</option>
-                                                <option value="99-Vacaciones ordinarias">99-Vacaciones ordinarias</option>
+                                                <option value="01-RETARDO 1/S1">01-RETARDO 1/S1</option>
+                                                <option value="02-RETARDO 2/S2">02-RETARDO 2/S2</option>
+                                                <option value="03-RETARDO 3/S3">03-RETARDO 3/S3</option>
+                                                <option value="04-COMISIÓN SINDICAL">04-COMISIÓN SINDICAL</option>
+                                                <option value="05-COMISIÓN INTERNA">05-COMISIÓN INTERNA</option>
+                                                <option value="06-COMISIÓN EXTERNA">06-COMISIÓN EXTERNA</option>
+                                                <option value="07-CUIDADOS MATERNOS">07-CUIDADOS MATERNOS</option>
+                                                <option value="08-DIA ECONOMICO">08-DIA ECONOMICO</option>
+                                                <option value="09-LICENCIA MEDICA">09-LICENCIA MEDICA</option>
+                                                <option value="10-ONOMASTICO">10-ONOMASTICO</option>
+                                                <option value="11-FALTA RETARDO">11-FALTA RETARDO</option>
+                                                <option value="12-SALIDA ANTICIPADA">12-SALIDA ANTICIPADA</option>
+                                                <option value="13-MATRIMONIO">13-MATRIMONIO</option>
+                                                <option value="14-DEFUNCION FAMILIAR DIRECTO">14-DEFUNCION FAMILIAR DIRECTO</option>
+                                                <option value="15-VACACIONES EXTRAORDINARIAS TRIMESTRAL">15-VACACIONES EXTRAORDINARIAS TRIMESTRAL</option>
+                                                <option value="16-VACACIONES EXTRAORDINARIAS ANTIGÜEDAD">16-VACACIONES EXTRAORDINARIAS ANTIGÜEDAD</option>
+                                                <option value="17-VACACIONES EXTRAORDINARIAS ESTIMULOS Y RECOMPENSAS">17-VACACIONES EXTRAORDINARIAS ESTIMULOS Y RECOMPENSAS</option>
+                                                <option value="18-FACILIDADES ADMVAS">18-FACILIDADES ADMVAS</option>
+                                                <option value="19-NACIMIENTO HIJO/A">19-NACIMIENTO HIJO/A</option>
+                                                <option value="20-OLVIDO DE CREDENCIAL">20-OLVIDO DE CREDENCIAL</option>
                                             </select>
                                         </div>
                                     </div>
@@ -268,48 +224,26 @@
                                         <div class="form-group">
                                             <select class="form-control" name="just3">
                                                 <option value="-"></option>
-                                                <option value="34-Cambio de adscripción">34-Cambio de adscripción</option>
-                                                <option value="04-Comisión externa">04-Comisión externa</option>
-                                                <option value="03-Comisión interna">03-Comisión interna</option>
-                                                <option value="02-Comisión sindical">02-Comisión sindical</option>
-                                                <option value="37-Constancia escolar">37-Constancia escolar</option>
-                                                <option value="99-Constancia medica/tiempo">99-Constancia medica/tiempo</option>
-                                                <option value="99-Cuidados maternos">99-Cuidados maternos</option>
-                                                <option value="16-Defunción familiar directo">16-Defunción familiar directo</option>
-                                                <option value="17-Descanso">17-Descanso</option>
-                                                <option value="31-Día de la secretaria">31-Día de la secretaria</option>
-                                                <option value="26-Día de las madres (10 de mayo)">26-Día de las madres (10 de mayo)</option>
-                                                <option value="32-Día del padre">32-Día del padre</option>
-                                                <option value="27-Día del trabajador SEMARNAT">27-Día del trabajador SEMARNAT</option>
-                                                <option value="99-Día económico">99-Día económico</option>
-                                                <option value="28-Día inhabil DOF">28-Día inhabil DOF</option>
-                                                <option value="24-Facilidades administrativas">24-Facilidades administrativas</option>
-                                                <option value="01-Falta injustificada">01-Falta injustificada</option>
-                                                <option value="01-Falta por eventos sin horario asignado">01-Falta por eventos sin horario asignado</option>
-                                                <option value="01-Falta por falta de registro (omision)">01-Falta por falta de registro (omision)</option>
-                                                <option value="35-Falta por falta retardo">35-Falta por falta retardo</option>
-                                                <option value="02-Falta por retardo">02-Falta por retardo</option>
-                                                <option value="03-Falta por salida anticipada">03-Falta por salida anticipada</option>
-                                                <option value="36-Falta retardo justificado">36-Falta retardo justificado</option>
-                                                <option value="99-Licencia médica">99-Licencia médica</option>
-                                                <option value="33-Licencia por titulación">33-Licencia por titulación</option>
-                                                <option value="23-Licencia pre-jubilatoria">23-Licencia pre-jubilatoria</option>
-                                                <option value="15-Matrimonio">15-Matrimonio</option>
-                                                <option value="25-Nacimiento de hijo/a (padre)">25-Nacimiento de hijo/a (padre)</option>
-                                                <option value="30-Olvido de credencial">30-Olvido de credencial</option>
-                                                <option value="99-Onomástico">99-Onomástico</option>
-                                                <option value="29-Permiso de salida anticipada">29-Permiso de salida anticipada</option>
-                                                <option value="02-Retardo 1">02-Retardo 1</option>
-                                                <option value="02-Retardo 2">02-Retardo 2</option>
-                                                <option value="02-Retardo 3">02-Retardo 3</option>
-                                                <option value="02-Salida anticipada 1">02-Salida anticipada 1</option>
-                                                <option value="02-Salida anticipada 2">02-Salida anticipada 2</option>
-                                                <option value="02-salida anticipada 3">02-salida anticipada 3</option>
-                                                <option value="99-Vacaciones extraordinarias">99-Vacaciones extraordinarias</option>
-                                                <option value="20-Vacaciones extraordinarias (trimestral)">20-Vacaciones extraordinarias (trimestral)</option>
-                                                <option value="21-Vacaciones extraordinarias (antifuedad)">21-Vacaciones extraordinarias (antifuedad)</option>
-                                                <option value="22-Vacaciones extraordinarias (estímulos y recompensas)">22-Vacaciones extraordinarias (estímulos y recompensas)</option>
-                                                <option value="99-Vacaciones ordinarias">99-Vacaciones ordinarias</option>
+                                                <option value="01-RETARDO 1/S1">01-RETARDO 1/S1</option>
+                                                <option value="02-RETARDO 2/S2">02-RETARDO 2/S2</option>
+                                                <option value="03-RETARDO 3/S3">03-RETARDO 3/S3</option>
+                                                <option value="04-COMISIÓN SINDICAL">04-COMISIÓN SINDICAL</option>
+                                                <option value="05-COMISIÓN INTERNA">05-COMISIÓN INTERNA</option>
+                                                <option value="06-COMISIÓN EXTERNA">06-COMISIÓN EXTERNA</option>
+                                                <option value="07-CUIDADOS MATERNOS">07-CUIDADOS MATERNOS</option>
+                                                <option value="08-DIA ECONOMICO">08-DIA ECONOMICO</option>
+                                                <option value="09-LICENCIA MEDICA">09-LICENCIA MEDICA</option>
+                                                <option value="10-ONOMASTICO">10-ONOMASTICO</option>
+                                                <option value="11-FALTA RETARDO">11-FALTA RETARDO</option>
+                                                <option value="12-SALIDA ANTICIPADA">12-SALIDA ANTICIPADA</option>
+                                                <option value="13-MATRIMONIO">13-MATRIMONIO</option>
+                                                <option value="14-DEFUNCION FAMILIAR DIRECTO">14-DEFUNCION FAMILIAR DIRECTO</option>
+                                                <option value="15-VACACIONES EXTRAORDINARIAS TRIMESTRAL">15-VACACIONES EXTRAORDINARIAS TRIMESTRAL</option>
+                                                <option value="16-VACACIONES EXTRAORDINARIAS ANTIGÜEDAD">16-VACACIONES EXTRAORDINARIAS ANTIGÜEDAD</option>
+                                                <option value="17-VACACIONES EXTRAORDINARIAS ESTIMULOS Y RECOMPENSAS">17-VACACIONES EXTRAORDINARIAS ESTIMULOS Y RECOMPENSAS</option>
+                                                <option value="18-FACILIDADES ADMVAS">18-FACILIDADES ADMVAS</option>
+                                                <option value="19-NACIMIENTO HIJO/A">19-NACIMIENTO HIJO/A</option>
+                                                <option value="20-OLVIDO DE CREDENCIAL">20-OLVIDO DE CREDENCIAL</option>
                                             </select>
                                         </div>
                                     </div>
@@ -342,48 +276,26 @@
                                         <div class="form-group">
                                             <select class="form-control" name="just4">
                                                 <option value="-"></option>
-                                                <option value="34-Cambio de adscripción">34-Cambio de adscripción</option>
-                                                <option value="04-Comisión externa">04-Comisión externa</option>
-                                                <option value="03-Comisión interna">03-Comisión interna</option>
-                                                <option value="02-Comisión sindical">02-Comisión sindical</option>
-                                                <option value="37-Constancia escolar">37-Constancia escolar</option>
-                                                <option value="99-Constancia medica/tiempo">99-Constancia medica/tiempo</option>
-                                                <option value="99-Cuidados maternos">99-Cuidados maternos</option>
-                                                <option value="16-Defunción familiar directo">16-Defunción familiar directo</option>
-                                                <option value="17-Descanso">17-Descanso</option>
-                                                <option value="31-Día de la secretaria">31-Día de la secretaria</option>
-                                                <option value="26-Día de las madres (10 de mayo)">26-Día de las madres (10 de mayo)</option>
-                                                <option value="32-Día del padre">32-Día del padre</option>
-                                                <option value="27-Día del trabajador SEMARNAT">27-Día del trabajador SEMARNAT</option>
-                                                <option value="99-Día económico">99-Día económico</option>
-                                                <option value="28-Día inhabil DOF">28-Día inhabil DOF</option>
-                                                <option value="24-Facilidades administrativas">24-Facilidades administrativas</option>
-                                                <option value="01-Falta injustificada">01-Falta injustificada</option>
-                                                <option value="01-Falta por eventos sin horario asignado">01-Falta por eventos sin horario asignado</option>
-                                                <option value="01-Falta por falta de registro (omision)">01-Falta por falta de registro (omision)</option>
-                                                <option value="35-Falta por falta retardo">35-Falta por falta retardo</option>
-                                                <option value="02-Falta por retardo">02-Falta por retardo</option>
-                                                <option value="03-Falta por salida anticipada">03-Falta por salida anticipada</option>
-                                                <option value="36-Falta retardo justificado">36-Falta retardo justificado</option>
-                                                <option value="99-Licencia médica">99-Licencia médica</option>
-                                                <option value="33-Licencia por titulación">33-Licencia por titulación</option>
-                                                <option value="23-Licencia pre-jubilatoria">23-Licencia pre-jubilatoria</option>
-                                                <option value="15-Matrimonio">15-Matrimonio</option>
-                                                <option value="25-Nacimiento de hijo/a (padre)">25-Nacimiento de hijo/a (padre)</option>
-                                                <option value="30-Olvido de credencial">30-Olvido de credencial</option>
-                                                <option value="99-Onomástico">99-Onomástico</option>
-                                                <option value="29-Permiso de salida anticipada">29-Permiso de salida anticipada</option>
-                                                <option value="02-Retardo 1">02-Retardo 1</option>
-                                                <option value="02-Retardo 2">02-Retardo 2</option>
-                                                <option value="02-Retardo 3">02-Retardo 3</option>
-                                                <option value="02-Salida anticipada 1">02-Salida anticipada 1</option>
-                                                <option value="02-Salida anticipada 2">02-Salida anticipada 2</option>
-                                                <option value="02-salida anticipada 3">02-salida anticipada 3</option>
-                                                <option value="99-Vacaciones extraordinarias">99-Vacaciones extraordinarias</option>
-                                                <option value="20-Vacaciones extraordinarias (trimestral)">20-Vacaciones extraordinarias (trimestral)</option>
-                                                <option value="21-Vacaciones extraordinarias (antifuedad)">21-Vacaciones extraordinarias (antifuedad)</option>
-                                                <option value="22-Vacaciones extraordinarias (estímulos y recompensas)">22-Vacaciones extraordinarias (estímulos y recompensas)</option>
-                                                <option value="99-Vacaciones ordinarias">99-Vacaciones ordinarias</option>
+                                                <option value="01-RETARDO 1/S1">01-RETARDO 1/S1</option>
+                                                <option value="02-RETARDO 2/S2">02-RETARDO 2/S2</option>
+                                                <option value="03-RETARDO 3/S3">03-RETARDO 3/S3</option>
+                                                <option value="04-COMISIÓN SINDICAL">04-COMISIÓN SINDICAL</option>
+                                                <option value="05-COMISIÓN INTERNA">05-COMISIÓN INTERNA</option>
+                                                <option value="06-COMISIÓN EXTERNA">06-COMISIÓN EXTERNA</option>
+                                                <option value="07-CUIDADOS MATERNOS">07-CUIDADOS MATERNOS</option>
+                                                <option value="08-DIA ECONOMICO">08-DIA ECONOMICO</option>
+                                                <option value="09-LICENCIA MEDICA">09-LICENCIA MEDICA</option>
+                                                <option value="10-ONOMASTICO">10-ONOMASTICO</option>
+                                                <option value="11-FALTA RETARDO">11-FALTA RETARDO</option>
+                                                <option value="12-SALIDA ANTICIPADA">12-SALIDA ANTICIPADA</option>
+                                                <option value="13-MATRIMONIO">13-MATRIMONIO</option>
+                                                <option value="14-DEFUNCION FAMILIAR DIRECTO">14-DEFUNCION FAMILIAR DIRECTO</option>
+                                                <option value="15-VACACIONES EXTRAORDINARIAS TRIMESTRAL">15-VACACIONES EXTRAORDINARIAS TRIMESTRAL</option>
+                                                <option value="16-VACACIONES EXTRAORDINARIAS ANTIGÜEDAD">16-VACACIONES EXTRAORDINARIAS ANTIGÜEDAD</option>
+                                                <option value="17-VACACIONES EXTRAORDINARIAS ESTIMULOS Y RECOMPENSAS">17-VACACIONES EXTRAORDINARIAS ESTIMULOS Y RECOMPENSAS</option>
+                                                <option value="18-FACILIDADES ADMVAS">18-FACILIDADES ADMVAS</option>
+                                                <option value="19-NACIMIENTO HIJO/A">19-NACIMIENTO HIJO/A</option>
+                                                <option value="20-OLVIDO DE CREDENCIAL">20-OLVIDO DE CREDENCIAL</option>
                                             </select>
                                         </div>
                                     </div>
