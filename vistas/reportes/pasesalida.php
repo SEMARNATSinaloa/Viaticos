@@ -14,8 +14,8 @@ $jefe=isset($_POST["jefe"])?$_POST["jefe"]:"Error";
 $asunto=isset($_POST["asunto"])?($_POST["asunto"]):"Error";
 
 setlocale(LC_TIME, 'spanish');
-alert($fecha);
-$fecha=strftime("%A, %d de %B del %Y", strtotime($fecha));
+$fecha=strftime("%A %d de %B del %Y");
+//$fecha=strftime("%A, %d de %B del %Y", strtotime($fecha));
 //$fecha=strftime($fecha); 
 
 $pdf = new FPDF();
