@@ -31,14 +31,14 @@
 
                         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#psalida" data-toggle="tab">Pase de salida</a></li>
+              <li class="active"><a href="#psalidavehicular" data-toggle="tab">Pase de salida vehicular</a></li>
             </ul>
             <div class="tab-content">
                 <!-- Formulario para pase de salida -->
-                <div class="tab-pane active" id="psalida">
+                <div class="tab-pane active" id="psalidavehicular">
                     <!-- centro -->
-                    <div class="panel-body" id="formulariopsalida">
-                        <form name="formpsalida" id="formpsalida" action="reportes/pasesalida.php" method="POST" target="_blank">
+                    <div class="panel-body" id="formulariopsalidavehicular">
+                        <form name="formpsalidavehicular" id="formpsalidavehicular" action="reportes/pasevehicular.php" method="POST" target="_blank">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <label for="fecha">Fecha: </label>
@@ -52,15 +52,15 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <label>Tipo de asunto::</label>
+                                    <label>Lugar de solicitud:</label>
                                     <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-inbox"></i></span>
+                                        <span class="input-group-addon"><i class="fa fa-street-view"></i></span>
                                         <!-- select -->
                                         <div class="form-group">
-                                            <select class="form-control" name="caracter">
-                                                <option>Oficial</option>
-                                                <option>Personal</option>
-                                                <option>Otro</option>
+                                            <select class="form-control" name="lugar" required>
+                                                <option>CULIACAN</option>
+                                                <option>MAZATLAN</option>
+                                                <option>LOS MOCHIS</option>
                                             </select>
                                         </div>
                                     </div>
@@ -74,34 +74,49 @@
                                         <input type="text" name="nombre" class="form-control" id="nombre" maxlength="35" placeholder="Nombre del comisionado" required>
                                     </div>
                                 </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <label for="adscripcion">Área de adscripción:</label>
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-globe"></i></span>
-                                        <input type="text" name="adscripcion" class="form-control" id="adscripcion" maxlength="50" placeholder="Area de adscripción"  required>
-                                    </div>
-                                </div> 
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <label for="jefe">Jefe Inmediato:</label>
+                                    <label>Vehículo solicitado o asignado:</label>
                                     <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-black-tie"></i></span>
-                                        <input type="text" name="jefe" class="form-control" id="jefe" maxlength="60" placeholder="Jefe Inmediato"  required>
-                                    </div>
-                                </div> 
-                            </div>
-                            
-                            <div class="row">
-                                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <label for="asunto">Asunto: </label>
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
-                                        <textarea class="form-control" rows="3" name="asunto" id="asunto" maxlength="240" placeholder="Asunto" required></textarea>
+                                        <span class="input-group-addon"><i class="fa fa-car"></i></span>
+                                        <!-- select -->
+                                        <div class="form-group">
+                                            <select class="form-control" name="vehiculo">
+                                                <option>SMA 034  -  PICK UP RANGER</option>
+                                                <option>SMA 036  -  PICK UP RANGER</option>
+                                                <option>SMA 037  -  PICK UP RANGER</option>
+                                                <option>SMA 044  -  PICK UP RANGER</option>
+                                                <option>SMA 045  -  PICK UP RANGER</option>
+                                                <option>SMA 048  -  CHEVY</option>
+                                                <option>SMA 050  -  PICK UP RANGER</option>
+                                                <option>SMA 051  -  PICK UP RANGER</option>
+                                                <option>SMA 052  -  PICK UP RANGER</option>
+                                                <option>SMA 053  -  CHEVY</option>
+                                                <option>SMA 055  -  CHEVY</option>
+                                                <option>SMA 056  -  CHEVY</option>
+                                                <option>SMA 057  -  DODGE NITRO</option>
+                                                <option>SMA 058  -  JEEP</option>
+                                                <option>SMA 060  -  JEEP</option>
+                                                <option>SMA 059  -  JEEP</option>
+                                                <option>SMA 061  -  JEEP</option>
+                                                <option>SMA 063  -  DURANGO</option>
+                                                <option>SMA 064  -  DODGE RAM</option>
+                                                <option>SMA 000  -  CUATRIMOTO</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="jefe">Autorizador: </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-black-tie"></i></span>
+                                        <input type="text" name="jefe" class="form-control" id="jefe" maxlength="35" placeholder="Nombre de quien autoriza" value="Lic. Eduardo Urizabel Luque">
+                                    </div>
+                                </div> 
+                            </div>
                             <div class="row">
                                 <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <br>
@@ -136,4 +151,4 @@
 <script src="../public/bootstrap/bootstrap-datepicker/js/locales/bootstrap-datepicker.es.js"></script>
 
 
-<script type="text/javascript" src="scripts/pasesalida.js"></script>
+<script type="text/javascript" src="scripts/pasevehicular.js"></script>

@@ -276,7 +276,7 @@ desired effect
         
         <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
         -->
-        <li class="treeview">
+        <li class="active treeview menu-open">
           <a href="#"><i class="fa fa-edit"></i> <span>Formatos</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -285,6 +285,7 @@ desired effect
           <ul class="treeview-menu">
             <li><a href="fuji.php"><i class="fa fa-file-pdf-o"><span></i>Justificación de Incidencias</span></a></li>
             <li><a href="pasesalida.php"><i class="fa fa-file-pdf-o"><span></i>Pase de salida</span></a></li>
+            <li><a href="pasevehicular.php"><i class="fa fa-file-pdf-o"><span></i>Pase de salida vehicular</span></a></li>
           </ul>
         </li>
         
