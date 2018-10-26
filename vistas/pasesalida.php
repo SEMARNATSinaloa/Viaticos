@@ -52,7 +52,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <label>Tipo de asunto::</label>
+                                    <label>Tipo de asunto:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-inbox"></i></span>
                                         <!-- select -->
