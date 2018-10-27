@@ -23,12 +23,26 @@ $diasaut=isset($_POST["diasaut"])?$_POST["diasaut"]:"Error";
 $diaspen=isset($_POST["diaspen"])?$_POST["diaspen"]:"Error";
 $observaciones=isset($_POST["observaciones"])?$_POST["observaciones"]:"Error";
 
-//setlocale(LC_TIME, 'spanish');
-//echo $fechai=strftime("%A %d de %B del %Y");
-//$fechaf=strftime("%A %d de %B del %Y", $fechaf);
 
-$fechai= date('d/m/Y', strtotime(str_replace('/','-', $fechai)));
+echo $fechai."<br>";
+$fechai = str_replace('/','-', $fechai);
+$timestamp = strtotime($fechai);
+//$fechai = date("Y-m-d", $timestamp);
+//echo date("%A %d de %B del %Y", $fechai);
+setlocale(LC_TIME, 'spanish');
+echo strftime("%A %d de %B del %Y", $timestamp);
+
+die();
+$fechai= date('d/m/Y', strtotime(str_replace('-','/', $fechai)));
 $fechaf= date('d/m/Y', strtotime(str_replace('/','-', $fechaf)));
+//die($fechaf);
+$date = new DateTime($fechai);
+echo $date->getTimestamp();
+echo $fechai=strftime("%A %d de %B del %Y", $fechaf);
+//$fechaf=strftime("%A %d de %B del %Y", $fechaf);
+die();
+
+
 //contar dias habiles 
 
 $i=0;/*
