@@ -13,8 +13,11 @@ $adscripcion=isset($_POST["adscripcion"])?$_POST["adscripcion"]:"Error";
 $jefe=isset($_POST["jefe"])?$_POST["jefe"]:"Error";
 $asunto=isset($_POST["asunto"])?($_POST["asunto"]):"Error";
 
+$fecha = str_replace('/','-', $fecha);
+$timestamp = strtotime($fecha);
+
 setlocale(LC_TIME, 'spanish');
-$fecha=strftime("%A %d de %B del %Y");
+$fecha=strftime("%A %d de %B del %Y", $timestamp);
 //$fecha=strftime("%A, %d de %B del %Y", strtotime($fecha));
 //$fecha=strftime($fecha); 
 
@@ -62,7 +65,7 @@ else{
 $pdf->Ln(5);
 $pdf->Cell(40, 5, "", 0, 0,  'C');
 
-$pdf->Cell(120, 5, "FECHA:   ". strtoupper($fecha), 0, 1,  'R');
+$pdf->Cell(120, 5, "FECHA:   ". utf8_encode(strtoupper($fecha)), 0, 1,  'R');
 $pdf->Ln(10);
 
 $pdf->Cell(20, 5, "", 0, 0,  'L');

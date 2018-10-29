@@ -123,7 +123,7 @@
                                     <label for="puesto">Puesto:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-globe"></i></span>
-                                        <input type="text" name="puesto" class="form-control" id="puesto" maxlength="50" placeholder="Puesto"  required>
+                                        <input type="text" name="puesto" class="form-control" id="puesto" maxlength="45" placeholder="Puesto"  required>
                                     </div>
                                 </div> 
                             </div>

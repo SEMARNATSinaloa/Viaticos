@@ -24,15 +24,21 @@ $diaspen=isset($_POST["diaspen"])?$_POST["diaspen"]:"Error";
 $observaciones=isset($_POST["observaciones"])?$_POST["observaciones"]:"Error";
 
 
-echo $fechai."<br>";
+//echo $fechai."<br>";
 $fechai = str_replace('/','-', $fechai);
-$timestamp = strtotime($fechai);
+$timestampi = strtotime($fechai);
+
+$fechaf = str_replace('/','-', $fechaf);
+$timestampf = strtotime($fechaf);
 //$fechai = date("Y-m-d", $timestamp);
 //echo date("%A %d de %B del %Y", $fechai);
 setlocale(LC_TIME, 'spanish');
-echo strftime("%A %d de %B del %Y", $timestamp);
+$fechai= strftime("%A %d de %B del %Y", $timestampi);
+$fechaf= strftime("%A %d de %B del %Y", $timestampf);
 
-die();
+//die();
+
+/*
 $fechai= date('d/m/Y', strtotime(str_replace('-','/', $fechai)));
 $fechaf= date('d/m/Y', strtotime(str_replace('/','-', $fechaf)));
 //die($fechaf);
@@ -41,11 +47,11 @@ echo $date->getTimestamp();
 echo $fechai=strftime("%A %d de %B del %Y", $fechaf);
 //$fechaf=strftime("%A %d de %B del %Y", $fechaf);
 die();
-
+*/
 
 //contar dias habiles 
-
-$i=0;/*
+/*
+$i=0;
 while($fechaf>=$fechai){
     $i++;
     $fechai = strtotime ( '+1 day' , strtotime ( $fechai ) ) ;
@@ -108,7 +114,7 @@ $pdf->Cell(9, 5, "", 0,0, 'L');
 $pdf->Cell(45, 5, "Nombre (s)", 0,0, 'C');
 $pdf->Cell(19, 5, "", 0,1, 'L');
 
-$pdf->Ln(10);
+$pdf->Ln(5);
 $pdf->Cell(18, 5, "", 0,0, 'L');
 $pdf->Cell(45, 5, $rfc, "B",0, 'C');
 $pdf->Cell(9, 5, "", 0,0, 'L');
@@ -125,11 +131,11 @@ $pdf->Cell(9, 5, "", 0,0, 'R');
 $pdf->Cell(45, 5, "", 0,0, 'C');
 $pdf->Cell(19, 5, "", 0,1, 'L');
 
-$pdf->Ln(10);
+$pdf->Ln(5);
 $pdf->Cell(18, 5, "", 0,0, 'L');
 $pdf->Cell(74, 5, $adscripcion, "B",0, 'C');
-$pdf->Cell(25, 5, "", 0,0, 'C');
-$pdf->Cell(54, 5, $puesto, "B",0, 'C');
+$pdf->Cell(15, 5, "", 0,0, 'C');
+$pdf->Cell(65, 5, $puesto, "B",0, 'C');
 $pdf->Cell(19, 5, "", 0,1, 'L');
 
 $pdf->Cell(18, 5, "", 0,0, 'L');
@@ -138,22 +144,19 @@ $pdf->Cell(25, 5, "", 0,0, 'C');
 $pdf->Cell(54, 5, "Puesto", 0,0, 'C');
 $pdf->Cell(19, 5, "", 0,1, 'L');
 
-$pdf->Rect(28,120,154,0.2);
-$pdf->Line(28,120.7,182,120.7);
+$pdf->Rect(28,110,154,0.2);
+$pdf->Line(28,110.7,182,110.7);
 
 $pdf->Ln(5);
 $pdf->Cell(20, 5, "", 0,0, 'L');
-$pdf->MultiCell(150, 4, "De conformidad con las fracciones III y XIV del apartado B, del articulo 123 Constitucional, y 30 de la Ley Federal de los Trabajadores al Servicio del Estado, solicito disfrutar de vacaciones en el siguiente:",0, 'L');
+$pdf->MultiCell(150, 4, "De conformidad con las fracciones III y XIV del apartado B, del articulo 123 Constitucional, y 30 de la Ley Federal de los Trabajadores al Servicio del Estado, solicito disfrutar de vacaciones en el siguiente:",0, 'J');
 
-setlocale(LC_TIME, 'Spanish');
-$fechai2=date("l \d\\e d F \d\\e\l Y", strtotime($fechai));
-$fechaf2=date("l d F Y", strtotime($fechaf));
 $pdf->Ln(5);
 $pdf->Cell(20, 5, "", 0,0, 'L');
 $pdf->Cell(10, 5, "Del:", 0,0, 'L');
-$pdf->Cell(50, 5, $fechai2, "B",0, 'L');
-$pdf->Cell(30, 5, "Al: ", 0,0, 'R');
-$pdf->Cell(50, 5, $fechaf2, "B",0, 'L');
+$pdf->Cell(55, 5, utf8_encode($fechai), "B",0, 'L');
+$pdf->Cell(25, 5, "Al: ", 0,0, 'R');
+$pdf->Cell(55, 5, utf8_encode($fechaf), "B",0, 'L');
 
 $pdf->Ln(10);
 $pdf->Cell(20, 5, "", 0,0, 'L');
@@ -166,8 +169,64 @@ $pdf->Cell(20, 5, "4", 1,0, 'C');
 
 $pdf->Ln(10);
 $pdf->Cell(20, 5, "", 0,0, 'L');
-$pdf->Cell(85, 5, "Número de días hábiles autorizados del periodo:", 0,0, 'L');
-$pdf->Cell(20, 5, "4", 1,1, 'C');
+$pdf->Cell(85, 5, "Observaciones:", 0,1, 'L');
+$pdf->Cell(20, 5, "", 0,0, 'L');
+$pdf->MultiCell(150, 4, $observaciones, 0, 'J');
 
+$pdf->Ln(5);
+$pdf->SetY(181);
+$pdf->Cell(20, 5, "", 0,0, 'L');
+$pdf->MultiCell(150, 4, "Lo anterior, toda vez que me encuentro al corriente del cumplimiento de mis funciones y conforme al derecho que me asiste al contar con mas de seis meses de servicios ininterrumpidos en el de sempeño de mi cargo:", 0, 'J');
+
+
+//$pdf->Cell(60, 5, "", 1,0, 'L');
+$pdf->Ln(10);
+$pdf->Cell(60, 5, "", 0,0, 'L');
+$pdf->Cell(70, 5, "", "B",1, 'L');
+$pdf->Cell(60, 5, "", 0,0, 'L');
+$pdf->MultiCell(70, 5, $nombre." ".$apaterno." ".$amaterno, "T", 'C');
+
+$pdf->Ln(5);
+$pdf->Cell(20, 5, "", 0,0, 'L');
+$pdf->MultiCell(150, 4, "En mi carácter de superior jerárquico del servidor publico solicitante y de conformidad con las disposiciones legales y administrativas, autorizo disfrutar del periodo vacacional señalado.", 0, 'J');
+
+$pdf->Ln(5);
+$pdf->SetXY(10,240);
+$pdf->Cell(18, 5, "", 0,0, 'L');
+$pdf->MultiCell(70, 5, $puestojefe, 0, 'C');
+//$pdf->Cell(33, 5, "", 1,0, 'C');
+
+
+$pdf->SetXY(98,240);
+$pdf->Cell(10, 5, "", 0,0, 'C');
+$pdf->MultiCell(70, 5,"Vo.Bo." , 0, 'C');
+
+$pdf->SetXY(10,260);
+$pdf->Cell(18, 5, "", 0,0, 'L');
+$pdf->MultiCell(70, 5, $jefe, "T", 'C');
+
+$pdf->SetXY(98,260);
+$pdf->Cell(10, 5, "", 0,0, 'C');
+$pdf->MultiCell(70, 5,"Área Administrativa" , "T", 'C');
+
+/*
+$pdf->SetXY(10,245);
+$pdf->Cell(18,10,'','LTR',0,'C');
+$pdf->Cell(60,10,'JEFE INMEDIATO','LTR',0,'C');
+$pdf->Cell(33,10,'','LTR',0,'C');
+$pdf->Cell(60,10,'AUTORIZA','LTR',1,'C');
+$pdf->Cell(4.75,20,'','L',0,'C');
+$pdf->Cell(37,20,'','B',0,'C');
+$pdf->Cell(4.75,20,'','R',0,'C');
+$pdf->Cell(4.75,20,'','L',0,'C');
+$pdf->Cell(37,20,'','B',0,'C');
+$pdf->Cell(4.75,20,'','R',0,'C');
+$pdf->Cell(4.75,20,'','L',0,'C');
+$pdf->Cell(37,20,'','B',0,'C');
+$pdf->Cell(4.75,20,'','R',0,'C');
+$pdf->Cell(4.75,20,'','L',0,'C');
+$pdf->Cell(37,20,'','B',0,'C');
+$pdf->Cell(4.75,20,'','R',1,'C');
+*/
 $pdf->Output();
 ?>
