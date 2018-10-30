@@ -287,6 +287,7 @@ desired effect
             <li><a href="pasesalida.php"><i class="fa fa-file-pdf-o"><span></i>Pase de salida</span></a></li>
             <li><a href="pasevehicular.php"><i class="fa fa-file-pdf-o"><span></i>Pase de salida vehicular</span></a></li>
             <li><a href="vacaciones.php"><i class="fa fa-file-pdf-o"><span></i>Solicitud de vacaciones</span></a></li>
+            <li><a href="../public/docs/certificadotransito.pdf" download="certificado.pdf"><i class="fa fa-file-pdf-o"><span></i>Certificado de transito</span></a></li>
           </ul>
         </li>
         
