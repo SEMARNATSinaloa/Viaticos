@@ -14,8 +14,11 @@ $vehiculo=isset($_POST["vehiculo"])?separar($_POST["vehiculo"]):"Error";
 $jefe=isset($_POST["jefe"])?strtoupper($_POST["jefe"]):"Error";
 $lugar=isset($_POST["lugar"])?$_POST["lugar"]:"Error";
 
+$fecha = str_replace('/','-', $fecha);
+$timestamp = strtotime($fecha);
+
 setlocale(LC_TIME, 'spanish');
-$fecha=strtoupper(strftime("%A %d de %B del %Y"));
+$fecha=strftime("%A %d de %B del %Y", $timestamp);
 
 $pdf = new FPDF();
 $pdf->AddPage();
@@ -36,7 +39,7 @@ $pdf->SetFont('Arial','',10);
 $pdf->Cell(20, 5, "", 0, 0,  'C');
 $pdf->Cell(30, 5, "FECHA: ", 0, 0,  'C');
 $pdf->Cell(50, 5, $lugar.", SINALOA; A  ", 0, 0,  'L');
-$pdf->Cell(70, 5, $fecha, 0, 0,  'C');
+$pdf->Cell(70, 5, utf8_encode(strtoupper($fecha)), 0, 0,  'C');
 
 $pdf->Ln(10);
 $pdf->Cell(20, 5, "", 0, 0,  'C');

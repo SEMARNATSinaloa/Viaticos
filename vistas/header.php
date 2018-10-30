@@ -283,9 +283,10 @@ desired effect
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="fuji.php"><i class="fa fa-file-pdf-o"><span></i>Justificación de Incidencias</span></a></li>
+            <li><a href="fuji.php"><i class="fa fa-file-pdf-o"><span></i>Justificación de incidencias</span></a></li>
             <li><a href="pasesalida.php"><i class="fa fa-file-pdf-o"><span></i>Pase de salida</span></a></li>
             <li><a href="pasevehicular.php"><i class="fa fa-file-pdf-o"><span></i>Pase de salida vehicular</span></a></li>
+            <li><a href="vacaciones.php"><i class="fa fa-file-pdf-o"><span></i>Solicitud de vacaciones</span></a></li>
           </ul>
         </li>
         
