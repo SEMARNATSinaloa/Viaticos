@@ -168,14 +168,14 @@
                                     <label for="diasaut">Días Hábiles Autorizados:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-suitcase"></i></span>
-                                        <input type="text" name="diasaut" class="form-control" id="diasaut" maxlength="10" placeholder="Días autorizados"  required>
+                                        <input type="number" name="diasaut" class="form-control" id="diasaut" min="1" max="10" placeholder="Días autorizados"  required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <label for="diaspen">Días Habiles Pendientes:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-ticket"></i></span>
-                                        <input type="text" name="diaspen" class="form-control" id="diaspen" maxlength="10" placeholder="Días pendientes"  required>
+                                        <input type="number" name="diaspen" class="form-control" id="diaspen" min="1" max="10" placeholder="Días pendientes"  required>
                                     </div>
                                 </div>  
                             </div>

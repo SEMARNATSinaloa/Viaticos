@@ -161,11 +161,11 @@ $pdf->Cell(55, 5, utf8_encode($fechaf), "B",0, 'L');
 $pdf->Ln(10);
 $pdf->Cell(20, 5, "", 0,0, 'L');
 $pdf->Cell(85, 5, "Número de días hábiles autorizados del periodo:", 0,0, 'L');
-$pdf->Cell(20, 5, "4", 1,1, 'C');
+$pdf->Cell(20, 5, $diasaut, 1,1, 'C');
 $pdf->Ln(4);
 $pdf->Cell(20, 5, "", 0,0, 'L');
 $pdf->Cell(85, 5, "Número de días pendientes por disfrutar del periodo:", 0,0, 'L');
-$pdf->Cell(20, 5, "4", 1,0, 'C');
+$pdf->Cell(20, 5, $diaspen, 1,0, 'C');
 
 $pdf->Ln(10);
 $pdf->Cell(20, 5, "", 0,0, 'L');
