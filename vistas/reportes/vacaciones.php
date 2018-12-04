@@ -66,7 +66,7 @@ $pdf->Rect(25,10,160,275);
 $pdf->Rect(26,11,158,273);
 $pdf->Rect(25.5,10.5,159,274);
 
-$pdf->Image('logoh.jpg',27,12,-850);
+$pdf->Image('logoh.jpg',27,20,-300);
 $pdf->SetFont('Arial','',10);
 $pdf->Ln(5);
 $pdf->Cell(65, 5, '', 0, 0, 'L');

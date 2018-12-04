@@ -43,7 +43,7 @@ $just4=separar($just4);
 $pdf = new FPDF();
 $pdf->AddPage();
 $pdf->SetAutoPageBreak(false);
-$pdf->Image('logoh.jpg',15,20,-1100);
+$pdf->Image('logoh.jpg',10,23,-300);
 $pdf->SetFont('Arial','B',10);
 $pdf->Ln(10);
 $pdf->Cell(65, 5, '', 'LT', 0, 'L');
@@ -196,7 +196,7 @@ $pdf->SetDash(0,0);
 
 
 
-$pdf->Image('logoh.jpg',15,153,-1100);
+$pdf->Image('logoh.jpg',10,157,-300);
 $pdf->SetFont('Arial','B',10);
 $pdf->Ln(10);
 $pdf->Cell(65, 5, '', 'LT', 0, 'L');

@@ -24,7 +24,7 @@ $fecha=strftime("%A %d de %B del %Y", $timestamp);
 $pdf = new FPDF();
 $pdf->AddPage();
 $pdf->SetFont('Arial','',10);
-$pdf->Image('logoh.jpg',15,10,-1100);
+$pdf->Image('logoh.jpg',15,15,-300);
 $pdf->Cell(70, 5, "", 0, 0,  'L');
 $pdf->Cell(110, 5, "SECRETARIA DE MEDIO AMBIENTE Y RECURSOS NATURALES", 0, 1,  'C');
 $pdf->Cell(70, 5, "", 0, 0,  'L');
