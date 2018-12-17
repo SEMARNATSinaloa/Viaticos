@@ -12,3 +12,6 @@ input[type=number] {
     background-color: red;
     min-width: 100px;
 }
+.fieldwrapper{
+    display: -webkit-box;
+}

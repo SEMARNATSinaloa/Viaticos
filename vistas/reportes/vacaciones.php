@@ -62,11 +62,12 @@ while($fechaf>=$fechai){
 $pdf = new FPDF();
 $pdf->AddPage();
 $pdf->SetFont('Arial','B',16);
+$pdf->Image('logov.jpg',35,5,-300);
 $pdf->Rect(25,10,160,275);
 $pdf->Rect(26,11,158,273);
 $pdf->Rect(25.5,10.5,159,274);
 
-$pdf->Image('logoh.jpg',27,20,-300);
+
 $pdf->SetFont('Arial','',10);
 $pdf->Ln(5);
 $pdf->Cell(65, 5, '', 0, 0, 'L');
@@ -191,23 +192,14 @@ $pdf->Cell(20, 5, "", 0,0, 'L');
 $pdf->MultiCell(150, 4, "En mi carácter de superior jerárquico del servidor publico solicitante y de conformidad con las disposiciones legales y administrativas, autorizo disfrutar del periodo vacacional señalado.", 0, 'J');
 
 $pdf->Ln(5);
-$pdf->SetXY(10,240);
-$pdf->Cell(18, 5, "", 0,0, 'L');
+$pdf->Cell(60, 5, "", 0,0, 'L');
 $pdf->MultiCell(70, 5, $puestojefe, 0, 'C');
-//$pdf->Cell(33, 5, "", 1,0, 'C');
-
-
-$pdf->SetXY(98,240);
-$pdf->Cell(10, 5, "", 0,0, 'C');
-$pdf->MultiCell(70, 5,"Vo.Bo." , 0, 'C');
-
-$pdf->SetXY(10,260);
-$pdf->Cell(18, 5, "", 0,0, 'L');
+$pdf->Ln(15);
+$pdf->Cell(60, 5, "", 0,0, 'L');
+$pdf->Cell(70, 5, "", "B",1, 'L');
+$pdf->Cell(60, 5, "", 0,0, 'L');
 $pdf->MultiCell(70, 5, $jefe, "T", 'C');
 
-$pdf->SetXY(98,260);
-$pdf->Cell(10, 5, "", 0,0, 'C');
-$pdf->MultiCell(70, 5,"Área Administrativa" , "T", 'C');
 
 /*
 $pdf->SetXY(10,245);

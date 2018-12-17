@@ -41,14 +41,15 @@ $puestojefei=isset($_POST["puestojefei"])?acompletar($_POST["puestojefei"]):"Err
 $autorizador=isset($_POST["autorizador"])?acompletar($_POST["autorizador"]):"Error";
 $puestojefe=isset($_POST["puestojefe"])?acompletar($_POST["puestojefe"]):"Error";
 $adscripcion=isset($_POST["adscripcion"])?$_POST["adscripcion"]:"Error";
-$delegado=acompletar($delegado="Jorge Abel Lopez Sanchez \r Delegado Federal de la SEMARNAT \n \n ");
+$leyenda="\"Con fundamento en lo dispuesto por el artículo 84 del Reglamento Interior de la Secretaría de Medio Ambiente y Recursos Naturales, en suplencia, por ausencia del Titular de la Delegación Federal en los términos del artículo 17 Bis en relación con los artículos Octavo y Décimo Tercero Transitorios del Decreto por el que se reforman, adicionan y derogan diversas disposiciones de la Ley Orgánica de la Administración Pública Federal, publicado en el Diario Oficial de la Federación el 30 de noviembre de 2018 de la SEMARNAT en el estado de Sinaloa, previa designación, firma el presente el Subdelegado de Gestión para la Protección Ambiental y Recursos Naturales\"";
 
+$delegado=acompletar($delegado="Francisco Javier Ochoa Loza \n ");
 
 
 $pdf = new FPDF();
 $pdf->AddPage();
 $pdf->SetAutoPageBreak(false);
-$pdf->Image('logoh.jpg',15,20,-1100);
+$pdf->Image('logov.jpg',15,3,-280);
 $pdf->SetFont('Arial','',15);
 $pdf->Ln(10);
 $pdf->Cell(65, 5, '', 0, 0, 'L');
@@ -206,8 +207,12 @@ $pdf->SetXY(56.5,260);
 $pdf->MultiCell(46.5,5,$jefei."\r".$puestojefei,0,'C');
 $pdf->SetXY(103,260);
 $pdf->MultiCell(46.5,5,$autorizador."\r".$puestojefe,0,'C');
-$pdf->SetXY(149.5,260);
-$pdf->MultiCell(46.5,5,$delegado,0,'C');
+$pdf->SetXY(149.5,261);
+$pdf->SetFont('Arial','',10);
+$pdf->MultiCell(46.5,4,$delegado,0,'C');
+$pdf->SetFont('Arial','',3.5);
+$pdf->SetXY(149.5,270);
+$pdf->MultiCell(46.5,2,$leyenda,0,'C');
 
 $pdf->SetXY(10,260);
 $pdf->Cell(46.5,30,"",'LBR',0,"C");

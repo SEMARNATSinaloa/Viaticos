@@ -25,7 +25,7 @@
         -------------------------->
 
          <div class="row">
-              <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+              <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
 
                         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
@@ -40,6 +40,15 @@
                     <div class="panel-body" id="formularioComision">
                         <form name="formofcomision" id="formofcomision" action="reportes/ofcomision.php" method="POST" target="_blank">
                             <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="fechaof">Fecha: </label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" class="form-control pull-right" name="fechaof" id="fechaof" value='<?php echo date('d/m/Y')?>' required>
+                                    </div>
+                                </div>
                                 <div class="col-lg-12 col-smd-12 col-sm-12 col-xs-12">
                                     <label for="departamento">Departamento: </label>
                                     <div class="input-group">
@@ -53,7 +62,7 @@
                                     <label for="noficio">Número de oficio: </label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-book"></i></span>
-                                        <input type="text" name="noficio" class="form-control" id="noficio" maxlength="20" placeholder="Número de oficio" required>
+                                        <input type="text" name="noficio" class="form-control" id="noficio" maxlength="20" placeholder="Número de oficio">
                                     </div> 
                                 </div>
                             </div>
@@ -151,11 +160,11 @@
                                     <label for="noficio">Número del oficio de comisión: </label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-book"></i></span>
-                                        <input type="text" name="noficio" class="form-control" id="noficio" maxlength="20" placeholder="Número de oficio" required>
+                                        <input type="text" name="noficio" class="form-control" id="noficio" maxlength="20" placeholder="Número de oficio" >
                                     </div> 
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <label for="fechaof">Fechas del oficio: </label>
+                                <label for="fechaof">Fecha del oficio: </label>
                                     <div class="input-group date">
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
@@ -176,7 +185,7 @@
                                     <label for="clavep">Clave Presupuestal: </label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-gg"></i></span>
-                                        <input type="text" name="clavep" class="form-control" id="clavep" maxlength="60" placeholder="Clave presupuestal" required>
+                                        <input type="text" name="clavep" class="form-control" id="clavep" maxlength="60" placeholder="Clave presupuestal" >
                                     </div>
                                 </div> 
                             </div>
@@ -316,7 +325,7 @@
                                     <label for="objetivo">Objetivo de la comisión: </label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
-                                        <textarea class="form-control" rows="3" name="objetivo" id="objetivo" maxlength="500" placeholder="Objetivo de la comisión" required></textarea>
+                                        <textarea class="form-control" rows="3" name="objetivo" id="objetivo" maxlength="1000" placeholder="Objetivo de la comisión" required></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -375,7 +384,7 @@
                                     <label for="unidad">Unidad: </label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-book"></i></span>
-                                        <input type="text" name="unidad" class="form-control" id="unidad" maxlength="60" placeholder="Unidad" required>
+                                        <input type="text" name="unidad" class="form-control" id="unidad" value="145" maxlength="60" placeholder="Unidad" required>
                                     </div> 
                                 </div>
                             </div>
@@ -384,7 +393,7 @@
                                     <label for="nombre">Nombre del comisionado: </label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-paperclip"></i></span>
-                                        <input type="text" name="nombre" class="form-control" id="nombre" maxlength="10" placeholder="Nombre">
+                                        <input type="text" name="nombre" class="form-control" id="nombre" maxlength="50" placeholder="Nombre">
                                     </div>
                                 </div>
                             </div>
@@ -393,7 +402,7 @@
                                     <label for="Destino">Destino de la comisión:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-child"></i></span>
-                                        <input type="text" name="Destino" class="form-control" id="Destino" maxlength="60" placeholder="Destino" required>
+                                        <input type="text" name="destino" class="form-control" id="destino" maxlength="60" placeholder="Destino" required>
                                     </div>
                                 </div> 
                             </div>
@@ -417,53 +426,28 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <h3>Desglose de gastos<span class="label label-default"></span></h3>
-                                    <h1><button class="btn btn-success" id="add"><i class="fa fa-plus-circle"></i>Agregar factura</button></h1>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <label>Documnetación:</label>
-                                    <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-file"></i></span>
-                                    <!-- select -->
-                                    <div class="form-group">
-                                        <select class="form-control">
-                                            <option>Factura</option>
-                                            <option>Sin factura</option>
-                                        </select>
-                                    </div>
-                                </div>
                             
-                                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <div class="input-group">
-                                        <label for="nfactura">Fac. o concepto:</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa fa-stumbleupon"></i></span>
-                                            <input type="text" name="nfactura" class="form-control" id="nfactura" maxlength="25" placeholder="Concepto" required>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <div class="input-group">
-                                        <label for="fechafac">Fecha::</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
-                                            <input type="text" name="fechafac" class="form-control" id="fechafac" placeholder="Fecha" required>
-                                        </div>
-                                    </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <fieldset id="gastosFact">
+                                        <legend>Gastos con factura:</legend>
+                                    </fieldset>
+                                    <!-- <input type="button" value="Preview form" class="add" id="preview" />  -->
+                                    <br>
+                                    <input class="btn btn-info" type="button" value="Agregar" id="add1" />
                                 </div>
 
-                                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <div class="input-group">
-                                        <br>
-                                        <button type="button" class="btn btn-success delete">Delete</button>
-                                    </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <fieldset id="gastosNotas">
+                                        <legend>Gastos sin factura:</legend>
+                                    </fieldset>
+                                    <!-- <input type="button" value="Preview form" class="add" id="preview" />  -->
+                                    <br>
+                                    <input class="btn btn-info" type="button" value="Agregar" id="add2" />
                                 </div>
-                                </div>
+                            </div>
+                    
+                            <div class="row">
                                 <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <br>
                                     <button class="btn btn-primary" type="submit" id="btnImprimir" value="imprimir"><i class="fa fa-print"></i> Imprimir</button>

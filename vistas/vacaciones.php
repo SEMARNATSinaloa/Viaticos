@@ -175,7 +175,7 @@
                                     <label for="diaspen">Días Habiles Pendientes:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-ticket"></i></span>
-                                        <input type="number" name="diaspen" class="form-control" id="diaspen" min="1" max="10" placeholder="Días pendientes"  required>
+                                        <input type="number" name="diaspen" class="form-control" id="diaspen" min="0" max="10" placeholder="Días pendientes"  required>
                                     </div>
                                 </div>  
                             </div>

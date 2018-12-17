@@ -4,6 +4,7 @@
 
     setlocale(LC_ALL,"es_ES");
     //190px de ancho de la hoja con los margenes
+    $fechaof=isset($_POST["fechaof"])?$_POST["fechaof"]:"";
     $departamento=isset($_POST["departamento"])?$_POST["departamento"]:"";
     $noficio=isset($_POST["noficio"])?$_POST["noficio"]:"";
     $nombre=isset($_POST["nombre"])?$_POST["nombre"]:"";
@@ -20,10 +21,17 @@
                     "de su comisión, segun sea el caso, en un lapso no mayor a 6 días hábiles posteriores ".
                     "a su regreso.";
 
+        $fechaof = str_replace('/','-', $fechaof);
+        $timestamp = strtotime($fechaof);
+        
+        setlocale(LC_TIME, 'spanish');
+        //$fecha=strftime("%A %d de %B del %Y");
+        $fechaof=strftime("%A %d de %B del %Y", $timestamp);
+
     //$pdf2 = new PDF_MC_Table();
     $pdf= new FPDF();
     $pdf->AddPage();
-    $pdf->Image('logoh.jpg',15,20,-1100);
+    $pdf->Image('logov.jpg',20,05,-280);
     $pdf->SetFont('Arial','',11);
     $pdf->Ln(10);
     $pdf->Cell(65, 5, '', 0, 0, 'L');
@@ -35,10 +43,10 @@
     $pdf->Cell(65, 5, '', 0, 0, 'L');
     $pdf->Cell(20, 5, 'Oficio No.:', 0, 0, 'L');
     $pdf->Cell(60, 5, $noficio, 0, 0, 'L');
-    $pdf->Ln(20);
+    $pdf->Ln(10);
     $pdf->Cell(65, 5, '', 0, 0, 'L');
     $pdf->Cell(20, 5, 'Fecha:', 0, 0, 'L');
-    $pdf->Cell(105, 5, strftime("%A %d de %B del %Y"), 0, 0, 'L');
+    $pdf->Cell(105, 5, $fechaof, 0, 0, 'L');
     $pdf->Ln(15);
     $pdf->Cell(10, 5, '', 0, 0, 'L');
     $pdf->Cell(50, 5, 'Nombre del comisionado:', 0, 0, 'L');
@@ -82,19 +90,21 @@
     $pdf->Ln(10);
     $pdf->Cell(10, 5, '', 0, 0, 'L');
     $pdf->MultiCell(180, 5, $cierreoficio, 0, 'L');
-    $pdf->Ln(15);
+    $pdf->Ln(5);
     $pdf->SetFont('Arial','B',11);
     $pdf->Cell(10, 5, '', 0, 0, 'L');
     $pdf->Cell(50, 5, 'Atentamente:', 0, 1, 'L');
-    $pdf->Ln(15);
+    $pdf->Ln(5);
     $pdf->SetFont('Arial','',11);
-    $pdf->SetWidths(array(10,75,20,75,10));
+    $pdf->SetWidths(array(5,75,5,105,0));
     $pdf->SetAligns(array('C','C','C','C','C'));
     //for($i=0;$i<20;$i++)
     //$pdf->SetAligns('C');
-    $pdf->Row(array('',$puestojefe,'','Delegado Federal',''));
-    $pdf->Ln(0);
-    $pdf->Row(array('',$jefeinmediato,'','Jorge Abel Lopez Sanchez',''));
+    $pdf->SetFont('Arial','',9);
+    $pdf->Row(array('',$puestojefe,'',"\"Con fundamento en lo dispuesto por el artículo 84 del Reglamento Interior de la Secretaría de Medio Ambiente y Recursos Naturales, en suplencia, por ausencia del Titular de la Delegación Federal en los términos del artículo 17 Bis en relación con los artículos Octavo y Décimo Tercero Transitorios del Decreto por el que se reforman, adicionan y derogan diversas disposiciones de la Ley Orgánica de la Administración Pública Federal, publicado en el Diario Oficial de la Federación el 30 de noviembre de 2018 de la SEMARNAT en el estado de Sinaloa, previa designación, firma el presente el Subdelegado de Gestión para la Protección Ambiental y Recursos Naturales\"",''));
+    $pdf->Ln(15);
+    $pdf->SetFont('Arial','',11);
+    $pdf->Row(array('',$jefeinmediato,'','Francisco Javier Ochoa Loza',''));
 
 
     $pdf->Output();

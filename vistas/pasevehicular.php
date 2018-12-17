@@ -83,6 +83,7 @@
                                         <!-- select -->
                                         <div class="form-group">
                                             <select class="form-control" name="vehiculo">
+                                                <option> - </option>
                                                 <option>SMA 034  -  PICK UP RANGER</option>
                                                 <option>SMA 036  -  PICK UP RANGER</option>
                                                 <option>SMA 037  -  PICK UP RANGER</option>

@@ -34,6 +34,14 @@ function init()
         minViewMode: "years"
     })
 
+    $('#añop2').datepicker({
+        autoclose: true,
+        language: 'es',
+        format: " yyyy",
+        viewMode: "years",
+        minViewMode: "years"
+    })
+
     
 
     /*restar dos fechas con dias habiles
