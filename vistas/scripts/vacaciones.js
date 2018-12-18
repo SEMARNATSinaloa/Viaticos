@@ -26,7 +26,7 @@ function init()
 
     })
 
-    $('#añop').datepicker({
+    $('#añop1').datepicker({
         autoclose: true,
         language: 'es',
         format: " yyyy",

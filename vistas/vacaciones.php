@@ -57,7 +57,7 @@
                                         <span class="input-group-addon"><i class="fa fa-inbox"></i></span>
                                         <!-- select -->
                                         <div class="form-group">
-                                            <select class="form-control" name="periodo">
+                                            <select class="form-control" name="periodo1">
                                                 <option>Primero</option>
                                                 <option>Segundo</option>
                                             </select>
@@ -70,7 +70,32 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input type="text" class="form-control pull-right" name="añop" id="añop" value='<?php echo date('Y')?>' required>
+                                        <input type="text" class="form-control pull-right" name="añop1" id="añop1" value='<?php echo date('Y')?>' required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <label>Unir periodo:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-inbox"></i></span>
+                                        <!-- select -->
+                                        <div class="form-group">
+                                            <select class="form-control" name="periodo2">
+                                                <option> - </option>
+                                                <option>Primero</option>
+                                                <option>Segundo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <label for="añop">Año del Periodo: </label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" class="form-control pull-right" name="añop2" id="añop2" value='<?php echo date('Y')?>' required>
                                     </div>
                                 </div>
                             </div>

@@ -6,8 +6,9 @@ require('../../public/plugins/fpdf181/fpdf.php');
 //print "<p>Su nombre es $_REQUEST[nombre]</p>\n";
 
 $fecha=isset($_POST["fecha"])?$_POST["fecha"]:"Error";
-$periodo=isset($_POST["periodo"])?$_POST["periodo"]:"Error";
-$añop=isset($_POST["añop"])?$_POST["añop"]:"Error";
+$periodo1=isset($_POST["periodo1"])?$_POST["periodo1"]:"Error";
+$añop1=isset($_POST["añop1"])?$_POST["añop1"]:"Error";
+$añop2=isset($_POST["añop2"])?$_POST["añop2"]:"Error";
 $rfc=isset($_POST["rfc"])?$_POST["rfc"]:"Error";
 $id=isset($_POST["id"])?$_POST["id"]:"Error";
 $apaterno=isset($_POST["apaterno"])?$_POST["apaterno"]:"Error";
@@ -22,6 +23,7 @@ $fechaf=isset($_POST["fechaf"])?$_POST["fechaf"]:"Error";
 $diasaut=isset($_POST["diasaut"])?$_POST["diasaut"]:"Error";
 $diaspen=isset($_POST["diaspen"])?$_POST["diaspen"]:"Error";
 $observaciones=isset($_POST["observaciones"])?$_POST["observaciones"]:"Error";
+$periodo2=isset($_POST["periodo2"])?$_POST["periodo2"]:"Error";
 
 
 //echo $fechai."<br>";
@@ -81,9 +83,21 @@ $pdf->Cell(53, 5, 'FECHA: ', 0,0, 'R');
 $pdf->Cell(40, 5, $fecha, "B",0, 'C');
 $pdf->Ln(10);
 $pdf->Cell(100, 5, '', 0, 0, 'L');
-$pdf->Cell(30, 5, $periodo."/".$añop, 1,0, 'C');
+$pdf->Cell(30, 5, $periodo1."/".$añop1, 1,0, 'C');
 $pdf->Cell(30, 5, "Periodo", 0,1, 'L');
-$pdf->Ln(1);
+
+if($periodo2==="-")
+{
+    $pdf->Ln(1);
+}
+else{
+    $pdf->Ln(1);
+    $pdf->Cell(100, 5, '', 0, 0, 'L');
+    $pdf->Cell(30, 5, $periodo2."/".$añop2, 1,0, 'C');
+    $pdf->Cell(30, 5, "Periodo", 0,1, 'L');
+    $pdf->Ln(1);
+}
+
 $pdf->Cell(100, 5, '', 0, 0, 'L');
 $pdf->Cell(30, 5, "", 1,0, 'C');
 $pdf->Cell(30, 5, "Modificación", 0,1, 'L');
