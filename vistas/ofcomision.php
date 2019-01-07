@@ -32,6 +32,7 @@
               <li class="active"><a href="#ofcomision" data-toggle="tab">Of. Comisión</a></li>
               <li><a href="#ministracion" data-toggle="tab">Ministración</a></li>
               <li><a href="#desglose" data-toggle="tab">Desglose de Gastos</a></li>
+              <li><a href="#informe" data-toggle="tab">Informe</a></li>
             </ul>
             <div class="tab-content">
                 <!-- Formulario para oficio de comision -->
@@ -374,11 +375,11 @@
                     <!--Fin centro -->
                 </div>
                 <!-- /#orden de ministracion -->
-                <!-- formulario de orden de ministracion-->
+                <!-- formulario de desglose-->
                 <div class="tab-pane" id="desglose">
                     <!-- centro -->
                     <div class="panel-body" id="formularioDesglose">
-                        <form name="formofministracion" id="formdesglose" action="reportes/desglose.php" method="POST" target="_blank">
+                        <form name="formdesglose" id="formdesglose" action="reportes/desglose.php" method="POST" target="_blank">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <label for="unidad">Unidad: </label>
@@ -393,7 +394,7 @@
                                     <label for="nombre">Nombre del comisionado: </label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-paperclip"></i></span>
-                                        <input type="text" name="nombre" class="form-control" id="nombre" maxlength="50" placeholder="Nombre">
+                                        <input type="text" name="nombre" class="form-control" id="nombre" maxlength="50" placeholder="Nombre" required>
                                     </div>
                                 </div>
                             </div>
@@ -459,7 +460,75 @@
                     </div>
                     <!--Fin centro -->
                 </div>
-                <!-- /#orden de ministracion -->
+                <!-- /#orden de desglose -->
+                <!-- formulario de informe-->
+                <div class="tab-pane" id="informe">
+                    <!-- centro -->
+                    <div class="panel-body" id="formularioInforme">
+                        <form name="forminforme" id="forminforme" action="reportes/informe.php" method="POST" target="_blank">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="numero">Número: </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-book"></i></span>
+                                        <input type="text" name="numero" class="form-control" id="numero" maxlength="30" placeholder="Número">
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="fechaInf">Fecha de la comisión: </label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" class="form-control pull-right" name="fechaInf" id="fechaInf" value='<?php echo date('d/m/Y')?>' required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="destino">Destino de la comisión:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-globe"></i></span>
+                                        <input type="text" name="destino" class="form-control" id="destino" maxlength="60" placeholder="Destino de la comisión" required>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="fechainicio">Fechas de inicio: </label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" class="form-control pull-right" name="fechainicio" id="fechainicio" value='<?php echo date('d/m/Y')?>' required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="fechafin">Fechas de fin: </label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" class="form-control pull-right" name="fechafin" id="fechafin" value='<?php echo date('d/m/Y')?>' required>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="row">
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <br>
+                                    <button class="btn btn-primary" type="submit" id="btnImprimir" value="imprimir"><i class="fa fa-print"></i> Imprimir</button>
+
+                                    <button class="btn btn-danger"  type="reset" id="btnborrar"><i class="fa fa-eraser"></i> Borrar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--Fin centro -->
+                </div>
+                <!-- /#orden de informe -->
             </div>
             <!-- /.tab-content -->
           </div>
