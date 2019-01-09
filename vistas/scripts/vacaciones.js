@@ -26,7 +26,15 @@ function init()
 
     })
 
-    $('#añop').datepicker({
+    $('#añop1').datepicker({
+        autoclose: true,
+        language: 'es',
+        format: " yyyy",
+        viewMode: "years",
+        minViewMode: "years"
+    })
+
+    $('#añop2').datepicker({
         autoclose: true,
         language: 'es',
         format: " yyyy",

@@ -24,7 +24,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
-  <link rel="stylesheet" href="../public/css/skins/skin-blue.min.css">
+  <link rel="stylesheet" href="../public/css/skins/skin-yellow.min.css">
 
   <link rel="stylesheet" href="../public/css/viaticos.css">
 
@@ -65,7 +65,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-yellow sidebar-mini">
 <div class="wrapper">
 
   <!-- Main Header -->
@@ -289,6 +289,30 @@ desired effect
             <li><a href="vacaciones.php"><i class="fa fa-file-pdf-o"><span></i>Solicitud de vacaciones</span></a></li>
             <li><a href="../public/docs/certificadotransito.pdf" download="certificado.pdf"><i class="fa fa-file-pdf-o"><span></i>Certificado de tránsito</span></a></li>
           </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-edit"></i> <span>Viaticos</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+            <ul class="treeview-menu">
+              <li><a href="ofcomision.php"><i class="fa fa-file-pdf-o"><span></i>Comisión</span></a></li>        
+            </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-edit"></i> <span>Soporte</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+            <ul class="treeview-menu">
+              <li><a href="../../support/submit_ticket"><i class="fa fa-file-pdf-o"><span></i>Enviar ticket de soporte</span></a></li>
+              <li><a href="../../support/"><i class="fa fa-file-pdf-o"><span></i>Seguimiento a un ticket</span></a></li>
+              <li><a href="../../support/staff"><i class="fa fa-file-pdf-o"><span></i>Administrar soporte</span></a></li>          
+            </ul>
         </li>
         
       </ul>
