@@ -7,10 +7,12 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
+    <!--
       <h1>
         Page Header
         <small>Optional description</small>
       </h1>
+    -->
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
         <li class="active">Here</li>
@@ -467,6 +469,13 @@
                     <div class="panel-body" id="formularioInforme">
                         <form name="forminforme" id="forminforme" action="reportes/informe.php" method="POST" target="_blank">
                             <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label for="nombre">Nombre: </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-book"></i></span>
+                                        <input type="text" name="nombre" class="form-control" id="nombre" maxlength="50" placeholder="Nombre">
+                                    </div> 
+                                </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <label for="numero">Número: </label>
                                     <div class="input-group">
@@ -515,7 +524,12 @@
                                     </div>
                                 </div>
                             </div>
-                    
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label for="sintesis">Sintesis del informe:</label>
+                                        <textarea class="form-control textarea" name="sintesis" id="sintesis" rows="3" placeholder="Escriba su síntesis ..." required></textarea>
+                                </div> 
+                            </div>
                             <div class="row">
                                 <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <br>
