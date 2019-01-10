@@ -76,12 +76,41 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                                    <label>Unir periodo:</label>
+                                    <label for="fechai">Fecha Inicial del Periodo: </label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" class="form-control pull-right" name="fechai" id="fechai" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <label for="fechaf">Fecha Final del Periodo: </label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" class="form-control pull-right" name="fechaf" id="fechaf" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <br>
+                                    <input class="btn btn-info" type="button" value="Agregar periodo" id="add1" />
+                                </div>
+                            </div>
+                            <div class="row" id="bloque1">
+                                
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                
+                                    <label>Periodo:</label>
                                     <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-inbox"></i></span>
-                                        <!-- select -->
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-inbox"></i>
+                                        </span><!-- select -->
                                         <div class="form-group">
-                                            <select class="form-control" name="periodo2">
+                                            <select class="form-control" name="periodo2" id="periodo2">
                                                 <option> - </option>
                                                 <option>Primero</option>
                                                 <option>Segundo</option>
@@ -95,10 +124,24 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input type="text" class="form-control pull-right" name="añop2" id="añop2" value='<?php echo date('Y')?>' required>
+                                        <input type="text" class="form-control pull-right" name="añop2" id="añop2" value="">
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    
+                                    
+                                    
+                                    <br>
+                                    <fieldset id="otroPeriodo">
+                                        
+                                    </fieldset>
+                                    <!-- <input type="button" value="Preview form" class="add" id="preview" />  -->
+                                    
+                                </div>
+                            </div>
+                            
                             <div class="row">
                                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                     <label for="rfc">R.F.C.:</label>
@@ -165,26 +208,6 @@
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-black-tie"></i></span>
                                         <input type="text" name="puestojefe" class="form-control" id="puestojefe" maxlength="60" placeholder="Puesto Jefe Inmediato"  required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <label for="fechai">Fecha Inicial del Periodo: </label>
-                                    <div class="input-group date">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-calendar"></i>
-                                        </div>
-                                        <input type="text" class="form-control pull-right" name="fechai" id="fechai" required>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <label for="fechaf">Fecha Final del Periodo: </label>
-                                    <div class="input-group date">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-calendar"></i>
-                                        </div>
-                                        <input type="text" class="form-control pull-right" name="fechaf" id="fechaf" required>
                                     </div>
                                 </div>
                             </div>

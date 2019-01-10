@@ -8,7 +8,6 @@ require('../../public/plugins/fpdf181/fpdf.php');
 $fecha=isset($_POST["fecha"])?$_POST["fecha"]:"Error";
 $periodo1=isset($_POST["periodo1"])?$_POST["periodo1"]:"Error";
 $añop1=isset($_POST["añop1"])?$_POST["añop1"]:"Error";
-$añop2=isset($_POST["añop2"])?$_POST["añop2"]:"Error";
 $rfc=isset($_POST["rfc"])?$_POST["rfc"]:"Error";
 $id=isset($_POST["id"])?$_POST["id"]:"Error";
 $apaterno=isset($_POST["apaterno"])?$_POST["apaterno"]:"Error";
@@ -24,6 +23,10 @@ $diasaut=isset($_POST["diasaut"])?$_POST["diasaut"]:"Error";
 $diaspen=isset($_POST["diaspen"])?$_POST["diaspen"]:"Error";
 $observaciones=isset($_POST["observaciones"])?$_POST["observaciones"]:"Error";
 $periodo2=isset($_POST["periodo2"])?$_POST["periodo2"]:"Error";
+$añop2=isset($_POST["añop2"])?$_POST["añop2"]:"Error";
+$fechaip2=isset($_POST["fechaip2"])?$_POST["fechaip2"]:"Error";
+$fechafp2=isset($_POST["fechafp2"])?$_POST["fechafp2"]:"Error";
+
 
 
 //echo $fechai."<br>";
@@ -37,6 +40,20 @@ $timestampf = strtotime($fechaf);
 setlocale(LC_TIME, 'spanish');
 $fechai= strftime("%A %d de %B del %Y", $timestampi);
 $fechaf= strftime("%A %d de %B del %Y", $timestampf);
+
+for($i=0;$i<count($fechaip2);$i++){
+    $fechaip2[$i]=str_replace('/','-', $fechaip2[$i]);
+    $timestampip2= strtotime($fechaip2[$i]);
+
+    $fechafp2[$i]=str_replace('/','-', $fechafp2[$i]);
+    $timestampfp2=strtotime($fechafp2[$i]);
+
+    setlocale(LC_TIME, 'spanish');
+    $fechaip2[$i]= strftime("%A %d de %B del %Y", $timestampip2);
+    $fechafp2[$i]= strftime("%A %d de %B del %Y", $timestampfp2);
+}
+
+
 
 //die();
 
@@ -112,7 +129,7 @@ $pdf->Cell(20, 5, '', 0, 0, 'L');
 $pdf->Cell(30, 5, "DATOS DEL SERVIDOR PUBLICO", 0,0, 'L');
 
 $pdf->SetFont('Arial','',10);
-$pdf->Ln(10);
+$pdf->Ln(5);
 $pdf->Cell(18, 5, "", 0,0, 'L');
 $pdf->Cell(45, 5, $apaterno, "B",0, 'C');
 $pdf->Cell(9, 5, "", 0,0, 'L');
@@ -162,7 +179,7 @@ $pdf->Cell(19, 5, "", 0,1, 'L');
 $pdf->Rect(28,110,154,0.2);
 $pdf->Line(28,110.7,182,110.7);
 
-$pdf->Ln(5);
+$pdf->Ln(10);
 $pdf->Cell(20, 5, "", 0,0, 'L');
 $pdf->MultiCell(150, 4, "De conformidad con las fracciones III y XIV del apartado B, del articulo 123 Constitucional, y 30 de la Ley Federal de los Trabajadores al Servicio del Estado, solicito disfrutar de vacaciones en el siguiente:",0, 'J');
 
@@ -172,6 +189,18 @@ $pdf->Cell(10, 5, "Del:", 0,0, 'L');
 $pdf->Cell(55, 5, utf8_encode($fechai), "B",0, 'L');
 $pdf->Cell(25, 5, "Al: ", 0,0, 'R');
 $pdf->Cell(55, 5, utf8_encode($fechaf), "B",0, 'L');
+if($periodo2 != "-"){
+    
+    for($i=0;$i<count($fechaip2);$i++){
+        $pdf->Ln(5);
+        $pdf->Cell(20, 5, "", 0,0, 'L');
+        $pdf->Cell(10, 5, "Del:", 0,0, 'L');
+        $pdf->Cell(55, 5, utf8_encode($fechaip2[$i]), "B",0, 'L');
+        $pdf->Cell(25, 5, "Al: ", 0,0, 'R');
+        $pdf->Cell(55, 5, utf8_encode($fechafp2[$i]), "B",0, 'L');
+    }
+}
+
 
 $pdf->Ln(10);
 $pdf->Cell(20, 5, "", 0,0, 'L');
@@ -189,7 +218,7 @@ $pdf->Cell(20, 5, "", 0,0, 'L');
 $pdf->MultiCell(150, 4, $observaciones, 0, 'J');
 
 $pdf->Ln(5);
-$pdf->SetY(181);
+//$pdf->SetY(191);
 $pdf->Cell(20, 5, "", 0,0, 'L');
 $pdf->MultiCell(150, 4, "Lo anterior, toda vez que me encuentro al corriente del cumplimiento de mis funciones y conforme al derecho que me asiste al contar con mas de seis meses de servicios ininterrumpidos en el de sempeño de mi cargo:", 0, 'J');
 
