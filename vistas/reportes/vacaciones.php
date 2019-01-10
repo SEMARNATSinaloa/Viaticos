@@ -24,6 +24,8 @@ $diaspen=isset($_POST["diaspen"])?$_POST["diaspen"]:"Error";
 $observaciones=isset($_POST["observaciones"])?$_POST["observaciones"]:"Error";
 $periodo2=isset($_POST["periodo2"])?$_POST["periodo2"]:"Error";
 $añop2=isset($_POST["añop2"])?$_POST["añop2"]:"Error";
+$fechaip1=isset($_POST["fechaip1"])?$_POST["fechaip1"]:"Error";
+$fechafp1=isset($_POST["fechafp1"])?$_POST["fechafp1"]:"Error";
 $fechaip2=isset($_POST["fechaip2"])?$_POST["fechaip2"]:"Error";
 $fechafp2=isset($_POST["fechafp2"])?$_POST["fechafp2"]:"Error";
 
@@ -31,27 +33,28 @@ $fechafp2=isset($_POST["fechafp2"])?$_POST["fechafp2"]:"Error";
 
 //echo $fechai."<br>";
 $fechai = str_replace('/','-', $fechai);
-$timestampi = strtotime($fechai);
-
 $fechaf = str_replace('/','-', $fechaf);
+$fechaip1 = str_replace('/','-', $fechaip1);
+$fechaip2 = str_replace('/','-', $fechaip2);
+$fechafp1 = str_replace('/','-', $fechafp1);
+$fechafp2 = str_replace('/','-', $fechafp2);
+$timestampi = strtotime($fechai);
 $timestampf = strtotime($fechaf);
-//$fechai = date("Y-m-d", $timestamp);
-//echo date("%A %d de %B del %Y", $fechai);
+$timestampip1 = strtotime($fechaip1);
+$timestampip2 = strtotime($fechaip2);
+$timestampfp1 = strtotime($fechafp1);
+$timestampfp2 = strtotime($fechafp2);
 setlocale(LC_TIME, 'spanish');
 $fechai= strftime("%A %d de %B del %Y", $timestampi);
 $fechaf= strftime("%A %d de %B del %Y", $timestampf);
+$fechaip1= strftime("%A %d de %B del %Y", $timestampip1);
+$fechaip2= strftime("%A %d de %B del %Y", $timestampip2);
+$fechafp1= strftime("%A %d de %B del %Y", $timestampfp1);
+$fechafp2= strftime("%A %d de %B del %Y", $timestampfp2);
 
-for($i=0;$i<count($fechaip2);$i++){
-    $fechaip2[$i]=str_replace('/','-', $fechaip2[$i]);
-    $timestampip2= strtotime($fechaip2[$i]);
 
-    $fechafp2[$i]=str_replace('/','-', $fechafp2[$i]);
-    $timestampfp2=strtotime($fechafp2[$i]);
 
-    setlocale(LC_TIME, 'spanish');
-    $fechaip2[$i]= strftime("%A %d de %B del %Y", $timestampip2);
-    $fechafp2[$i]= strftime("%A %d de %B del %Y", $timestampfp2);
-}
+
 
 
 
@@ -108,11 +111,16 @@ if($periodo2==="-")
     $pdf->Ln(1);
 }
 else{
-    $pdf->Ln(1);
-    $pdf->Cell(100, 5, '', 0, 0, 'L');
-    $pdf->Cell(30, 5, $periodo2."/".$añop2, 1,0, 'C');
-    $pdf->Cell(30, 5, "Periodo", 0,1, 'L');
-    $pdf->Ln(1);
+    if($periodo1===$periodo2 && $añop1===$añop2){
+        $pdf->Ln(1);
+    }
+    else{
+        $pdf->Ln(1);
+        $pdf->Cell(100, 5, '', 0, 0, 'L');
+        $pdf->Cell(30, 5, $periodo2."/".$añop2, 1,0, 'C');
+        $pdf->Cell(30, 5, "Periodo", 0,1, 'L');
+        $pdf->Ln(1);
+    }
 }
 
 $pdf->Cell(100, 5, '', 0, 0, 'L');
@@ -191,13 +199,27 @@ $pdf->Cell(25, 5, "Al: ", 0,0, 'R');
 $pdf->Cell(55, 5, utf8_encode($fechaf), "B",0, 'L');
 if($periodo2 != "-"){
     
-    for($i=0;$i<count($fechaip2);$i++){
+    if($fechaip2 != "jueves 01 de enero del 1970"){
         $pdf->Ln(5);
         $pdf->Cell(20, 5, "", 0,0, 'L');
         $pdf->Cell(10, 5, "Del:", 0,0, 'L');
-        $pdf->Cell(55, 5, utf8_encode($fechaip2[$i]), "B",0, 'L');
+        $pdf->Cell(55, 5, utf8_encode($fechaip1), "B",0, 'L');
         $pdf->Cell(25, 5, "Al: ", 0,0, 'R');
-        $pdf->Cell(55, 5, utf8_encode($fechafp2[$i]), "B",0, 'L');
+        $pdf->Cell(55, 5, utf8_encode($fechafp1), "B",0, 'L');
+        $pdf->Ln(5);
+        $pdf->Cell(20, 5, "", 0,0, 'L');
+        $pdf->Cell(10, 5, "Del:", 0,0, 'L');
+        $pdf->Cell(55, 5, utf8_encode($fechaip2), "B",0, 'L');
+        $pdf->Cell(25, 5, "Al: ", 0,0, 'R');
+        $pdf->Cell(55, 5, utf8_encode($fechafp2), "B",0, 'L');
+    }
+    else{
+        $pdf->Ln(5);
+        $pdf->Cell(20, 5, "", 0,0, 'L');
+        $pdf->Cell(10, 5, "Del:", 0,0, 'L');
+        $pdf->Cell(55, 5, utf8_encode($fechaip1), "B",0, 'L');
+        $pdf->Cell(25, 5, "Al: ", 0,0, 'R');
+        $pdf->Cell(55, 5, utf8_encode($fechafp1), "B",0, 'L');
     }
 }
 
