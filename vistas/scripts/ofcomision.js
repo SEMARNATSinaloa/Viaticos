@@ -1,5 +1,7 @@
 $(document).ready(function() {
     $("#add1").click(function() {
+
+        var tiempo = + new Date();
         
         var intId = $("#gastosFact div").length + 1;
         //console.log($("#gastosFact div").length);
@@ -7,7 +9,7 @@ $(document).ready(function() {
         //var fName = $("<input type=\"text\" class=\"fieldname\" />");
         //var fType = $("<select class=\"fieldtype\"><option value=\"checkbox\">Checked</option><option value=\"textbox\">Text</option><option value=\"textarea\">Paragraph</option></select>");
         //var fType = $("<div class=\"col-lg-4 col-md-4 col-sm-12 col-xs-12\"><div class=\"input-group\"><span class=\"input-group-addon\">-</span><input name=\"ndoc\" id=\"ndoc\" type=\"text\" required class=\"form-control\" placeholder=\"No. de documento\"><span class=\"input-group-addon\">-</span><input name=\"fechadoc\" id=\"fechadoc\" type=\"text\" required class=\"form-control\" placeholder=\"Fecha\"><span class=\"input-group-addon\">-</span><input name=\"importe\" id=\"importe\" type=\"text\" required class=\"form-control\" placeholder=\"Importe $\"></div></div>");
-        var fType = $("<br><div class=\"input-group\"><span class=\"input-group-addon\"><i class=\"fa fa-ticket\"></i></span><input name=\"factura[]\" id=\"factura[]\" type=\"text\" required class=\"form-control\" placeholder=\"Factura\"><span class=\"input-group-addon\"><i class=\"fa fa-calendar\"></i></span><input name=\"fechaFac[]\" id=\"fechaFac[]\" type=\"text\" required class=\"form-control\" placeholder=\"Fecha\"><span class=\"input-group-addon\"><i class=\"fa fa-money\"></i></span><input name=\"importeFac[]\" id=\"importeFac[]\" type=\"text\" required class=\"form-control\" placeholder=\"Importe\"></div>");
+        var fType = $("<br><div class=\"input-group\"><span class=\"input-group-addon\"><i class=\"fa fa-ticket\"></i></span><input name=\"factura[]\" id=\"factura[]\" type=\"text\" maxlength=\"13\" required class=\"form-control\" placeholder=\"Factura\"><span class=\"input-group-addon\"><i class=\"fa fa-calendar\"></i></span><input name=\"fechaFac[]\" id=\"fechaFac" + tiempo + "\" type=\"text\" required class=\"form-control\" placeholder=\"Fecha\"><span class=\"input-group-addon\"><i class=\"fa fa-money\"></i></span><input name=\"importeFac[]\" id=\"importeFac[]\" type=\"number\" min=\"0\" max=\"9999999\" step=\"0.01\" required class=\"form-control\" placeholder=\"Importe\"></div>");
         var removeButton = $("<button class=\"btn btn-danger\" type=\"submit\" value=\"\"><i class=\"fa fa-trash\"></i></button>");
         removeButton.click(function() {
             $(this).parent().remove();
@@ -26,16 +28,27 @@ $(document).ready(function() {
             $("#add1").attr("disabled", true);
             console.log($("#gastosFact div").length >= 20);
         }
+
+        setTimeout(function(){ 
+            $('#fechaFac'+tiempo).datepicker({
+            autoclose: true,
+            language: 'es'
+            })  
+        }, 100);   
+        
         
     });
 
     $("#add2").click(function() {
+
+        var tiempo = + new Date();
+
         var intId = $("#gastosNotas div").length + 1;
         var fieldWrapper = $("<div class=\"fieldwrapper col-lg-12 col-smd-12\" id=\"field" + intId + "\"/>");
         var fName = $("<input type=\"text\" class=\"fieldname\" />");
         //var fType = $("<select class=\"fieldtype\"><option value=\"checkbox\">Checked</option><option value=\"textbox\">Text</option><option value=\"textarea\">Paragraph</option></select>");
         //var fType = $("<div class=\"col-lg-4 col-md-4 col-sm-12 col-xs-12\"><div class=\"input-group\"><span class=\"input-group-addon\">-</span><input name=\"ndoc\" id=\"ndoc\" type=\"text\" required class=\"form-control\" placeholder=\"No. de documento\"><span class=\"input-group-addon\">-</span><input name=\"fechadoc\" id=\"fechadoc\" type=\"text\" required class=\"form-control\" placeholder=\"Fecha\"><span class=\"input-group-addon\">-</span><input name=\"importe\" id=\"importe\" type=\"text\" required class=\"form-control\" placeholder=\"Importe $\"></div></div>");
-        var fType = $("<br><div class=\"input-group\"><span class=\"input-group-addon\"><i class=\"fa fa-ticket\"></i></span><input name=\"conceptoGas[]\" id=\"conceptoGas[]\" type=\"text\" required class=\"form-control\" placeholder=\"Concepto\"><span class=\"input-group-addon\"><i class=\"fa fa-calendar\"></i></span><input name=\"fechaGas[]\" id=\"fechaGas[]\" type=\"text\" required class=\"form-control\" placeholder=\"Fecha\"><span class=\"input-group-addon\"><i class=\"fa fa-money\"></i></span><input name=\"importeGas[]\" id=\"importeGas[]\" type=\"text\" required class=\"form-control\" placeholder=\"Importe $\"></div>");
+        var fType = $("<br><div class=\"input-group\"><span class=\"input-group-addon\"><i class=\"fa fa-ticket\"></i></span><input name=\"conceptoGas[]\" id=\"conceptoGas[]\" type=\"text\" maxlength=\"13\" required class=\"form-control\" placeholder=\"Concepto\"><span class=\"input-group-addon\"><i class=\"fa fa-calendar\"></i></span><input name=\"fechaGas[]\" id=\"fechaGas" + tiempo + "\" type=\"text\" required class=\"form-control\" placeholder=\"Fecha\"><span class=\"input-group-addon\"><i class=\"fa fa-money\"></i></span><input name=\"importeGas[]\" id=\"importeGas[]\" type=\"number\" maxlength=\"10\" required class=\"form-control\" placeholder=\"Importe $\"></div>");
         //var removeButton = $("<input type=\"button\" class=\"btn btn-danger\" >");
         var removeButton = $("<button class=\"btn btn-danger\" type=\"submit\" value=\"\"><i class=\"fa fa-trash\"></i></button>");
         removeButton.click(function() {
@@ -55,6 +68,13 @@ $(document).ready(function() {
             $("#add2").attr("disabled", true);
             console.log($("#gastosNotas div").length >= 20);
         }
+
+        setTimeout(function(){ 
+            $('#fechaGas'+tiempo).datepicker({
+            autoclose: true,
+            language: 'es'
+            })  
+        }, 100);   
 
     });
 
