@@ -11,12 +11,12 @@ $nombre=isset($_POST["nombre"])?$_POST["nombre"]:"Error";
 $destino=isset($_POST["destino"])?$_POST["destino"]:"Error";
 $fechamininicio=isset($_POST["fechamininicio"])?$_POST["fechamininicio"]:"Error";
 $fechaminfin=isset($_POST["fechaminfin"])?($_POST["fechaminfin"]):"Error";
-$factura=isset($_POST["factura"])?($_POST["factura"]):"Error";
-$fechafac=isset($_POST["fechaFac"])?($_POST["fechaFac"]):"Error";
-$importefac=isset($_POST["importeFac"])?($_POST["importeFac"]):"Error";
-$fechagas=isset($_POST["fechaGas"])?($_POST["fechaGas"]):"Error";
-$conceptogas=isset($_POST["conceptoGas"])?($_POST["conceptoGas"]):"Error";
-$importegas=isset($_POST["importeGas"])?($_POST["importeGas"]):"Error";
+$factura=isset($_POST["factura"])?($_POST["factura"]):"";
+$fechafac=isset($_POST["fechaFac"])?($_POST["fechaFac"]):"";
+$importefac=isset($_POST["importeFac"])?($_POST["importeFac"]):"";
+$fechagas=isset($_POST["fechaGas"])?($_POST["fechaGas"]):"";
+$conceptogas=isset($_POST["conceptoGas"])?($_POST["conceptoGas"]):"";
+$importegas=isset($_POST["importeGas"])?($_POST["importeGas"]):"";
 $impFac=0;
 $impGas=0;
 
@@ -74,13 +74,16 @@ $pdf->Cell(24, 8, 'CONCEPTO', 1, 0, 'C');
 $pdf->Cell(24, 8, 'IMPORTE', 1, 1, 'C');
 
 //repetir en funcion del tamaño de los arreglos de facturas y gastos
-for($i=0;$i<count($factura);$i++){
-    $pdf->Cell(24, 8, '', 0, 0, 'L');
-    $pdf->Cell(24, 8, $factura[$i], 1, 0, 'C');
-    $pdf->Cell(24, 8, $fechafac[$i], 1, 0, 'C');
-    $pdf->Cell(24, 8, $importefac[$i], 1, 1, 'C');
 
-    $impFac=$impFac+$importefac[$i];
+if($factura!=""){
+    for($i=0;$i<count($factura);$i++){
+        $pdf->Cell(24, 8, '', 0, 0, 'L');
+        $pdf->Cell(24, 8, $factura[$i], 1, 0, 'C');
+        $pdf->Cell(24, 8, $fechafac[$i], 1, 0, 'C');
+        $pdf->Cell(24, 8, $importefac[$i], 1, 1, 'C');
+    
+        $impFac=$impFac+$importefac[$i];
+    }
 }
 
 for($i=count($factura);$i<10;$i++){
@@ -92,13 +95,15 @@ for($i=count($factura);$i<10;$i++){
 
 $pdf->SetXY(106,116);
 
-for($i=0;$i<count($conceptogas);$i++){
-    $pdf->SetX(106);
-    $pdf->Cell(24, 8, $fechagas[$i], 1, 0, 'C');
-    $pdf->Cell(24, 8, $conceptogas[$i], 1, 0, 'C');
-    $pdf->Cell(24, 8, $importegas[$i], 1, 1, 'C');
-
-    $impGas=$impGas+$importegas[$i];
+if($conceptogas!=""){
+    for($i=0;$i<count($conceptogas);$i++){
+        $pdf->SetX(106);
+        $pdf->Cell(24, 8, $fechagas[$i], 1, 0, 'C');
+        $pdf->Cell(24, 8, $conceptogas[$i], 1, 0, 'C');
+        $pdf->Cell(24, 8, $importegas[$i], 1, 1, 'C');
+    
+        $impGas=$impGas+$importegas[$i];
+    }
 }
 
 for($i=count($conceptogas);$i<10;$i++){

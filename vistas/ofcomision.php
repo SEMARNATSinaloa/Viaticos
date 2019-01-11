@@ -531,6 +531,15 @@
                                 </div> 
                             </div>
                             <div class="row">
+                                <div class="col-lg-6 col-smd-6 col-sm-12 col-xs-12">
+                                    <label for="jefeinmediato">Jefe inmediato: </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                        <input type="text" name="jefeinmediato" class="form-control" id="jefeinmediato" maxlength="60" placeholder="Jefe inmediato" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <br>
                                     <button class="btn btn-primary" type="submit" id="btnImprimir" value="imprimir"><i class="fa fa-print"></i> Imprimir</button>
