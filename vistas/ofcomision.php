@@ -328,7 +328,7 @@
                                     <label for="objetivo">Objetivo de la comisión: </label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
-                                        <textarea class="form-control" rows="3" name="objetivo" id="objetivo" maxlength="1000" placeholder="Objetivo de la comisión" required></textarea>
+                                        <textarea class="form-control" rows="3" name="objetivo" id="objetivo" maxlength="500" placeholder="Objetivo de la comisión" required></textarea>
                                     </div>
                                 </div>
                             </div>
