@@ -2,7 +2,7 @@
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      Anything you want
+      v0.8.1
     </div>
     <!-- Default to the left -->
     <strong><a href="https://www.gob.mx/semarnat">SEMARNAT </a></strong>Delegación Federal en el Estado de Sinaloa.
