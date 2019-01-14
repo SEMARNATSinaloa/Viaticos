@@ -23,7 +23,9 @@ $fecha=strftime("%A %d de %B del %Y", $timestamp);
 
 $pdf = new FPDF();
 $pdf->AddPage();
-$pdf->SetFont('Arial','',10);
+$pdf->AddFont("Montserrat", "");
+$pdf->AddFont("Montserrat-Bold", "");
+$pdf->SetFont('Montserrat','',10);
 $pdf->Image('logov.jpg',25,5,-300);
 $pdf->Cell(70, 5, "", 0, 0,  'L');
 $pdf->Cell(110, 5, "SECRETARIA DE MEDIO AMBIENTE Y RECURSOS NATURALES", 0, 1,  'C');
@@ -36,10 +38,10 @@ $pdf->Cell(110, 5, "DEPTO. DE RECURSOS HUMANOS Y MATERIALES", 0, 1,  'C');
 
 
 $pdf->Ln(20);
-$pdf->SetFont('Arial','B',12);
+$pdf->SetFont('Montserrat-Bold','',12);
 $pdf->Cell(0, 5, "PASE DE SALIDA", 0, 1,  'C');
 
-$pdf->SetFont('Arial','',9);
+$pdf->SetFont('Montserrat','',9);
 $pdf->Ln(10);
 $pdf->Cell(20, 5, "", 0, 0,  'L');
 $pdf->Cell(60, 5, "ASUNTO DE CARACTER:", 0, 0,  'L');

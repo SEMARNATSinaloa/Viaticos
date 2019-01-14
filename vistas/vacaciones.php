@@ -147,7 +147,7 @@
                                     <label for="rfc">R.F.C.:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-expeditedssl"></i></span>
-                                        <input type="text" name="rfc" class="form-control" id="rfc" maxlength="10" placeholder="R.F.C." required>
+                                        <input type="text" name="rfc" class="form-control" id="rfc" maxlength="13" placeholder="R.F.C." required>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">

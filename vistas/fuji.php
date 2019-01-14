@@ -55,7 +55,7 @@
                                     <label for="nombre">Nombre: </label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-child"></i></span>
-                                        <input type="text" name="nombre" class="form-control" id="nombre" maxlength="60" placeholder="Nombre del comisionado" required>
+                                        <input type="text" name="nombre" class="form-control" id="nombre" maxlength="50" placeholder="Nombre del comisionado" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -69,7 +69,7 @@
                                     <label for="adscripcion">Área de adscripción:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-globe"></i></span>
-                                        <input type="text" name="adscripcion" class="form-control" id="adscripcion" maxlength="60" placeholder="Area de adscripción"  required>
+                                        <input type="text" name="adscripcion" class="form-control" id="adscripcion" maxlength="50" placeholder="Area de adscripción"  required>
                                     </div>
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -102,7 +102,7 @@
                                     <label for="jefe">Jefe Inmediato:</label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-black-tie"></i></span>
-                                        <input type="text" name="jefe" class="form-control" id="jefe" maxlength="60" placeholder="Jefe Inmediato"  required>
+                                        <input type="text" name="jefe" class="form-control" id="jefe" maxlength="50" placeholder="Jefe Inmediato"  required>
                                     </div>
                                 </div> 
                             </div>
@@ -324,7 +324,7 @@
                                     <label for="motivo">Motivo de la justificación: </label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-bullseye"></i></span>
-                                        <textarea class="form-control" rows="3" name="motivo" id="motivo" maxlength="240" placeholder="Motivo de la justificación" required></textarea>
+                                        <textarea class="form-control" rows="3" name="motivo" id="motivo" maxlength="290" placeholder="Motivo de la justificación" required></textarea>
                                     </div>
                                 </div>
                             </div>

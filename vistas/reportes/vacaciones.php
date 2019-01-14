@@ -22,8 +22,8 @@ $fechaf=isset($_POST["fechaf"])?$_POST["fechaf"]:"Error";
 $diasaut=isset($_POST["diasaut"])?$_POST["diasaut"]:"Error";
 $diaspen=isset($_POST["diaspen"])?$_POST["diaspen"]:"Error";
 $observaciones=isset($_POST["observaciones"])?$_POST["observaciones"]:"Error";
-$periodo2=isset($_POST["periodo2"])?$_POST["periodo2"]:"Error";
-$añop2=isset($_POST["añop2"])?$_POST["añop2"]:"Error";
+$periodo2=isset($_POST["periodo2"])?$_POST["periodo2"]:"-";
+$añop2=isset($_POST["añop2"])?$_POST["añop2"]:"0";
 $fechaip1=isset($_POST["fechaip1"])?$_POST["fechaip1"]:"Error";
 $fechafp1=isset($_POST["fechafp1"])?$_POST["fechafp1"]:"Error";
 $fechaip2=isset($_POST["fechaip2"])?$_POST["fechaip2"]:"Error";
@@ -32,24 +32,24 @@ $fechafp2=isset($_POST["fechafp2"])?$_POST["fechafp2"]:"Error";
 
 
 //echo $fechai."<br>";
-$fechai = str_replace('/','-', $fechai);
-$fechaf = str_replace('/','-', $fechaf);
+$fechai   = str_replace('/','-', $fechai);
+$fechaf   = str_replace('/','-', $fechaf);
 $fechaip1 = str_replace('/','-', $fechaip1);
-$fechaip2 = str_replace('/','-', $fechaip2);
 $fechafp1 = str_replace('/','-', $fechafp1);
+$fechaip2 = str_replace('/','-', $fechaip2);
 $fechafp2 = str_replace('/','-', $fechafp2);
-$timestampi = strtotime($fechai);
-$timestampf = strtotime($fechaf);
+$timestampi   = strtotime($fechai);
+$timestampf   = strtotime($fechaf);
 $timestampip1 = strtotime($fechaip1);
-$timestampip2 = strtotime($fechaip2);
 $timestampfp1 = strtotime($fechafp1);
+$timestampip2 = strtotime($fechaip2);
 $timestampfp2 = strtotime($fechafp2);
 setlocale(LC_TIME, 'spanish');
-$fechai= strftime("%A %d de %B del %Y", $timestampi);
-$fechaf= strftime("%A %d de %B del %Y", $timestampf);
+$fechai=   strftime("%A %d de %B del %Y", $timestampi);
+$fechaf=   strftime("%A %d de %B del %Y", $timestampf);
 $fechaip1= strftime("%A %d de %B del %Y", $timestampip1);
-$fechaip2= strftime("%A %d de %B del %Y", $timestampip2);
 $fechafp1= strftime("%A %d de %B del %Y", $timestampfp1);
+$fechaip2= strftime("%A %d de %B del %Y", $timestampip2);
 $fechafp2= strftime("%A %d de %B del %Y", $timestampfp2);
 
 
@@ -83,14 +83,16 @@ while($fechaf>=$fechai){
 
 $pdf = new FPDF();
 $pdf->AddPage();
-$pdf->SetFont('Arial','B',16);
+$pdf->AddFont("Montserrat", "");
+$pdf->AddFont("Montserrat-Bold", "");
+$pdf->SetFont('Montserrat-Bold','',16);
 $pdf->Image('logov.jpg',35,5,-300);
 $pdf->Rect(25,10,160,275);
 $pdf->Rect(26,11,158,273);
 $pdf->Rect(25.5,10.5,159,274);
 
 
-$pdf->SetFont('Arial','',10);
+$pdf->SetFont('Montserrat','',8);
 $pdf->Ln(5);
 $pdf->Cell(65, 5, '', 0, 0, 'L');
 $pdf->Cell(0, 5, 'SOLICITUD/AUTORIZACION', 0,1, 'C');
@@ -111,7 +113,7 @@ if($periodo2==="-")
     $pdf->Ln(1);
 }
 else{
-    if($periodo1===$periodo2 && $añop1===$añop2){
+    if($periodo1==$periodo2 && $añop1==$añop2){
         $pdf->Ln(1);
     }
     else{
@@ -131,12 +133,12 @@ $pdf->Cell(100, 5, '', 0, 0, 'L');
 $pdf->Cell(30, 5, "", 1,0, 'C');
 $pdf->Cell(30, 5, "Cancelación", 0,1, 'L');
 
-$pdf->SetFont('Arial','B',10);
+$pdf->SetFont('Montserrat-Bold','',8);
 $pdf->Ln(1);
 $pdf->Cell(20, 5, '', 0, 0, 'L');
 $pdf->Cell(30, 5, "DATOS DEL SERVIDOR PUBLICO", 0,0, 'L');
 
-$pdf->SetFont('Arial','',10);
+$pdf->SetFont('Montserrat','',8);
 $pdf->Ln(5);
 $pdf->Cell(18, 5, "", 0,0, 'L');
 $pdf->Cell(45, 5, $apaterno, "B",0, 'C');
@@ -249,21 +251,21 @@ $pdf->MultiCell(150, 4, "Lo anterior, toda vez que me encuentro al corriente del
 $pdf->Ln(10);
 $pdf->Cell(60, 5, "", 0,0, 'L');
 $pdf->Cell(70, 5, "", "B",1, 'L');
-$pdf->Cell(60, 5, "", 0,0, 'L');
-$pdf->MultiCell(70, 5, $nombre." ".$apaterno." ".$amaterno, "T", 'C');
+$pdf->Cell(45, 5, "", 0,0, 'L');
+$pdf->MultiCell(100, 5, $nombre." ".$apaterno." ".$amaterno, 0, 'C');
 
 $pdf->Ln(5);
 $pdf->Cell(20, 5, "", 0,0, 'L');
 $pdf->MultiCell(150, 4, "En mi carácter de superior jerárquico del servidor publico solicitante y de conformidad con las disposiciones legales y administrativas, autorizo disfrutar del periodo vacacional señalado.", 0, 'J');
 
 $pdf->Ln(5);
-$pdf->Cell(60, 5, "", 0,0, 'L');
-$pdf->MultiCell(70, 5, $puestojefe, 0, 'C');
+$pdf->Cell(45, 5, "", 0,0, 'L');
+$pdf->MultiCell(100, 5, $puestojefe, 0, 'C');
 $pdf->Ln(15);
 $pdf->Cell(60, 5, "", 0,0, 'L');
-$pdf->Cell(70, 5, "", "B",1, 'L');
-$pdf->Cell(60, 5, "", 0,0, 'L');
-$pdf->MultiCell(70, 5, $jefe, "T", 'C');
+$pdf->Cell(70, 5, "", 0,1, 'L');
+$pdf->Cell(45, 5, "", 0,0, 'L');
+$pdf->MultiCell(100, 5, $jefe, "T", 'C');
 
 
 /*
