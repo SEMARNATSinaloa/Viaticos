@@ -22,14 +22,16 @@ $pdf = new FPDF();
 $pdf->AddPage();
 
 $pdf->Image('logov.jpg',15,3,-280);
-$pdf->SetFont('Arial','',11);
+$pdf->AddFont("Montserrat", "");
+$pdf->AddFont("Montserrat-Bold", "");
+$pdf->SetFont('Montserrat','',11);
 $pdf->Ln(10);
 $pdf->Cell(65, 5, '', 0, 0, 'L');
 $pdf->MultiCell(0, 5, 'SECRETARIA DE MEDIO AMBIENTE Y RECURSOS NATURALES', 0, 'C');
 $pdf->Cell(65, 5, '', 0, 0, 'L');
 $pdf->Cell(0, 5, 'DELEGACION FEDERAL SINALOA', 0,0, 'C');
 $pdf->Ln(25);
-$pdf->SetFont('Arial','', 9);
+$pdf->SetFont('Montserrat','', 9);
 //$pdf->Cell(40, 5, '', 1, 0, 'L');
 $pdf->Cell("", 5, 'INFORME DE COMISION', 0, 1, 'R');
 $pdf->Ln(5);
@@ -40,7 +42,8 @@ $pdf->Cell(40, 10, 'FECHA', 1, 0, 'C');
 $pdf->Cell(55, 10, $fechaInf, 1, 1, 'C');
 $pdf->Cell("", 5, '', 1, 1, 'C');
 $pdf->Cell(40, 10, 'LUGAR', 1, 0, 'C');
-$pdf->Cell(55, 10, $destino, 1, 0, 'C');
+$pdf->MultiCell(55, 5, $destino, 1, 'C');
+$pdf->SetXY(105,75);
 $pdf->Cell(40, 10, 'PERIODO', 1, 0, 'C');
 $pdf->Cell(55, 10, $fechainicio." AL ". $fechafin, 1, 1, 'C');
 $pdf->Cell("", 5, '', 1, 1, 'C');
@@ -55,21 +58,22 @@ $pdf->Cell(10, 10, "", 1, 0, 'C');
 $pdf->Cell(60, 10, $nombre, 1, 0, 'C');
 $pdf->Cell(80, 10, "FIRMA DEL SERVIDOR PUBLICO COMISIONADO", 1, 0, 'C');
 */
-$pdf->Ln(5);
+
+$pdf->SetXY(10,220);
 $pdf->Rect(10,215,190,40);
 $pdf->SetWidths(array(20,60,30,60,10));
 $pdf->SetAligns(array('C','C','C','C','C'));
 //for($i=0;$i<20;$i++)
 //$pdf->SetAligns('C');
-$pdf->SetFont('Arial','',7);
+$pdf->SetFont('Montserrat','',7);
 $pdf->Row(array('',$nombre,'',$jefeinmediato,''));
 $pdf->Ln(5);
 $pdf->SetWidths(array(20,65,20,65,10));
 $pdf->Row(array('',"_____________________________________________",'',"_____________________________________________",''));
-$pdf->SetFont('Arial','',9);
+$pdf->SetFont('Montserrat','',9);
 $pdf->Row(array('',"FIRMA DEL SERVIDOR PUBLICO COMISIONADO",'',"JEFE INMEDIATO",''));
 $pdf->Ln(5);
-$pdf->SetFont('Arial','',7);
+$pdf->SetFont('Montserrat','',7);
 $pdf->MultiCell("", 5, "Declaro, bajo protesta de decir verdad, que los datos contenidos en este formato son los solicitados y manifiesto tener conocimiento de las sanciones que se aplicarian en caso contrario.", 0, 'L');
 
 
